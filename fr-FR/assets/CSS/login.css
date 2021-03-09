@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    justify-content: center;
+}
+body{
+    background: linear-gradient(to top, rgba(27, 107, 161, 1), rgba(11, 66, 103, 1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.row{
+    background: white;
+    border-radius: 30px;
+    box-shadow:12px 12px 22px grey;
+}
+img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width:100%;
+    background-color: burlywood;
+    border-radius:4px;
+    font-weight: bold;
+}
+.btn1:hover{
+    background:white;
+    border:1px solid;
+}
+.Form{
+    margin-right: 20px;
+    width: 150%;
+}
