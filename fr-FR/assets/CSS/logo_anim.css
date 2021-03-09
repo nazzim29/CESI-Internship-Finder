@@ -21,11 +21,11 @@ body{
 }
 .logo-svg path{
     fill: transparent;
-    stroke: #5f0f4e;
+    stroke: #a12d88;
     stroke-width: 10;
     stroke-dasharray: 9600;
     stroke-dashoffset: 0;
-    animation: logoanim 2s linear forwards;
+    animation: logoanim 3s linear forwards;
     
 }
 @keyframes logoanim{
@@ -39,9 +39,11 @@ body{
     80%{
         stroke-dashoffset: 19200;
         fill: #5f0f4e;
+        opacity: 1;
     }
     100%{
         fill: #5f0f4e;
+        opacity: 0;
     }
 }
 
