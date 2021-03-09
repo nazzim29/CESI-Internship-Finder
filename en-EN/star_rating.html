@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/CSS/star_rating.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="stars-container">
+        <div class="stars-widget">
+            <input type="radio" name="rate" id="rate-5" value ="5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4" value="4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3" value="3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2" value="2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1" value="1">
+            <label for="rate-1" class="fas fa-star"></label>
+        </div>
+        <form action="#" id="comm">
+            <h1 id="ressenti"></h1>
+            <textarea cols="45" placeholder="Laisser un commentaire..."></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <script src="../assets/JS/star_rating.js"></script>
+</body>
+</html>
