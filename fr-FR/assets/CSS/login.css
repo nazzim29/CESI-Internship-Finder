@@ -27,7 +27,7 @@ body{
 }
 
 .left-container{
-	display: flex;
+    display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
@@ -39,13 +39,53 @@ body{
     text-align: center;
     padding: 20px;
 }
-
-.left-container img{
-	width: 300px;
+.left-container{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+}
+.left-container h1{
+    font-family: 'poppins', sans-serif ;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2em;
+    left: 0;
+}
+.left-container svg{
+    width: 200px;
+}
+.left-container svg path{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 20px;
+    stroke-dasharray: 9600;
+    stroke-dashoffset: 0;
+    animation: logoanim 3s linear forwards;
+}
+@keyframes logoanim{
+    0%{
+        stroke-dashoffset: 9600;
+    }
+    40%{
+        stroke-dashoffset: 19200;
+        fill: transparent;
+    }
+    80%{
+        stroke-dashoffset:  19200;
+        fill:black;
+    }
+    100%{
+        fill: black;
+    }
 }
 
 form{
-	width: 300px;
+    width: 300px;
+    height: 100%;
+    top: -10em;
 }
 
 .login-content .input-div{
@@ -105,9 +145,16 @@ form{
     transform: translateY(-10em);
 
 }
-.usr-icon img{
-    width: 3em;
+.usr-icon svg{
+    width: 4em;
     display: none;
+}
+.usr-icon svg path{
+    stroke-dasharray: 9600;
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke-width: 20px;
+    stroke: black;
 }
 .input-div input{
     position: absolute;
@@ -205,7 +252,7 @@ form{
         margin: 8px 0;
 	}
 
-	.left-container img{
+	.left-container svg{
 		width: 400px;
 	}
 }
@@ -218,8 +265,12 @@ form{
 	.left-container{
 		display: none;
     }
-    .usr-icon img{
+    .usr-icon svg{
         display: block;
+        
+    }
+    .usr-icon svg path{
+        animation: logoanim 3s linear forwards;
     }
 
 	.login-content{
