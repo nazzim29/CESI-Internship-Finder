@@ -22,7 +22,8 @@ body{
     grid-gap :2rem;
     background-color: honeydew;
     border-radius: 10px;
-    padding: 20px;
+    padding: 0px;
+    overflow: hidden;
     box-shadow: 0px 20px 20px rgba(39, 37, 37, 0.50);
 }
 
@@ -56,6 +57,7 @@ body{
 }
 .left-container svg{
     width: 200px;
+    background: none;
 }
 .left-container svg path{
     fill: transparent;
@@ -142,7 +144,7 @@ form{
     position: absolute;
     justify-content: center;
     align-items: center;
-    transform: translateY(-10em);
+    transform: translateY(-9em);
 
 }
 .usr-icon svg{
