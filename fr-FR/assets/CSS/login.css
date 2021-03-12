@@ -281,11 +281,52 @@ form{
 	}
 }
 .check-div label{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
     width: 100%;
     background: transparent;
     padding: 10px 17px;
 }
+.check-div label span{
+    align-content: center;
+    justify-content: center;
+    margin-left: 5px;
+}
 .check-div input[type=checkbox] {
     display: none;
+}
+.check-div i{
+    display: flex;
+    float: left;
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 13px;
+    vertical-align: middle;
+    transition: 0.25s .09s;
+    position: relative;
+    background: #d8d9db;
+    box-sizing: initial;
+}
+.check-div i:after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 2px;
+    transition: .25s;
+}
+input:checked + i {
+    background: #4bd865;
+}
+input:checked + i:after {
+    transform: translateX(20px);
+}
+input:checked + i:after:hover {
+    cursor: pointer;
 }
