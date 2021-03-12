@@ -6,42 +6,84 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
 .logo-svg{
-    width: 450px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
     position: absolute;
     top: 50%;
+    width:100%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
     z-index: 50;
+}
+.logo-svg svg{
+    position: absolute;
+    max-width: 300px;
+    width: 90%;
 }
 .logo-svg path{
     fill: transparent;
-    stroke: #5f0f4e;
-    stroke-width: 10;
+    stroke: #a12d88;
+    stroke-width: 2em;
     stroke-dasharray: 9600;
     stroke-dashoffset: 0;
-    animation: logoanim 2s linear forwards;
+    animation: logoanim 3s linear forwards;
+    -webkit-animation: logoanim 3s linear forwards;
+    -moz-animation: logoanim 3s linear forwards;
     
+}
+
+@-moz-keyframes logoanim{
+    0%{
+        stroke-dashoffset: 9600;
+    }
+    40%{
+        stroke-dashoffset: 4300;
+        fill: transparent;
+    }
+    80%{
+        stroke-dashoffset: 0;
+
+    }
+    100%{
+        fill: #5f0f4e;
+    }
+}
+@-webkit-keyframes logoanim{
+    0%{
+        stroke-dashoffset: 9600;
+    }
+    40%{
+        stroke-dashoffset: 4300;
+        fill: transparent;
+    }
+    80%{
+        stroke-dashoffset: 0;
+
+    }
+    100%{
+        fill: #5f0f4e;
+        
+    }
 }
 @keyframes logoanim{
     0%{
         stroke-dashoffset: 9600;
     }
     40%{
-        stroke-dashoffset: 19200;
+        stroke-dashoffset: 4300;
         fill: transparent;
     }
     80%{
-        stroke-dashoffset: 19200;
-        fill: #5f0f4e;
+        stroke-dashoffset: 0;
     }
     100%{
         fill: #5f0f4e;
+        
     }
 }
 
