@@ -22,13 +22,13 @@ body{
 }
 .logo-svg svg{
     position: absolute;
-    max-width: 300px;
-    width: 90%;
+    /* max-width: 1000px; */
+    width: 150%;
 }
 .logo-svg path{
     fill: transparent;
     stroke: #a12d88;
-    stroke-width: 2em;
+    stroke-width: 2px;;
     stroke-dasharray: 9600;
     stroke-dashoffset: 0;
     animation: logoanim 3s linear forwards;
@@ -50,7 +50,7 @@ body{
 
     }
     100%{
-        fill: #5f0f4e;
+        /* fill: #5f0f4e; */
     }
 }
 @-webkit-keyframes logoanim{
@@ -66,7 +66,7 @@ body{
 
     }
     100%{
-        fill: #5f0f4e;
+        /* fill: #5f0f4e; */
         
     }
 }
@@ -82,7 +82,7 @@ body{
         stroke-dashoffset: 0;
     }
     100%{
-        fill: #5f0f4e;
+        /* fill: #5f0f4e; */
         
     }
 }
