@@ -5,7 +5,8 @@
 }
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
     background-color: gray;
@@ -35,16 +36,15 @@ body{
 }
 
 .login-content{
-	display: flex;
 	justify-content: center;
 	align-items: center;
     text-align: center;
     padding: 20px;
+    height:100%
 }
 .left-container{
     width: 300px;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     top: 50%;
@@ -59,6 +59,7 @@ body{
 .left-container svg{
     width: 200px;
     background: none;
+    margin-top: 20px;
 }
 .left-container svg path{
     fill: transparent;
@@ -126,13 +127,13 @@ form{
 
 
 .check-div{
-    margin-top: 1em;
-    display:flex;
-    justify-content: left ;
+    margin: 1em;
+    display: flex;
+    justify-content: left;
 }
 .check-div input[type="checkbox"]{
     margin-right: 0.5em;
-    transform: translateY(0.4em);
+
 }
 .check-div label{
     font-family: 'poppins', sans-serif;
@@ -142,15 +143,17 @@ form{
 
 
 .usr-icon {
-    position: absolute;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
-    transform: translateY(-9em);
-
 }
 .usr-icon svg{
-    width: 4em;
+    width: 9em;
     display: none;
+
 }
 .usr-icon svg path{
     stroke-dasharray: 9600;
@@ -231,7 +234,8 @@ form{
 	text-transform: uppercase;
 	margin: 1rem 0;
 	cursor: pointer;
-	transition: .5s;
+    transition: .5s;
+    bottom: 1em;
 }
 .btn:hover{
     box-shadow: 0px 20px 20px rgba(78, 78, 78, 0.411);
@@ -280,53 +284,5 @@ form{
 		justify-content: center;
 	}
 }
-.check-div label{
-    display: inline-flex;
-    align-items: center;
-    justify-content: left;
-    text-align: left;
-    width: 100%;
-    background: transparent;
-    padding: 10px 17px;
-}
-.check-div label span{
-    align-content: center;
-    justify-content: center;
-    margin-left: 5px;
-}
-.check-div input[type=checkbox] {
-    display: none;
-}
-.check-div i{
-    display: flex;
-    float: left;
-    padding: 2px;
-    width: 40px;
-    height: 20px;
-    border-radius: 13px;
-    vertical-align: middle;
-    transition: 0.25s .09s;
-    position: relative;
-    background: #d8d9db;
-    box-sizing: initial;
-}
-.check-div i:after {
-    content: " ";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    position: absolute;
-    left: 2px;
-    transition: .25s;
-}
-input:checked + i {
-    background: #4bd865;
-}
-input:checked + i:after {
-    transform: translateX(20px);
-}
-input:checked + i:after:hover {
-    cursor: pointer;
-}
+
+
