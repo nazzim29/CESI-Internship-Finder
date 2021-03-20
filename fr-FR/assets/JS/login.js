@@ -9,7 +9,7 @@ background.initializr = function () {
 
   //option
   $this.id = "background_css3";
-  $this.style = { bubbles_color: "#fff", stroke_width: 0, stroke_color: "black" };
+  $this.style = { bubbles_color: "#64a587", stroke_width: 0, stroke_color: "black" };
   $this.bubbles_number = 30;
   $this.speed = [1500, 8000]; //milliseconds
   $this.max_bubbles_height = $this.height;
@@ -29,9 +29,10 @@ background.initializr = function () {
   $("body").prepend("<style>.shape_background {transform-origin:center; width:30px; height:30px; background: " + $this.style.bubbles_color + "; position: absolute}</style>");
 
 
-  for (i = 0; i < $this.bubbles_number; i++) {if (window.CP.shouldStopExecution(0)) break;
+  for (i = 0; i < $this.bubbles_number; i++) {
+    if (window.CP.shouldStopExecution(0)) break;
     $this.generate_bubbles();
-  }window.CP.exitedLoop(0);
+  } window.CP.exitedLoop(0);
 
 };
 
@@ -44,9 +45,9 @@ background.generate_bubbles = function () {
   var base = $("<div class='shape_background'></div>");
   var shape_type = $this.shape ? $this.shape : Math.floor($this.rn(1, 3));
   if (shape_type == 1) {
-    var bolla = base.css({ borderRadius: "50%",width: "30px",height:"30px"});
+    var bolla = base.css({ borderRadius: "50%", width: "30px", height: "30px" });
   } else if (shape_type == 2) {
-    var bolla = base.css({ width: 0, height: 0, "border-style": "solid", "border-width": "0 40px 69.3px 40px", "border-color": "transparent transparent " + $this.style.bubbles_color + " transparent", background: "transparent"});
+    var bolla = base.css({ width: 0, height: 0, "border-style": "solid", "border-width": "0 40px 69.3px 40px", "border-color": "transparent transparent " + $this.style.bubbles_color + " transparent", background: "transparent" });
   } else {
     var bolla = base;
   }
