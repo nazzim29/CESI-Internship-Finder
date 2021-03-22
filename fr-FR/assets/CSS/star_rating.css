@@ -3,12 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    text-align: center;
-    background: #000;
+
+input[type=radio]{
+    display: none;
 }
 .stars-container{
     width: 350px;
@@ -26,7 +23,7 @@ html,body{
 }
 .stars-widget label{
     font-size: 35px;
-    color: #444;
+    color: #DCDDDF;
     padding: 5px;
     float: right;
     transition: all 0.2s ease;
@@ -40,31 +37,31 @@ input:checked ~ label{
 }
 input#rate-5:checked ~ label{
     color: #fe7;
-    text-shadow: 0 0 20px #952;
+    text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
     
 }
 input#rate-5:hover ~ label{
     color: #fe7;
-    text-shadow: 0 0 20px #952;
+    text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
 }
 input#rate-4:checked ~ label{
     color: #fe7;
-    text-shadow: 0 0 15px #952;
+    text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
 }
 input#rate-4:hover ~ label{
     color: #fe7;
-    text-shadow: 0 0 15px #952;
+    text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
 }
 input#rate-3:checked ~ label{
     color: #fe7;
-    text-shadow: 0 0 10px #952;
+    text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
 }
 input#rate-3:hover ~ label{
     color: #fe7;
-    text-shadow: 0 0 10px #952;
+    text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
 }
 form h1{
-    font-family: cursive;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     font-size: 25px;
     color: #fe7;
@@ -72,29 +69,20 @@ form h1{
     font-weight: 500;
     text-align: center;
     transition: all 0.2s ease;
+    margin-bottom: 1em;
     
 }
 form textarea{
     height: 100px;
-    width: 100%;
+    width: 60%;
     overflow: hidden;
-    border: 1px solid #444;
+    border: 1px solid #F17877;
     outline: none;
     padding: 5px;
-    font-size: 12px;
-    background: #222;
-    color: beige;
+    font-size: 15px;
+    background: white;
+    color: #414040;
     resize: none;
     border-radius: 10px;
 }
-button{
-    width: 100%;
-    border: 1px solid #444;
-    height: 30px;
-    background-color: transparent;
-    color: beige;
-    font-family: cursive;
-    font-weight: 500;
-    font-size: 17px;
-    border-radius: 10px;
-}
+
