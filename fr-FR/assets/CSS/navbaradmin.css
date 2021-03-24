@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+.navbar{
+    background-image:linear-gradient(to right, #64a587, #446b50) ;
+    padding: 0 ;
+}
+#Calque_1{
+    fill: white;
+}
+#Calque_1{
+    width: 10em;
+}
+.navbar-nav li{
+    font-size: 100%;
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: #ffffff  ;
+    font-weight: 600;
+}
+.navbar-toggler{
+    outline: none  ;
+    color:white;
+}
+#banner{
+    background-image:linear-gradient(to right, #64a587, #446b50) ;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+#navbarDropdown{
+    color: white;
+}
+#item{
+    color: #446b50;
+}
+.dropdown-menu{
+    border-color: #446b50;
+}
+
+#dl{
+    font-size: 130%;
+    margin: 10px 10px;
+    
+}
+#dl:hover{
+    color: #446b50;
+}

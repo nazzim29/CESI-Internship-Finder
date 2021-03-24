@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Création d'un étudiant</title>
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/CSS/star_rating.css">
-    <link rel="stylesheet" href="assets/CSS/formenrep.css">
+    <link rel="stylesheet" href="assets/CSS/navbaradmin.css">
+    <title>Page d'acceuil</title>
 </head>
 
 <body>
@@ -88,143 +82,78 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link text-white" href="#">ACCEUIL<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#banner">A PROPOS</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Entreprise
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="item">Créer</a>
+                            <a class="dropdown-item" href="#" id="item">Afficher</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Etudiant
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="item">Créer</a>
+                            <a class="dropdown-item" href="#" id="item">Afficher</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#pilote" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pilote
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="item">Créer</a>
+                            <a class="dropdown-item" href="#" id="item">Afficher</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Délégué
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="item">Créer</a>
+                            <a class="dropdown-item" href="#" id="item">Afficher</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#offre" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offre
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="item">Créer</a>
+                            <a class="dropdown-item" href="#" id="item">Afficher</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#partenaires">NOS PARTENAIRES</a>
+                        <a class="nav-link text-white" href="#footer">Candidature</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#footer">CONTACTER</a>
+                        <a class="nav-link text-white" href="#footer">Nous contacter</a>
                     </li>
-                    <!--<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li> -->
                 </ul>
-
+                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="login.html"
+                        style="text-decoration: none;color: inherit;">Déconnexion </a></button>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <form id="create">
-            <h1 id="titre">Créer un étudiant</h1>
-            <div class="row">
-                <div class="form-group">
-                    <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" name="firstname" class="form-control" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="secteur">Prénom</label><br>
-                    <input type="text" id="secteur" class="form-control" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="nom">Nom d'utilisateur</label><br>
-                    <input type="text" id="nom" class="form-control" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="nom">Mot de passe</label><br>
-                    <input type="text" id="nom" class="form-control" name="adress" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="adr">Adresse du centre</label><br>
-                    <input type="text" id="adr" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nbr">Promotion</label><br>
-                    <SELECT id="adr" class="form-control" name="nom" size="1">
-                        <OPTION id="op">Choisir une promotion...
-                        <OPTION id="op">A1
-                        <OPTION id="op">A2
-                        <OPTION id="op">A3
-                        <OPTION id="op">A4
-                        <OPTION id="op">A5
-                    </SELECT>
-
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" id="btnv" class="btn btn-sample btn-rounded form-control" value="Valider">
-                </div>
-            </div>
-        </form>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/JS/star_rating.js"></script>
 </body>
-<!--footer-->
-<footer id="footer" role="contentinfo">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <div id="about">
-                        <h3>A propos de nous</h3>
-                    </div>
-                    <p class="text-left">CESI Internship Finder, est un site de stage dédié aux
-                        étudiants des campus CESI pour leur permettre, grace aux differentes offres mise à
-                        leurs disposition pour trouver le meilleur stage
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3>Navigation</h3>
-                    <ul class="navigation">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Mention légales</a></li>
-                        <li><a href="#">Telécharger</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3 id="network">Suivez nous</h3>
-                    <ul class="social-network social-circle">
-                        <li><a href="#" class="iconfb" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="iconlink" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#" class="iconinst" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" class="icontwi" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3>Signalez un problème</h3>
-                    <form id="prblm">
-                        <input type="email" id="femail" placeholder="Email">
-                        <textarea name="description" id="ds" cols="5" rows="5"
-                            placeholder="Decrivez-nous le problème"></textarea>
-                        <button>Envoyer</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-12 copy">
-                <p class="text-center"> &copy; Copyright 2021 CESI Internship Finder. Tous droits reservés.</p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>
