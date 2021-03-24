@@ -61,11 +61,9 @@ option:hover {
   background-color: #F17877 ;
   color: white;
 }
-
 #btnv {
   margin-top: 3em ;
 }
-
 .rating-system{
     justify-content: center;
     display: flex;
