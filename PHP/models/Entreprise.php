@@ -1,5 +1,6 @@
 <?php
-class Entreprise
+require_once('db.php');
+class Entreprise Extends Db
 {
     protected $_id;
     protected $_secteur_activite;

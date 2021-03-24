@@ -1,5 +1,6 @@
 <?php
-class Promotion 
+require_once('db.php');
+class Promotion Extends Db
 {
     protected $_id;
     protected $_nom;

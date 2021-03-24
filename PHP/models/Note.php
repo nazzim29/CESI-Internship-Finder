@@ -1,5 +1,6 @@
 <?php
-class Note
+require_once('db.php');
+class Note Extends Db
 {
     protected $_id_entreprise;
     protected $_id_utilisateur;

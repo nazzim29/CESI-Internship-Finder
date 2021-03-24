@@ -1,5 +1,6 @@
 <?php
-class Utilisateur
+require_once("db.php");
+class Utilisateur Extends Db
 {
     protected $_id;
     protected $_login;

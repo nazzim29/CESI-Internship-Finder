@@ -1,5 +1,6 @@
 <?php
-class Permission
+require_once('db.php');
+class Permission Extends Db
 {
     protected $_id;
     protected $_nom;

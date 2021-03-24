@@ -1,5 +1,6 @@
 <?php
-class Shouaite
+require_once('db.php');
+class Shouaite Extends Db
 {
     protected $_id_utilisateur;
     protected $_id_offre;

@@ -1,5 +1,6 @@
 <?php
-class Portule
+require_once('db.php');
+class Portule Extends Db
 {
     protected $_id_utilisateur;
     protected $_id_offre;

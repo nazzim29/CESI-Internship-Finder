@@ -1,5 +1,6 @@
 <?php
-class Requiert
+require_once('db.php');
+class Requiert Extends Db
 {
     protected $_id_competence;
     protected $_id_offre;
