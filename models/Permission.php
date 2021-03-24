@@ -21,5 +21,17 @@ class Permission Extends Db
     {
         $this->$_nom = $nom;
     }
+    public function create(){
+
+    }
+    public function read(){
+
+    }
+    public function update(){
+
+    }
+    public function delete(){
+        
+    }
 
 }

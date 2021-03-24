@@ -3,8 +3,8 @@ require_once("db.php");
 class Utilisateur Extends Db
 {
     protected $_id;
-    protected $_login;
-    protected $_pwd;
+    protected $_email;
+    protected $_password;
     protected $_type;
     protected $_nom;
     protected $_prenom;
@@ -77,5 +77,24 @@ class Utilisateur Extends Db
     public function setidpromotion(int $idpromotion)
     {
         $this->$_id_promotion = $idpromotion;
+    }
+    public function selectbyemail(array $postdata){
+        $req = $db->prepare("select * from utilisateur where email = :email");
+        $result = $req->execute(array(
+            ':email' => $postdata['email']
+        ));
+        echo $result;
+    }
+    public function create(){
+
+    }
+    public function read(){
+
+    }
+    public function update(){
+
+    }
+    public function delete(){
+        
     }
 }
