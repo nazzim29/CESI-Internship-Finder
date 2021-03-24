@@ -1,5 +1,6 @@
 <?php
-class Offre
+require_once('db.php');
+class Offre Extends Db
 {
     protected $_id;
     protected $_description;

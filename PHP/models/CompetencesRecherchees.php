@@ -1,5 +1,6 @@
 <?php
-class CompetencesRecherchees extends AnotherClass implements Interface
+require_once('db.php');
+class CompetencesRecherchees extends Db
 {
     protected $_id;
     protected $_nom;

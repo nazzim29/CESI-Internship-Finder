@@ -82,3 +82,35 @@ body{
         
     }
 }
+
+/* .cookie-banner .bottom .show{
+    bottom: 0;
+    transition: bottom 1s;
+    -webkit-transition-timing-function: ease-in; 
+    transition-timing-function: ease-in;
+    
+    
+}
+.cookie-banner .full{
+    left:0px;
+    margin: 0px;
+    width:100%;
+
+    
+}
+.cookie-banner .bottom{
+    display: block;
+    border-top: 2px solid #9C7E48;
+    bottom: -350px;
+    transition: bottom .5s;
+
+}
+.cookie-banner {
+    display: none;
+    height: auto;
+    position: fixed;
+    padding: 4px 3%;
+    background-color: #eee;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+} */

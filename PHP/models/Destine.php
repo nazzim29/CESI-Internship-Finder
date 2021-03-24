@@ -1,5 +1,6 @@
 <?php
-class Destine
+require_once('db.php');
+class Destine Extends Db
 {
     protected $_id_promotion;
     protected $_id_offre;

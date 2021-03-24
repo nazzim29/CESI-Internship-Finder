@@ -1,5 +1,6 @@
 <?php
-class Avoir
+require_once('db.php');
+class Avoir Extends Db
 {
     protected $_id_permission;
 

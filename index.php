@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_POST['username']) & isset($_POST['pwd']) & isset($_POST['resterco'])){
+    
+
+
+
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -215,7 +225,7 @@
                     </g>
                 </svg>
             </div>
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>

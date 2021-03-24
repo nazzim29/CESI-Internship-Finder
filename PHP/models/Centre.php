@@ -1,5 +1,6 @@
 <?php
-class Centre
+require_once('db.php');
+class Centre Extends Db
 {
     protected $_id;
     protected $_ville;
