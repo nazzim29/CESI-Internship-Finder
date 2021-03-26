@@ -15,35 +15,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS\star_rating.css">
-    <link rel="stylesheet" href="CSS\formentrep.css">
+    <link rel="stylesheet" href="\css\star_rating.css">
+    <link rel="stylesheet" href="\css\formentrep.css">
 </head>
 
 <body>
     {include 'navbar.tpl'}
     <div class="container">
-        <form id="create">
+        <form id="create" action="" method="POST" >
             <h1 id="titre">Creation d'Entreprise</h1>
             <div class="row">
                 <div class="form-group">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" class="form-control" required>
+                    <input type="text" id="raisonsociale" name="raison_sociale" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="secteur">Secteur d'activité</label><br>
-                    <input type="text" id="secteur" class="form-control" required>
+                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" required>
                 </div>
 
 
                 <div class="form-group">
-                    <label for="adr">Adresse</label><br>
-                    <input type="text" id="adr" class="form-control" required>
+                    <label for="adr">Localité</label><br>
+                    <input type="text" id="localite" name="localite" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
-                    <input type="text" id="nbr" class="form-control" required>
+                    <label for="email">Adresse Email</label><br>
+                    <input type="email" id="email" name="email" class="form-control" required>
                 </div>
 
                 <label for="nbr">Confiance du pilote</label><br>
@@ -61,7 +61,7 @@
                         <label for="rate-1" class="fas fa-star"></label>
                     </div>
                     <h1 id="ressenti"></h1>
-                    <textarea cols="45" placeholder="Laisser un commentaire..."></textarea>
+                    <textarea cols="45" placeholder="Laisser un commentaire..." name="commentaire"></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer
@@ -71,65 +71,12 @@
             </div>
         </form>
     </div>
+    {include 'footer.tpl'}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS/star_rating.js"></script>
 </body>
-<!--footer-->
-<footer id="footer" role="contentinfo">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <div id="about">
-                        <h3>A propos de nous</h3>
-                    </div>
-                    <p class="text-left">CESI Internship Finder, est un site de stage dédié aux
-                        étudiants des campus CESI pour leur permettre, grace aux differentes offres mise à
-                        leurs disposition pour trouver le meilleur stage
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3>Navigation</h3>
-                    <ul class="navigation">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Mention légales</a></li>
-                        <li><a href="#">Telécharger</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3 id="network">Suivez nous</h3>
-                    <ul class="social-network social-circle">
-                        <li><a href="#" class="iconfb" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="iconlink" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#" class="iconinst" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" class="icontwi" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-pad">
-                    <h3>Signalez un problème</h3>
-                    <form id="prblm">
-                        <input type="email" id="femail" placeholder="Email">
-                        <textarea name="description" id="ds" cols="5" rows="5"
-                            placeholder="Decrivez-nous le problème"></textarea>
-                        <button>Envoyer</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-12 copy">
-                <p class="text-center"> &copy; Copyright 2021 CESI Internship Finder. Tous droits reservés.</p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>

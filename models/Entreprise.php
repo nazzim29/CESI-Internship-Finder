@@ -47,9 +47,18 @@ class Entreprise Extends Db
     {
         $this->$_email = $email;
     }
-    public function create()
+    public function create($postdata)
     {
-        # code...
+        $req = $this->db->prepare("insert into entreprise(Secteur_activite,Localite,Raison_social,Email) values (?,?,?,?)");
+        $req->bindvalue(1,$postdata['secteur_dactivite']);
+        $req->bindvalue(2,$postdata['localite']);
+        $req->bindvalue(3,$postdata['raison_sociale']);
+        $req->bindvalue(4,$postdata['email']);
+        $req->execute();
+        $req = $this->db->prepare("SELECT LAST_INSERT_ID() as 'id';");
+        $req->execute();
+        $res = $req->fetch(PDO::FETCH_OBJ);
+        return $res->id;
     }
     public function read()
     {
