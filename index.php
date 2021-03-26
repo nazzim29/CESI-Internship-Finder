@@ -3,6 +3,7 @@ session_start();
 require_once('libs\Route.php');
 require_once('libs\smarty-3.1.39\libs\Smarty.class.php');
 include_once('controllers\LoginController.php');
+include_once('controllers\EntrepriseController.php');
 Route::add('/',function(){
     if(isset($_SESSION['current_user'])){
         //redirection vers la dashboard si connéctée
@@ -32,6 +33,10 @@ Route::add('/login',function(){
 Route::add('/logout',function(){
     LoginController::logout();
 });
+Route::add('/entreprise/new',function(){
+    EntrepriseController::get();
+
+},'GET');
 Route::add('/home',function(){
     //affichage de la dashboard
     // if(isset($_SESSION['email'])){

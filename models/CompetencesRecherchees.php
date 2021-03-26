@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class CompetencesRecherchees extends Db
 {
     protected $_id;
@@ -20,5 +20,21 @@ class CompetencesRecherchees extends Db
     public function setnom(string $nom)
     {
         $this->$_nom = $nom;
+    }
+    public function create()
+    {
+        # code...
+    }
+    public function read()
+    {
+
+    }
+    public function update()
+    {
+        # code...
+    }
+    public function delete()
+    {
+        # code...
     }
 }

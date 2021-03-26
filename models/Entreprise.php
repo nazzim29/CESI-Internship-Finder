@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Entreprise Extends Db
 {
     protected $_id;
@@ -46,5 +46,21 @@ class Entreprise Extends Db
     public function setemail(string $email)
     {
         $this->$_email = $email;
+    }
+    public function create()
+    {
+        # code...
+    }
+    public function read()
+    {
+
+    }
+    public function update()
+    {
+        # code...
+    }
+    public function delete()
+    {
+        # code...
     }
 }

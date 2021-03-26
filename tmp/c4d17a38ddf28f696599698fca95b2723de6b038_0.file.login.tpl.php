@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 13:09:16
+/* Smarty version 3.1.39, created on 2021-03-26 14:51:53
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605dceece1c9e9_17560762',
+  'unifunc' => 'content_605de6f9277b81_11284112',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4d17a38ddf28f696599698fca95b2723de6b038' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\login.tpl',
-      1 => 1616757591,
+      1 => 1616763377,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605dceece1c9e9_17560762 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -268,13 +268,17 @@ function content_605dceece1c9e9_17560762 (Smarty_Internal_Template $_smarty_tpl)
 "
                         <?php }?>
                         required>
-                        <label for="username">
+                        <label for="password">
                             <span class="content-name">
                                 Mot de passe
                             </span>
                         </label>
                     </div>
                 </div>
+                <?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
+                <div class="alert alert-danger" role="alert"> <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+ </div>
+                <?php }?>
                 <div class="check-div">
                     <input type="checkbox" id="remember" name="remember"
                     <?php if ((isset($_smarty_tpl->tpl_vars['emailvalue']->value)) && (isset($_smarty_tpl->tpl_vars['passwordvalue']->value))) {?> 

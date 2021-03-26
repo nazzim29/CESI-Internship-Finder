@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Note Extends Db
 {
     protected $_id_entreprise;
@@ -29,6 +29,22 @@ class Note Extends Db
     public function setnote(int $note)
     {
         $this->$_note = $note;
+    }
+    public function create()
+    {
+        # code...
+    }
+    public function read()
+    {
+
+    }
+    public function update()
+    {
+        # code...
+    }
+    public function delete()
+    {
+        # code...
     }
 
 }

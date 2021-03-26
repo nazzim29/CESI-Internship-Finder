@@ -243,13 +243,16 @@
                             value = "{$passwordvalue}"
                         {/if}
                         required>
-                        <label for="username">
+                        <label for="password">
                             <span class="content-name">
                                 Mot de passe
                             </span>
                         </label>
                     </div>
                 </div>
+                {if isset($error)}
+                <div class="alert alert-danger" role="alert"> {$error} </div>
+                {/if}
                 <div class="check-div">
                     <input type="checkbox" id="remember" name="remember"
                     {if isset($emailvalue) && isset($passwordvalue)} 

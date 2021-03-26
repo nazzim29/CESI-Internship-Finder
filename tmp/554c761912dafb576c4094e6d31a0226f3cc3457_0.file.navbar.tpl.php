@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 13:03:11
+/* Smarty version 3.1.39, created on 2021-03-26 16:29:28
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605dcd7ff3d0d5_39541208',
+  'unifunc' => 'content_605dfdd8bef085_29097792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1616756435,
+      1 => 1616772248,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605dcd7ff3d0d5_39541208 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605dfdd8bef085_29097792 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
+<link rel="stylesheet" href="CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
@@ -90,29 +91,35 @@ function content_605dcd7ff3d0d5_39541208 (Smarty_Internal_Template $_smarty_tpl)
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link text-white" href="#">ACCEUIL</a>
+                <a class="nav-link text-white" href="\home">ACCEUIL</a>
             </li>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Entreprise
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
+                    <a class="dropdown-item" href="\entreprise\new" id="item">Créer</a>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false) || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
                     <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <?php }?>
                 </div>
             </li>
-            <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx23',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx22',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <?php }?>
                 </div>
             </li>
             <?php }?>
@@ -128,7 +135,7 @@ function content_605dcd7ff3d0d5_39541208 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -147,14 +154,26 @@ function content_605dcd7ff3d0d5_39541208 (Smarty_Internal_Template $_smarty_tpl)
                     Offre
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx9',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <?php }?>
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
             <li class="nav-item">
                 <a class="nav-link text-white" href="#footer">Candidature</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
+                    <a class="dropdown-item" href="#" id="item">Mes Condidatures</a>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
+                    <a class="dropdown-item" href="#" id="item">Condidatures en cours</a>
+                    <?php }?>
+                </div>
             </li>
             <?php }?>
         </ul>
