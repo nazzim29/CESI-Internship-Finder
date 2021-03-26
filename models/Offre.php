@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('\db.php');
 class Offre Extends Db
 {
     protected $_id;
@@ -72,8 +72,22 @@ class Offre Extends Db
     {
         $this->$_titre = $titre;
     }
+
     public function setidentreprise(int $id)
     {
-        $this->$_id_entreprise = $id;
+       $this->$_id_entreprise = $id;
     }
+
+    public function select($post_data)
+    {
+        $req= $this->db->prepare("select*from offre where Titre =?");
+        $req->bindvalue(1,$post_data["titre"]);
+        $req->execute();
+        $s=$req->fetchAll();
+        return $s;
+    }
+
+    
+
 }
+
