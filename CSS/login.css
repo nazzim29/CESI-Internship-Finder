@@ -179,6 +179,7 @@ form{
     display: none;
 
 }
+
 .usr-icon svg path{
     stroke-dasharray: 9600;
     stroke-dashoffset: 0;
@@ -197,7 +198,7 @@ form{
     left: 0;
     text-align: left;
     color: #555;
-    font-family: "'poppins', sans-serif";
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 0.7rem;
 
     

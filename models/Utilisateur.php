@@ -1,5 +1,5 @@
 <?php
-require_once("db.php");
+require_once("libs\db.php");
 class Utilisateur Extends Db
 {
     protected $_id;
@@ -79,11 +79,12 @@ class Utilisateur Extends Db
         $this->$_id_promotion = $idpromotion;
     }
     public function selectbyemail(array $postdata){
-        $req = $db->prepare("select * from utilisateur where email = :email");
-        $result = $req->execute(array(
-            ':email' => $postdata['email']
-        ));
-        echo $result;
+        $req = $this->db->prepare("select * from utilisateur where email = ?");
+        $req->bindvalue(1,$postdata['email']);
+        $req->execute();
+        
+        return $req->fetch(PDO::FETCH_ASSOC);
+
     }
     public function create(){
 

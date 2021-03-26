@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-24 20:18:19
-  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\php\vue\acceuil.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-26 13:08:58
+  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605b907b647324_21435668',
+  'unifunc' => 'content_605dceda019a02_80834843',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3e8b8d0e0de6113f345103151bfaf1ea91e3b783' => 
+    '5d229a64e78856cc5cd65cd70f957054350b0a48' => 
     array (
-      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\php\\vue\\acceuil.tpl',
-      1 => 1616613497,
+      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\acceuil.tpl',
+      1 => 1616760536,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605dceda019a02_80834843 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -131,7 +131,7 @@ function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl)
                                 </div>
                             </li> -->
                 </ul>
-                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="login.html"
+                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="\login"
                         style="text-decoration: none;color: inherit;">SE CONNECTER </a></button>
             </div>
         </nav>
@@ -161,7 +161,7 @@ function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl)
         <div id="un" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire2" src="assets/Image/provisoire2.png" class="w-100 hover-shadow" alt="">
+                    <img id="provisoire2" src="Image\provisoire2.png" class="w-100 hover-shadow" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Si vous êtes empathique,
@@ -176,7 +176,7 @@ function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl)
         <div id="deux" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire3" src="assets/Image/provisoire3.png" alt="">
+                    <img id="provisoire3" src="Image\provisoire3.png" alt="">
                 </div>
                 <div class="col-md-6" style="display: table-cell;
                 vertical-align: middle; min-height: 10em;">
@@ -189,7 +189,7 @@ function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl)
         <div id="trois" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire1" src="assets/Image/provisoire1.png" alt="">
+                    <img id="provisoire1" src="Image\provisoire1.png" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3 style="padding-left: 15%; padding-right: 15%; margin: 17% 0;">CESI Internship Finder offre
@@ -211,22 +211,22 @@ function content_605b907b647324_21435668 (Smarty_Internal_Template $_smarty_tpl)
         <div class="container">
             <div class="row">
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo1.png" alt="" id="logos">
+                    <img src="Image\logo1.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo2.png" alt="" id="logos">
+                    <img src="Image\logo2.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo3.png" alt="" id="logos">
+                    <img src="Image\logo3.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo4.png" alt="" id="logos">
+                    <img src="Image\logo4.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo5.png" alt="" id="logos">
+                    <img src="Image\logo5.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo6.png" alt="" id="logos">
+                    <img src="Image\logo6.png" alt="" id="logos">
                 </div>
             </div>
         </div>

@@ -108,7 +108,7 @@
                                 </div>
                             </li> -->
                 </ul>
-                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="login.html"
+                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="\login"
                         style="text-decoration: none;color: inherit;">SE CONNECTER </a></button>
             </div>
         </nav>
@@ -138,7 +138,7 @@
         <div id="un" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire2" src="assets/Image/provisoire2.png" class="w-100 hover-shadow" alt="">
+                    <img id="provisoire2" src="Image\provisoire2.png" class="w-100 hover-shadow" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Si vous êtes empathique,
@@ -153,7 +153,7 @@
         <div id="deux" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire3" src="assets/Image/provisoire3.png" alt="">
+                    <img id="provisoire3" src="Image\provisoire3.png" alt="">
                 </div>
                 <div class="col-md-6" style="display: table-cell;
                 vertical-align: middle; min-height: 10em;">
@@ -166,7 +166,7 @@
         <div id="trois" class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img id="provisoire1" src="assets/Image/provisoire1.png" alt="">
+                    <img id="provisoire1" src="Image\provisoire1.png" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3 style="padding-left: 15%; padding-right: 15%; margin: 17% 0;">CESI Internship Finder offre
@@ -188,22 +188,22 @@
         <div class="container">
             <div class="row">
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo1.png" alt="" id="logos">
+                    <img src="Image\logo1.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo2.png" alt="" id="logos">
+                    <img src="Image\logo2.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo3.png" alt="" id="logos">
+                    <img src="Image\logo3.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo4.png" alt="" id="logos">
+                    <img src="Image\logo4.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo5.png" alt="" id="logos">
+                    <img src="Image\logo5.png" alt="" id="logos">
                 </div>
                 <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="assets/Image/logo6.png" alt="" id="logos">
+                    <img src="Image\logo6.png" alt="" id="logos">
                 </div>
             </div>
         </div>

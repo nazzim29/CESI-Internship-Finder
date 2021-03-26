@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-24 18:28:37
-  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\php\vue\navbar.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-26 13:03:11
+  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605b76c5679c43_22457095',
+  'unifunc' => 'content_605dcd7ff3d0d5_39541208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8e13efdb19bfeef893ba566af90bc4b0d33a8dcc' => 
+    '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
-      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\php\\vue\\navbar.tpl',
-      1 => 1616606916,
+      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
+      1 => 1616756435,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605dcd7ff3d0d5_39541208 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
             <li class="nav-item active">
                 <a class="nav-link text-white" href="#">ACCEUIL</a>
             </li>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,7 +104,7 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,7 +116,7 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#pilote" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,7 +128,7 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,7 +140,7 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#offre" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -152,14 +152,14 @@ function content_605b76c5679c43_22457095 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['role'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item">
                 <a class="nav-link text-white" href="#footer">Candidature</a>
             </li>
             <?php }?>
         </ul>
         <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit">
-            <a href="login.html" style="text-decoration: none;color: inherit;">Déconnexion </a>
+            <a href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
         </button>
     </div>
 </nav>

@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Permission Extends Db
 {
     protected $_id;
@@ -25,7 +25,9 @@ class Permission Extends Db
 
     }
     public function read(){
-
+        $req = $this->db->prepare("select * from permission");
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_ASSOC);
     }
     public function update(){
 

@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Avoir Extends Db
 {
     protected $_id_permission;
@@ -22,6 +22,12 @@ class Avoir Extends Db
     public  function setidpermission(int $idpermission)
     {
         $this->$_id_permission = $idpermission;
+    }
+    public function selectbyuser($s){
+        $req = $this->db->prepare("select Id_permission from avoir where Id_utilisateur = ?");
+        $req->bindvalue(1,$s['Id_utilisateur']);
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_ASSOC);
     }
     public function create(){
 

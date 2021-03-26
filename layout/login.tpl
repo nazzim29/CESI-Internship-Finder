@@ -5,7 +5,7 @@
     <title>Se Connecter</title>
     <link rel="icon" type="image/png" href="assets\Image\LOGOc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/fr-FR/assets/CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="CSS\login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 
@@ -215,13 +215,17 @@
                     </g>
                 </svg>
             </div>
-            <form action="#" method="POST">
+            <form action="\login" method="POST">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <input type="text" class="input" id="username" name="username" required>
+                        <input type="text" class="input" id="email" name="email"
+                        {if isset($emailvalue)}
+                            value = "{$emailvalue}"
+                        {/if}
+                        required>
                         <label for="username">
                             <span class="content-name">
                                 Nom d'utilisateur
@@ -234,7 +238,11 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                        <input type="password" class="input" id="pwd" name = "pwd" required>
+                        <input type="password" class="input" id="password" name = "password"
+                        {if isset($passwordvalue)}
+                            value = "{$passwordvalue}"
+                        {/if}
+                        required>
                         <label for="username">
                             <span class="content-name">
                                 Mot de passe
@@ -243,8 +251,12 @@
                     </div>
                 </div>
                 <div class="check-div">
-                    <input type="checkbox" id="rester-co" name="resterco"><i></i>
-                    <label for="rester-co">Se souvenir de moi</label>
+                    <input type="checkbox" id="remember" name="remember"
+                    {if isset($emailvalue) && isset($passwordvalue)} 
+                    checked 
+                    {/if}>
+                    <i></i>
+                    <label for="remember">Se souvenir de moi</label>
                 </div>
                 <input type="submit" class="btn" value="Se Connecter" id="loginbtn">
             </form>
@@ -255,7 +267,7 @@
     <script
         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
     <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
-    <script src="/fr-FR/assets/JS/login.js"></script>
+    <script src="JS\login.js"></script>
 </body>
 
 </html>

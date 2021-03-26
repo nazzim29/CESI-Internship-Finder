@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-24 14:55:50
-  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\php\vue\login.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-26 13:09:16
+  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605b44e617a419_66008036',
+  'unifunc' => 'content_605dceece1c9e9_17560762',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '561c25972f0ae03511f69d626ceea65fc7a54a56' => 
+    'c4d17a38ddf28f696599698fca95b2723de6b038' => 
     array (
-      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\php\\vue\\login.tpl',
-      1 => 1616593884,
+      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\login.tpl',
+      1 => 1616757591,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605dceece1c9e9_17560762 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -28,7 +28,7 @@ function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl)
     <title>Se Connecter</title>
     <link rel="icon" type="image/png" href="assets\Image\LOGOc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/fr-FR/assets/CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="CSS\login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 
@@ -238,13 +238,18 @@ function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl)
                     </g>
                 </svg>
             </div>
-            <form action="#" method="POST">
+            <form action="\login" method="POST">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <input type="text" class="input" id="username" name="username" required>
+                        <input type="text" class="input" id="email" name="email"
+                        <?php if ((isset($_smarty_tpl->tpl_vars['emailvalue']->value))) {?>
+                            value = "<?php echo $_smarty_tpl->tpl_vars['emailvalue']->value;?>
+"
+                        <?php }?>
+                        required>
                         <label for="username">
                             <span class="content-name">
                                 Nom d'utilisateur
@@ -257,7 +262,12 @@ function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl)
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                        <input type="password" class="input" id="pwd" name = "pwd" required>
+                        <input type="password" class="input" id="password" name = "password"
+                        <?php if ((isset($_smarty_tpl->tpl_vars['passwordvalue']->value))) {?>
+                            value = "<?php echo $_smarty_tpl->tpl_vars['passwordvalue']->value;?>
+"
+                        <?php }?>
+                        required>
                         <label for="username">
                             <span class="content-name">
                                 Mot de passe
@@ -266,8 +276,12 @@ function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
                 <div class="check-div">
-                    <input type="checkbox" id="rester-co" name="resterco"><i></i>
-                    <label for="rester-co">Se souvenir de moi</label>
+                    <input type="checkbox" id="remember" name="remember"
+                    <?php if ((isset($_smarty_tpl->tpl_vars['emailvalue']->value)) && (isset($_smarty_tpl->tpl_vars['passwordvalue']->value))) {?> 
+                    checked 
+                    <?php }?>>
+                    <i></i>
+                    <label for="remember">Se souvenir de moi</label>
                 </div>
                 <input type="submit" class="btn" value="Se Connecter" id="loginbtn">
             </form>
@@ -285,7 +299,7 @@ function content_605b44e617a419_66008036 (Smarty_Internal_Template $_smarty_tpl)
  src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="/fr-FR/assets/JS/login.js"><?php echo '</script'; ?>
+ src="JS\login.js"><?php echo '</script'; ?>
 >
 </body>
 

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-24 18:32:57
-  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\php\vue\home.tpl' */
+/* Smarty version 3.1.39, created on 2021-03-26 13:03:11
+  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605b77c9d3aaf6_64629251',
+  'unifunc' => 'content_605dcd7feaa962_65345200',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'db22ff85a51a2647ad7d11e246e419c0e300c7a9' => 
+    'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
-      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\php\\vue\\home.tpl',
+      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
       1 => 1616607174,
       2 => 'file',
     ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar.tpl' => 1,
   ),
 ),false)) {
-function content_605b77c9d3aaf6_64629251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605dcd7feaa962_65345200 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>

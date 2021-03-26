@@ -69,7 +69,7 @@
             <li class="nav-item active">
                 <a class="nav-link text-white" href="#">ACCEUIL</a>
             </li>
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,7 +81,7 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +93,7 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#pilote" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -105,7 +105,7 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -117,7 +117,7 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#offre" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -129,14 +129,14 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['role'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item">
                 <a class="nav-link text-white" href="#footer">Candidature</a>
             </li>
             {/if}
         </ul>
         <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit">
-            <a href="login.html" style="text-decoration: none;color: inherit;">Déconnexion </a>
+            <a href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
         </button>
     </div>
 </nav>
