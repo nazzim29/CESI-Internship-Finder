@@ -1,22 +1,22 @@
 
-$('input[type = radio][name=rate]').on('change',function(){
-    switch(this.value){
+$('input[type = radio][name=rate]').on('change', function () {
+    switch (this.value) {
         case "1":
-            document.getElementById("ressenti").innerHTML= "NUL";
+            document.getElementById("ressenti").innerHTML = "<h1>NUL</h1>";
             break;
         case "2":
-            document.getElementById("ressenti").innerHTML= "ASSEZ BIEN";
+            document.getElementById("ressenti").innerHTML = "<h1>ASSEZ BIEN</h1>";
             break;
         case "3":
-            document.getElementById("ressenti").innerHTML= "BIEN";
+            document.getElementById("ressenti").innerHTML = "<h1>BIEN</h1>";
             break;
         case "4":
-            document.getElementById("ressenti").innerHTML= "EXCELLENT";
+            document.getElementById("ressenti").innerHTML = "<h1>EXCELLENT</h1>";
             break;
         case "5":
-            document.getElementById("ressenti").innerHTML= "PARFAIT";
+            document.getElementById("ressenti").innerHTML = "<h1>PARFAIT</h1>";
             break;
     }
-    $('#comm').show();  
+    $('#comm').show();
 });
 $('#comm').hide();
