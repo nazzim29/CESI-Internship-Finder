@@ -14,6 +14,7 @@ class OffreController
         $smarty = new Smarty();
         $smarty->template_dir = 'layout';
         $smarty->compile_dir = 'tmp';
+        $smarty->assign('_SESSION',$_SESSION);
         $smarty->display('NewOffre.tpl');
     }
     public function afficher($postdata)

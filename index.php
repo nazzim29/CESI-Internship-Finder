@@ -7,7 +7,7 @@ include_once('controllers\EntrepriseController.php');
 include_once('controllers\OffreController.php');
 
 
-Root::add('/offre/New',function(){
+Route::add('/offre/New',function(){
     OffreController::indexnew();
 });
 Route::add('/home',function(){
