@@ -80,7 +80,7 @@
                     <a class="dropdown-item" href="\entreprise\new" id="item">Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx3',$_SESSION['current_user']['permission']) !== false) or $_SESSION['current_user']['type'] eq 'ETUDIANT'}
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item" href="\entreprise" id="item">Afficher</a>
                     {/if}
                 </div>
             </li>

@@ -62,7 +62,9 @@ class Entreprise Extends Db
     }
     public function read()
     {
-
+        $req = $this->db->prepare("select * from entreprise ");
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_OBJ);
     }
     public function update()
     {
