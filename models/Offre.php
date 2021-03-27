@@ -86,7 +86,22 @@ class Offre Extends Db
         $s=$req->fetchAll(PDO::FETCH_OBJ);
         return $s;
     }
+    public function create($postdata)
+{
+    $req=$this->db->prepare("insert into offre (Description,Duree_stage,Base_remuneration,Nb_places,Titre,Id_utilisateur,Id_entreprise) values(?,?,?,?,?,?,?)");
+    $req->biendvalue(1,$postdata["description"]);
+    $req->biendvalue(2,$postdata["duree_stage"]);
+    $req->biendvalue(3,$postdata["base_remuneration"]);
+    $req->biendvalue(4,$postdata["nb_places"]);
+    $req->biendvalue(5,$postdata["titre"]);
+    $req->biendvalue(6,$_SESSION["current_user"]["id"]);
+    $req->biendvalue(7,$postdata["id_entreprise"]);
+    $req->execute();
+    $req=$this->db->prepare("LAST_INSERT_ID()");
+    $req->execute();
+    return $req->fetchAll();
 
+}
     
 
 }

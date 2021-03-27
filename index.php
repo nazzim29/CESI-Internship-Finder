@@ -10,6 +10,16 @@ include_once('controllers\OffreController.php');
 Route::add('/offre/New',function(){
     OffreController::indexnew();
 });
+Route::add('/offre/New',function(){
+    OffreController::post(array(
+        "Competence"=>$_POST["competence"],
+        "identreprise"=>$_POST["identreprise"],
+        "promotion"=>$_POST["promotion"],
+        "dureestage"=>$_POST["dureestage"],
+        "basereemu"=>$_POST["basereemu"],
+        "nbplaces"=>$_POST["nbplaces"]
+    ));
+},"POST");
 Route::add('/home',function(){
     //affichage de la dashboard
     // if(isset($_SESSION['email'])){
