@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Requiert Extends Db
 {
     protected $_id_competence;
