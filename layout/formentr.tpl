@@ -15,35 +15,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="\css\star_rating.css">
-    <link rel="stylesheet" href="\css\formentrep.css">
+
+    <link rel="stylesheet" href="../CSS/star_rating.css">
+    <link rel="stylesheet" href="../CSS/formstyle.css">
 </head>
 
 <body>
     {include 'navbar.tpl'}
     <div class="container">
-        <form id="create" action="" method="POST" >
+        <form id="create">
             <h1 id="titre">Creation d'Entreprise</h1>
             <div class="row">
                 <div class="form-group">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="raisonsociale" name="raison_sociale" class="form-control" required>
+                    <input type="text" id="nom" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="secteur">Secteur d'activité</label><br>
-                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" required>
+                    <input type="text" id="secteur" class="form-control" required>
                 </div>
 
 
                 <div class="form-group">
-                    <label for="adr">Localité</label><br>
-                    <input type="text" id="localite" name="localite" class="form-control" required>
+                    <label for="adr">Adresse</label><br>
+                    <input type="text" id="adr" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Adresse Email</label><br>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
+                    <input type="number" id="nbr" class="form-control" required>
                 </div>
 
                 <label for="nbr">Confiance du pilote</label><br>
@@ -60,8 +61,8 @@
                         <input type="radio" name="rate" id="rate-1" value="1">
                         <label for="rate-1" class="fas fa-star"></label>
                     </div>
-                    <h1 id="ressenti"></h1>
-                    <textarea cols="45" placeholder="Laisser un commentaire..." name="commentaire"></textarea>
+                    <div id="ressenti"></div>
+                    <textarea cols="45" placeholder="Laisser un commentaire..."></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer
@@ -71,12 +72,15 @@
             </div>
         </form>
     </div>
-    {include 'footer.tpl'}
+
+    <!--footer-->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="JS/star_rating.js"></script>
+    <script src="../JS/star_rating.js"></script>
 </body>
 
-</html>
+
+</html> 

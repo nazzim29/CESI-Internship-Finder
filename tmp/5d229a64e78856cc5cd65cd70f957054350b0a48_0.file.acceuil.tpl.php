@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 12:23:05
+/* Smarty version 3.1.39, created on 2021-03-28 13:01:16
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606059093271b3_40985181',
+  'unifunc' => 'content_606061fc669a13_40873422',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d229a64e78856cc5cd65cd70f957054350b0a48' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1616926982,
+      1 => 1616927357,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_606059093271b3_40985181 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606061fc669a13_40873422 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -132,8 +132,7 @@ function content_606059093271b3_40985181 (Smarty_Internal_Template $_smarty_tpl)
                                 </div>
                             </li> -->
                 </ul>
-                <button id="sn" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="/login"
-                        style="text-decoration: none;color: inherit;">SE CONNECTER </a></button>
+                <a id="sn" class="d-inline btn btn-outline-light btn-rounded" href="/login" style="text-decoration: none;">SE CONNECTER </a>
             </div>
         </nav>
     </header>
