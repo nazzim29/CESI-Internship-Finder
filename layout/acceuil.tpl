@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS\acceuil.css">
+    <link rel="stylesheet" href="CSS/acceuil.css">
     <title>Page d'acceuil</title>
 </head>
 
@@ -109,7 +109,7 @@
                                 </div>
                             </li> -->
                 </ul>
-                <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="\login"
+                <button id="sn" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="\login"
                         style="text-decoration: none;color: inherit;">SE CONNECTER </a></button>
             </div>
         </nav>
@@ -188,29 +188,29 @@
         <h1 id="titre">Nos entreprises partenaires</h1>
         <div class="container">
             <div class="row">
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo1.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo1.png" alt="" class="logos">
                 </div>
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo2.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo2.png" alt="" class="logos">
                 </div>
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo3.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo3.png" alt="" class="logos">
                 </div>
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo4.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo4.png" alt="" class="logos">
                 </div>
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo5.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo5.png" alt="" class="logos">
                 </div>
-                <div id="partenaire" class="col-lg-2 col-md-4 col-sm-6">
-                    <img src="Image\logo6.png" alt="" id="logos">
+                <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
+                    <img src="Image\logo6.png" alt="" class="logos">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="footer" role="contentinfo">
+    <footer>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
