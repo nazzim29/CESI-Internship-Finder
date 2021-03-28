@@ -1,13 +1,29 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-input[type=radio]{
+ /*-----rating system-----*/
+ .rating-system{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .rating-system textarea{
+    width:100%;
+    margin-bottom: 2em;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid #F17877;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+    background: white;
+    color: #414040;
+    resize: none;
+    border-radius: 10px;
+  }
+  input[type=radio]{
     display: none;
-}
-.stars-container{
+  }
+  .stars-container{
     width: 350px;
     background: #111;
     padding: 20px 25px;
@@ -17,50 +33,50 @@ input[type=radio]{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.stars-container .stars-widget input{
+  }
+  .stars-container .stars-widget input{
     display: none;
-}
-.stars-widget label{
+  }
+  .stars-widget label{
     font-size: 35px;
     color: #DCDDDF;
     padding: 5px;
     float: right;
     transition: all 0.2s ease;
-}
-.stars-widget input:not(:checked) ~ label:hover, 
-.stars-widget input:not(:checked) ~ label:hover ~ label{
+  }
+  .stars-widget input:not(:checked) ~ label:hover, 
+  .stars-widget input:not(:checked) ~ label:hover ~ label{
     color: #fd4;
-}
-input:checked ~ label{
+  }
+  input:checked ~ label{
     color: #fd4;
-}
-input#rate-5:checked ~ label{
+  }
+  input#rate-5:checked ~ label{
     color: #fe7;
     text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
     
-}
-input#rate-5:hover ~ label{
+  }
+  input#rate-5:hover ~ label{
     color: #fe7;
     text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
-}
-input#rate-4:checked ~ label{
+  }
+  input#rate-4:checked ~ label{
     color: #fe7;
     text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
-}
-input#rate-4:hover ~ label{
+  }
+  input#rate-4:hover ~ label{
     color: #fe7;
     text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
-}
-input#rate-3:checked ~ label{
+  }
+  input#rate-3:checked ~ label{
     color: #fe7;
     text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
-}
-input#rate-3:hover ~ label{
+  }
+  input#rate-3:hover ~ label{
     color: #fe7;
     text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
-}
-form h1{
+  }
+  #ressenti{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     font-size: 25px;
@@ -71,18 +87,9 @@ form h1{
     transition: all 0.2s ease;
     margin-bottom: 1em;
     
-}
-form textarea{
-    height: 100px;
-    width: 60%;
-    overflow: hidden;
-    border: 1px solid #F17877;
-    outline: none;
-    padding: 5px;
-    font-size: 15px;
-    background: white;
-    color: #414040;
-    resize: none;
-    border-radius: 10px;
-}
-
+  }
+  
+  #area{
+    width: 100%;
+    margin-left: 0;
+  }

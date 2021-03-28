@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body{
@@ -42,7 +41,7 @@ body{
   margin: 8% 10%;
   box-shadow: 0px 0px 10px grey;
 }
-.form-group input{
+.form-group input[type="text"], input[type="password"]{
   width: 100%;
   padding: 0.5em;
   outline: none;
@@ -54,110 +53,45 @@ body{
   border-color: #F17877;
   box-shadow: inset 0 1px 1px white, 0 0 8px #F17877;
 }
+
 .form-group button[type="submit"]{
   width: 100%;
-  
+  margin-top: 1em;  
 }
 #btncreate{
   display: flex;
   justify-content: center;
 }
-/*-----rating system-----*/
-.rating-system{
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.rating-system textarea{
-  width:100%;
-  margin-bottom: 2em;
-  height: 100px;
-  overflow: hidden;
-  border: 1px solid #F17877;
-  outline: none;
-  padding: 5px;
-  font-size: 15px;
-  background: white;
-  color: #414040;
-  resize: none;
-  border-radius: 10px;
-}
-input[type=radio]{
-  display: none;
-}
-.stars-container{
-  width: 350px;
-  background: #111;
-  padding: 20px 25px;
-  border:1px solid #444;
-  border-radius: 10px;
+
+/*---checkboxes:promotions+permission---*/
+.checkbox{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 1em;
+  border:solid 1px #F17877;
+  border-radius: 5px;
+  margin-top: 0.5em;
 }
-.stars-container .stars-widget input{
-  display: none;
+ul.checkbox{
+  list-style: none;
 }
-.stars-widget label{
-  font-size: 35px;
-  color: #DCDDDF;
-  padding: 5px;
-  float: right;
-  transition: all 0.2s ease;
+ul.checkbox li{
+  display: inline;
+  margin-inline-end: 2em;
 }
-.stars-widget input:not(:checked) ~ label:hover, 
-.stars-widget input:not(:checked) ~ label:hover ~ label{
-  color: #fd4;
+ul.checkbox li label{
+  display: inline-block;
+  white-space:nowrap;
 }
-input:checked ~ label{
-  color: #fd4;
+ul.checkbox input[type="checkbox"]{
+  margin-right: 0.4em;
 }
-input#rate-5:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
-  
-}
-input#rate-5:hover ~ label{
-  color: #fe7;
-  text-shadow: 0 0 20px rgba(255, 220, 65, 0.966);
-}
-input#rate-4:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
-}
-input#rate-4:hover ~ label{
-  color: #fe7;
-  text-shadow: 0 0 15px rgba(255, 220, 65, 0.966);
-}
-input#rate-3:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
-}
-input#rate-3:hover ~ label{
-  color: #fe7;
-  text-shadow: 0 0 10px rgba(255, 220, 65, 0.966);
-}
-#ressenti{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 100%;
-  font-size: 25px;
-  color: #fe7;
-  margin: 5px;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.2s ease;
-  margin-bottom: 1em;
-  
+ul.checkbox li input[type="checkbox"]:checked +label{
+  color: #212529;  
 }
 
-#area{
-  width: 100%;
-  margin-left: 0;
-}
-/*---creer entreprise---*/
+
+/*---titre du formulaire---*/
 #titre{
   max-width: 100%;
   color: #446b50;
@@ -215,8 +149,20 @@ input#rate-3:hover ~ label{
       margin-right: 6em;
       margin: 0 2em;
   }
+  ul.checkbox li{
+    display: inline;
+    margin-inline-end: 1em;
+  }
 }
-/*---footer---*/
+@media (max-width: 300px){
+  ul.checkbox li{
+    display: inline;
+    margin-inline-end: 0.5em;
+  }
+}
+
+
+/*---footer---
 footer{
   background: rgb(65, 64, 64);
   color: white;
@@ -262,7 +208,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 letter-spacing: 0.15em;
 font-size: 16px;
 }
-/*form*/
+/*form
 #prblm{
 display: flex;
 flex-direction: column;
@@ -301,7 +247,7 @@ color: white;
 .footer-pad #network{
 margin-bottom: 1.5em;
 }
-/*Social Icon*/
+/*Social Icon
 ul.social-network i{
 font-size: 20px;
 }
@@ -380,4 +326,4 @@ ul.social-circle li{
 }
 .social-network a {
   background-color: #F17877;
-}
+}*/
