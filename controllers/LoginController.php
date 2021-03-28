@@ -55,6 +55,7 @@ class LoginController
                 }
             }
             $_SESSION['current_user'] = array(
+                'id' => $s['Id_utilisateur'],
                 'email' =>$s['Email'],
                 'password' =>$postdata['password'],
                 'type' =>$s['TYPE'],

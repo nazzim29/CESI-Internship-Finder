@@ -30,9 +30,14 @@ class Note Extends Db
     {
         $this->$_note = $note;
     }
-    public function create()
+    public function create($postdata)
     {
-        # code...
+        $req = $this->db->prepare("insert into note(Id_utilisateur,Id_entreprise,Note,Commentaire) values (?,?,?,?)");
+        $req->bindvalue(1,$postdata['id_utilisateur']);
+        $req->bindvalue(2,$postdata['id_entreprise']);
+        $req->bindvalue(3,$postdata['rate']);
+        $req->bindvalue(4,$postdata['commentaire']);
+        $req->execute();
     }
     public function read()
     {

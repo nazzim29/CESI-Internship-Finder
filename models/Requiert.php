@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Requiert Extends Db
 {
     protected $_id_competence;
@@ -22,4 +22,12 @@ class Requiert Extends Db
     {
         $this->$_id_offre = $id;
     }
+    public function post($postdata)
+    {
+        $req=$this->db->prepare("INSERT INTO Requiert(Id_competence,Id_offre) values(?,?)");
+        $req->bindvalue(1,$postdata["id_competence"]);
+        $req->bindvalue(2,$postdata["id_offre"]);
+        $req->execute();
+    }
 }
+

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 16:29:28
+/* Smarty version 3.1.39, created on 2021-03-27 13:28:16
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605dfdd8bef085_29097792',
+  'unifunc' => 'content_605f24e0519c22_15678949',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1616772248,
+      1 => 1616848094,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605dfdd8bef085_29097792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_605f24e0519c22_15678949 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
 <link rel="stylesheet" href="CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -103,7 +103,7 @@ function content_605dfdd8bef085_29097792 (Smarty_Internal_Template $_smarty_tpl)
                     <a class="dropdown-item" href="\entreprise\new" id="item">Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false) || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item" href="\entreprise" id="item">Afficher</a>
                     <?php }?>
                 </div>
             </li>

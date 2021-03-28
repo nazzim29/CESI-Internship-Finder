@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Offre Extends Db
 {
     protected $_id;
@@ -72,8 +72,37 @@ class Offre Extends Db
     {
         $this->$_titre = $titre;
     }
+
     public function setidentreprise(int $id)
     {
-        $this->$_id_entreprise = $id;
+       $this->$_id_entreprise = $id;
     }
+
+    public function select($postdata)
+    {
+        $req= $this->db->prepare("select * from offre where Titre = ?");
+        $req->bindvalue(1,$postdata["titre"]);
+        $req->execute();
+        $s=$req->fetchAll(PDO::FETCH_OBJ);
+        return $s;
+    }
+    public function create($postdata)
+{
+    $req=$this->db->prepare("insert into offre (Description,Duree_stage,Base_remuneration,Nb_places,Titre,Id_utilisateur,Id_entreprise) values(?,?,?,?,?,?,?)");
+    $req->biendvalue(1,$postdata["description"]);
+    $req->biendvalue(2,$postdata["duree_stage"]);
+    $req->biendvalue(3,$postdata["base_remuneration"]);
+    $req->biendvalue(4,$postdata["nb_places"]);
+    $req->biendvalue(5,$postdata["titre"]);
+    $req->biendvalue(6,$_SESSION["current_user"]["id"]);
+    $req->biendvalue(7,$postdata["id_entreprise"]);
+    $req->execute();
+    $req=$this->db->prepare("LAST_INSERT_ID()");
+    $req->execute();
+    return $req->fetchAll();
+
 }
+    
+
+}
+
