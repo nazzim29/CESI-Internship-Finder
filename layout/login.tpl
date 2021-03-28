@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <title>Se Connecter</title>
-    <link rel="icon" type="image/png" href="assets\Image\LOGOc.png" />
+    <link rel="icon" type="image/png" href="Image/LOGOc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS\login.css">
+    <link rel="stylesheet" type="text/css" href="CSS/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 
@@ -13,8 +13,8 @@
 
 <body>
     <div class="container">
-        <div class="left-container" include="logo_anim.html">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1574.000000 579.000000"
+        <div class="left-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1574.000000 579.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,579.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M14155 5779 c-312 -46 -631 -208 -837 -427 -125 -134 -250 -333 -308
@@ -117,7 +117,7 @@
         </div>
         <div class="login-content">
             <div class="usr-icon">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600.000000 579.000000"
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600.000000 579.000000"
                     preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,579.000000) scale(0.100000,-0.100000)" fill="#000000"
                         stroke="none">
@@ -215,7 +215,7 @@
                     </g>
                 </svg>
             </div>
-            <form action="\login" method="POST">
+            <form action="/login" method="POST">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
@@ -226,7 +226,7 @@
                             value = "{$emailvalue}"
                         {/if}
                         required>
-                        <label for="username">
+                        <label for="email">
                             <span class="content-name">
                                 Nom d'utilisateur
                             </span>
@@ -270,7 +270,7 @@
     <script
         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
     <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
-    <script src="JS\login.js"></script>
+    <script src="JS/login.js"></script>
 </body>
 
 </html>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 12:31:02
+/* Smarty version 3.1.39, created on 2021-03-28 15:54:48
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60605ae626fae1_88845275',
+  'unifunc' => 'content_60608aa88143b1_32427565',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1616927447,
+      1 => 1616937855,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60605ae626fae1_88845275 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60608aa88143b1_32427565 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,7 +33,7 @@ function content_60605ae626fae1_88845275 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="CSS\home.css" rel="stylesheet">
+    <link href="CSS/home.css" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>

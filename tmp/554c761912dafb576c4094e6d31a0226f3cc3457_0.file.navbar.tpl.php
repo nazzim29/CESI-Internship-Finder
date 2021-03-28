@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 13:06:57
+/* Smarty version 3.1.39, created on 2021-03-28 15:54:48
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6060635126e9a7_58013998',
+  'unifunc' => 'content_60608aa894a932_63888133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1616929596,
+      1 => 1616939576,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6060635126e9a7_58013998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60608aa894a932_63888133 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
 <link rel="stylesheet" href="../CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -91,74 +91,74 @@ function content_6060635126e9a7_58013998 (Smarty_Internal_Template $_smarty_tpl)
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link text-white" href="\home">ACCEUIL</a>
+                <a class="nav-link text-white" href="/home">ACCEUIL</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#entreprise" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Entreprise
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item" href="\entreprise\new" id="item">Créer</a>
+                    <a class="dropdown-item item" href="/entreprise/new">Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false) || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
-                    <a class="dropdown-item" href="\entreprise" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="/entreprise">Afficher</a>
                     <?php }?>
                 </div>
             </li>
             <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#etudiant"  role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx23',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx22',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                     <?php }?>
                 </div>
             </li>
             <?php }?>
             <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#pilote" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#pilote" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pilote
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             <?php }?>
             <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE') {?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#delegue" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Délégué
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             <?php }?>
             <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#offre" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Offre
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx9',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                     <?php }?>
                 </div>
             </li>
@@ -168,18 +168,16 @@ function content_6060635126e9a7_58013998 (Smarty_Internal_Template $_smarty_tpl)
                 <a class="nav-link text-white" href="#footer">Candidature</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
-                    <a class="dropdown-item" href="#" id="item">Mes Condidatures</a>
+                    <a class="dropdown-item item" href="#" >Mes Condidatures</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
-                    <a class="dropdown-item" href="#" id="item">Condidatures en cours</a>
+                    <a class="dropdown-item item" href="#" >Condidatures en cours</a>
                     <?php }?>
                 </div>
             </li>
             <?php }?>
         </ul>
-        <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit">
-            <a href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
-        </button>
+        <a id="dl" class="d-inline btn btn-outline-light btn-rounded" href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
     </div>
 </nav>
 </header><?php }
