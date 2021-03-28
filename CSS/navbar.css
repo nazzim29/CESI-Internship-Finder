@@ -32,10 +32,10 @@ body{
     color: white;
     font-family: 'Nunito', sans-serif;
 }
-#navbarDropdown{
+.navbarDropdown{
     color: white;
 }
-#item{
+.item{
     color: #446b50;
 }
 .dropdown-menu{
