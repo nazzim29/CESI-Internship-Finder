@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 19:37:22
+/* Smarty version 3.1.39, created on 2021-03-28 10:58:17
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605e29e23a32b3_36754836',
+  'unifunc' => 'content_60604529464b03_32221303',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d229a64e78856cc5cd65cd70f957054350b0a48' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1616779180,
+      1 => 1616921890,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605e29e23a32b3_36754836 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60604529464b03_32221303 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -147,7 +148,7 @@ function content_605e29e23a32b3_36754836 (Smarty_Internal_Template $_smarty_tpl)
                         le centre auquel vous appartenez ou même votre pays, CESI Internship Finder est
                         LE bon endroit pour trouver le stage qui vous convient le mieux.
                     </p>
-                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded">Télécharger</button>
+                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded" onclick="installPWA(deferredPrompt)">Télécharger</button>
                 </div>
             </div>
         </div>

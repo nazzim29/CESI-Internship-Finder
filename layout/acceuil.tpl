@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -124,7 +125,7 @@
                         le centre auquel vous appartenez ou même votre pays, CESI Internship Finder est
                         LE bon endroit pour trouver le stage qui vous convient le mieux.
                     </p>
-                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded">Télécharger</button>
+                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded" onclick="installPWA(deferredPrompt)">Télécharger</button>
                 </div>
             </div>
         </div>
