@@ -109,8 +109,7 @@
                                 </div>
                             </li> -->
                 </ul>
-                <button id="sn" class="d-inline btn btn-outline-light btn-rounded" type="submit"><a href="/login"
-                        style="text-decoration: none;color: inherit;">SE CONNECTER </a></button>
+                <a id="sn" class="d-inline btn btn-outline-light btn-rounded" href="/login" style="text-decoration: none;">SE CONNECTER </a>
             </div>
         </nav>
     </header>

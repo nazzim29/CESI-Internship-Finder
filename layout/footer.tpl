@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="CSS\footer.css">
+<link rel="stylesheet" href="CSS/footer.css">
 
-<footer id="footer" role="contentinfo">
+<footer style="width:100%;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">

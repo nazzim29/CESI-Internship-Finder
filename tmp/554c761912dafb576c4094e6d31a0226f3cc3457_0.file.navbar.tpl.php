@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 13:28:16
+/* Smarty version 3.1.39, created on 2021-03-28 13:06:57
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605f24e0519c22_15678949',
+  'unifunc' => 'content_6060635126e9a7_58013998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1616848094,
+      1 => 1616929596,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605f24e0519c22_15678949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6060635126e9a7_58013998 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
-<link rel="stylesheet" href="CSS/navbar.css">
+<link rel="stylesheet" href="../CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"

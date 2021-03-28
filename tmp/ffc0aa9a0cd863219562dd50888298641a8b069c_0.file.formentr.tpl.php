@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 18:36:53
+/* Smarty version 3.1.39, created on 2021-03-28 13:23:22
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\formentr.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605e1bb504c256_28422055',
+  'unifunc' => 'content_6060672a7d2816_92622769',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ffc0aa9a0cd863219562dd50888298641a8b069c' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\formentr.tpl',
-      1 => 1616780211,
+      1 => 1616930596,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:navbar.tpl' => 1,
-    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6060672a7d2816_92622769 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -40,36 +39,37 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="\css\star_rating.css">
-    <link rel="stylesheet" href="\css\formentrep.css">
+
+    <link rel="stylesheet" href="../CSS/star_rating.css">
+    <link rel="stylesheet" href="../CSS/formstyle.css">
 </head>
 
 <body>
     <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <form id="create" action="" method="POST" >
+        <form id="create">
             <h1 id="titre">Creation d'Entreprise</h1>
             <div class="row">
                 <div class="form-group">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="raisonsociale" name="raison_sociale" class="form-control" required>
+                    <input type="text" id="nom" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="secteur">Secteur d'activité</label><br>
-                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" required>
+                    <input type="text" id="secteur" class="form-control" required>
                 </div>
 
 
                 <div class="form-group">
-                    <label for="adr">Localité</label><br>
-                    <input type="text" id="localite" name="localite" class="form-control" required>
+                    <label for="adr">Adresse</label><br>
+                    <input type="text" id="adr" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Adresse Email</label><br>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
+                    <input type="number" id="nbr" class="form-control" required>
                 </div>
 
                 <label for="nbr">Confiance du pilote</label><br>
@@ -86,8 +86,8 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
                         <input type="radio" name="rate" id="rate-1" value="1">
                         <label for="rate-1" class="fas fa-star"></label>
                     </div>
-                    <h1 id="ressenti"></h1>
-                    <textarea cols="45" placeholder="Laisser un commentaire..." name="commentaire"></textarea>
+                    <div id="ressenti"></div>
+                    <textarea cols="45" placeholder="Laisser un commentaire..."></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer
@@ -97,8 +97,6 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </form>
     </div>
-    <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
 >
@@ -112,9 +110,10 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="JS/star_rating.js"><?php echo '</script'; ?>
+ src="../JS/star_rating.js"><?php echo '</script'; ?>
 >
 </body>
+<!--footer-->
 
-</html><?php }
+</html> <?php }
 }
