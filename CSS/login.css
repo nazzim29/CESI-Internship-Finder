@@ -75,7 +75,7 @@ body{
     stroke-dashoffset: 0;
     animation: logoanim 3s linear forwards;
 }
-#username, #pwd{
+#email, #password{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 17px;
     color: rgb(46, 46, 46);
