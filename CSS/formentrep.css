@@ -14,56 +14,7 @@ body{
     font-family: sans-serif;
 }
 
-/*navbar*/
-.navbar{
-    background-image:linear-gradient(to right, #64a587, #446b50) ;
-    padding: 0 ;
-}
-#Calque_1{
-    fill: white;
-}
-#Calque_1{
-    width: 10em;
-}
-.navbar-nav li{
-    font-size: 100%;
-    padding: 0 10px;
-}
-.navbar-nav li a{
-    color: #ffffff  ;
-    font-weight: 600;
-}
-.navbar-toggler{
-    outline: none  ;
-    color:white;
-}
 
-
-/*formulaire de creation*/
-#create{
-    box-shadow: 0px 0px 10px gray;
-    padding: 1em;
-    margin: 8% 20%;
-}
-.form-control{
-    width: 100%;
-    padding: 0.5em;
-    outline: none;
-    border-radius: 5px;
-    border-color: #F17877;
-    margin-left: 0;
-}
-.form-control:focus {
-    border-color: #F17877;
-    box-shadow: inset 0 1px 1px white, 0 0 8px #F17877;
-}
-option:hover { 
-  background-color: #F17877 ;
-  color: white;
-}
-#btnv {
-  margin-top: 3em ;
-}
 .rating-system{
     justify-content: center;
     display: flex;

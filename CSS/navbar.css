@@ -20,7 +20,7 @@ body{
     padding: 0 10px;
 }
 .navbar-nav li a{
-    color: #ffffff  ;
+    color: white  ;
     font-weight: 600;
 }
 .navbar-toggler{
@@ -32,21 +32,22 @@ body{
     color: white;
     font-family: 'Nunito', sans-serif;
 }
-#navbarDropdown{
-    color: white;
-}
-#item{
+.item{
     color: #446b50;
 }
 .dropdown-menu{
     border-color: #446b50;
 }
 
-#dl{
+.dl{
     font-size: 130%;
     margin: 10px 10px;
     
 }
-#dl:hover{
+.dl:hover{
     color: #446b50;
+}
+
+.nav-link{
+    color: white;
 }

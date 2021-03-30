@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 18:36:53
+/* Smarty version 3.1.39, created on 2021-03-30 15:56:27
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\formentr.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605e1bb504c256_28422055',
+  'unifunc' => 'content_60632e0b893d37_00017225',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ffc0aa9a0cd863219562dd50888298641a8b069c' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\formentr.tpl',
-      1 => 1616780211,
+      1 => 1617112584,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:navbar.tpl' => 1,
-    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60632e0b893d37_00017225 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -40,65 +39,68 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="\css\star_rating.css">
-    <link rel="stylesheet" href="\css\formentrep.css">
+
+    <link rel="stylesheet" href="../../CSS/star_rating.css">
+    <link rel="stylesheet" href="../../CSS/formstyle.css">
 </head>
 
 <body>
     <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <form id="create" action="" method="POST" >
-            <h1 id="titre">Creation d'Entreprise</h1>
+        <form enctype="multipart/form-data" id="create" method="POST">
+            <h1 id="titre"><?php if (!(isset($_smarty_tpl->tpl_vars['en']->value))) {?>Creation<?php } else { ?>Modification<?php }?> d'Entreprise</h1>
+            <?php if ((isset($_smarty_tpl->tpl_vars['erreur']->value))) {?>
+            <label><?php echo $_smarty_tpl->tpl_vars['erreur']->value;?>
+</label>
+            <?php }?>
             <div class="row">
                 <div class="form-group">
-                    <label for="nom">Nom</label><br>
-                    <input type="text" id="raisonsociale" name="raison_sociale" class="form-control" required>
+                    <label for="nom">Raison Sociale</label><br>
+                    <input type="text" id="raison_sociale" name="raison_sociale" class="form-control" <?php if ((isset($_smarty_tpl->tpl_vars['en']->value->Raison_social))) {?> value = "<?php echo $_smarty_tpl->tpl_vars['en']->value->Raison_social;?>
+"<?php }?> required>
                 </div>
 
                 <div class="form-group">
                     <label for="secteur">Secteur d'activité</label><br>
-                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" required>
+                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" <?php if ((isset($_smarty_tpl->tpl_vars['en']->value->Secteur_activite))) {?> value = "<?php echo $_smarty_tpl->tpl_vars['en']->value->Secteur_activite;?>
+"<?php }?> required>
                 </div>
 
 
                 <div class="form-group">
                     <label for="adr">Localité</label><br>
-                    <input type="text" id="localite" name="localite" class="form-control" required>
+                    <input type="text" id="adr" name="localite" class="form-control" <?php if ((isset($_smarty_tpl->tpl_vars['en']->value->Localite))) {?> value = "<?php echo $_smarty_tpl->tpl_vars['en']->value->Localite;?>
+"<?php }?> required>
                 </div>
-
+                
                 <div class="form-group">
                     <label for="email">Adresse Email</label><br>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="email" class="form-control" <?php if ((isset($_smarty_tpl->tpl_vars['en']->value->Email))) {?> value = "<?php echo $_smarty_tpl->tpl_vars['en']->value->Email;?>
+"<?php }?> required>
                 </div>
 
-                <label for="nbr">Confiance du pilote</label><br>
-                <div class="rating-system">
-                    <div class="stars-widget">
-                        <input type="radio" name="rate" id="rate-5" value="5">
-                        <label for="rate-5" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-4" value="4">
-                        <label for="rate-4" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-3" value="3">
-                        <label for="rate-3" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-2" value="2">
-                        <label for="rate-2" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-1" value="1">
-                        <label for="rate-1" class="fas fa-star"></label>
-                    </div>
-                    <h1 id="ressenti"></h1>
-                    <textarea cols="45" placeholder="Laisser un commentaire..." name="commentaire"></textarea>
+                <div class="form-group">
+                    <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
+                    <input type="number" id="nbr" name ="nbr" class="form-control" <?php if ((isset($_smarty_tpl->tpl_vars['en']->value->Nb_stage))) {?> value = "<?php echo $_smarty_tpl->tpl_vars['en']->value->Nb_stage;?>
+"<?php }?> required>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer
-                        Entreprise
+                    <label for="file">Uploader un logo</label><br>
+                    <input type="file" id="file" name="logo" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sample btn-rounded">
+                        <i class="fas fa-plus"></i> 
+                        <?php if (!(isset($_smarty_tpl->tpl_vars['en']->value))) {?>Créer Entreprise<?php } else { ?>Enregistrer<?php }?>
                     </button>
                 </div>
             </div>
         </form>
     </div>
-    <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+
+    <!--footer-->
+    
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
 >
@@ -112,9 +114,10 @@ function content_605e1bb504c256_28422055 (Smarty_Internal_Template $_smarty_tpl)
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="JS/star_rating.js"><?php echo '</script'; ?>
+ src="../JS/star_rating.js"><?php echo '</script'; ?>
 >
 </body>
 
-</html><?php }
+
+</html> <?php }
 }

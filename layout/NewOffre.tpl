@@ -15,13 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="..\CSS\formstyle.css">
+    <link rel="stylesheet" href="../CSS/formstyle.css">
 </head>
 
 <body>
 {include 'navbar.tpl'}
     <div class="container">
-        <form id="create">
+        <form id="create" method="POST">
             <h1 id="titre">Creation d'une offre</h1>
             <div class="row">
                 <div class="form-group">
@@ -40,13 +40,29 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="pro">Promotion</label><br>
-                    <input type="text" id="pro" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dateoffre">Date de l'ofrre </label><br>
-                    <input type="date" id="dateoffre" class="form-control" required>
+                    <label>Promotions concernées</label>
+                    <ul class="checkbox">
+                        <li>
+                            <input type="checkbox" id="pone" name="Promotions[]" value="A1">
+                            <label for="pone">A1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ptwo" name="Promotions[]" value="A2">
+                            <label for="ptwo">A2</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pthree" name="Promotions[]" value="A3">
+                            <label for="pthree">A3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pfour" name="Promotions[]" value="A4">
+                            <label for="pfour">A4</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pfive" name="Promotions[]" value="A5">
+                            <label for="pfive">A5</label>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="form-group">
@@ -72,13 +88,15 @@
             </div>
         </form>
     </div>
+    <!--footer-->
+    {include 'footer.tpl'}
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
-{include 'footer.tpl'}
-<!--footer-->
+
 
 
 </html>

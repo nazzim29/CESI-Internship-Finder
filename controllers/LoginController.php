@@ -2,6 +2,7 @@
 require_once('models\Utilisateur.php');
 require_once('models\Avoir.php');
 require_once('models\Permission.php');
+require_once('view\View.php');
 require_once('libs\smarty-3.1.39\libs\Smarty.class.php');
 class LoginController
 {
@@ -15,17 +16,17 @@ class LoginController
     }
     public function get()
     {
-        $smarty = new Smarty();
-        $smarty->template_dir = 'layout';
-        $smarty->compile_dir = 'tmp';
         if(isset($_SESSION['current_user'])){
             header('Location: /home');
         }else{
+            $param = null;
             if(isset($_COOKIE['cesiifemail']) & isset($_COOKIE['cesiifpassword'])){
-                $smarty->assign('passwordvalue',$_COOKIE['cesiifpassword']);
-                $smarty->assign('emailvalue',$_COOKIE['cesiifemail']);
+                $param = array(
+                    'passwordvalue' => $_COOKIE['cesiifpassword'],
+                    'emailvalue' => $_COOKIE['cesiifemail']
+                );
             }
-            $smarty->display('login.tpl');
+            View::display('login',$param);
         }
     }
 
@@ -34,12 +35,10 @@ class LoginController
         $user = new Utilisateur();  
         $s = $user->selectbyemail($postdata);
         if($s == false){
-            $smarty = new Smarty();
-            $smarty->template_dir = 'layout';
-            $smarty->compile_dir = 'tmp';
-            $smarty->assign('error','utilisateur inconnue');
-            $smarty->display('login.tpl');
-        }else if(password_verify($postdata['password'],$s['PASSWORD'])){
+            View::display('login',array(
+                'error'=>'utilisateur inconnue'
+            ));
+        }else if(password_verify($postdata['password'],$s['Password'])){
             if(isset($postdata['remember'])){
                 setcookie('cesiifemail',$postdata['email']);
                 setcookie('cesiifpassword',$postdata['password']);
@@ -58,18 +57,18 @@ class LoginController
                 'id' => $s['Id_utilisateur'],
                 'email' =>$s['Email'],
                 'password' =>$postdata['password'],
-                'type' =>$s['TYPE'],
+                'type' =>$s['Type'],
                 'nom' =>$s['Nom'],
                 'prenom' =>$s['Prenom'],
-                'permission' => $usrperm
+                'permission' => $usrperm,
+                'promotion' => $s['Promotion'],
+                'id_centre' => $s['Id_centre']
             );
             header('Location: home');
         }else{
-            $smarty = new Smarty();
-            $smarty->template_dir = 'layout';
-            $smarty->compile_dir = 'tmp';
-            $smarty->assign('error','Mot de passe incorrect');
-            $smarty->display('login.tpl');
+            View::display('login',array(
+                'error' => 'Mot de passe incorrect'
+            ));
         }
     }
     public function logout()

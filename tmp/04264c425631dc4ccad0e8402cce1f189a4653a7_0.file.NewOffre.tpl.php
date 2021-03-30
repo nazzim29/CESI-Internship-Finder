@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-27 22:17:15
+/* Smarty version 3.1.39, created on 2021-03-30 12:12:45
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\NewOffre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605fa0db035793_09138841',
+  'unifunc' => 'content_6062f99d5f42f6_23216275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04264c425631dc4ccad0e8402cce1f189a4653a7' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\NewOffre.tpl',
-      1 => 1616879833,
+      1 => 1617099163,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_605fa0db035793_09138841 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6062f99d5f42f6_23216275 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -40,14 +40,14 @@ function content_605fa0db035793_09138841 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="..\CSS\formstyle.css">
+    <link rel="stylesheet" href="../CSS/formstyle.css">
 </head>
 
 <body>
 <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <form id="create">
+        <form id="create" method="POST">
             <h1 id="titre">Creation d'une offre</h1>
             <div class="row">
                 <div class="form-group">
@@ -66,13 +66,29 @@ function content_605fa0db035793_09138841 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
 
                 <div class="form-group">
-                    <label for="pro">Promotion</label><br>
-                    <input type="text" id="pro" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dateoffre">Date de l'ofrre </label><br>
-                    <input type="date" id="dateoffre" class="form-control" required>
+                    <label>Promotions concernées</label>
+                    <ul class="checkbox">
+                        <li>
+                            <input type="checkbox" id="pone" name="Promotions[]" value="A1">
+                            <label for="pone">A1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ptwo" name="Promotions[]" value="A2">
+                            <label for="ptwo">A2</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pthree" name="Promotions[]" value="A3">
+                            <label for="pthree">A3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pfour" name="Promotions[]" value="A4">
+                            <label for="pfour">A4</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pfive" name="Promotions[]" value="A5">
+                            <label for="pfive">A5</label>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="form-group">
@@ -98,6 +114,10 @@ function content_605fa0db035793_09138841 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </form>
     </div>
+    <!--footer-->
+    <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
 >
@@ -111,9 +131,7 @@ function content_605fa0db035793_09138841 (Smarty_Internal_Template $_smarty_tpl)
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
 </body>
-<?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-<!--footer-->
+
 
 
 </html><?php }

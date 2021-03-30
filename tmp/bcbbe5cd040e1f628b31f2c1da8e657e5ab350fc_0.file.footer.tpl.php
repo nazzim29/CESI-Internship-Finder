@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 16:22:00
+/* Smarty version 3.1.39, created on 2021-03-29 11:57:05
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605dfc18ba96a1_61909074',
+  'unifunc' => 'content_6061a471a38665_82944613',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcbbe5cd040e1f628b31f2c1da8e657e5ab350fc' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\footer.tpl',
-      1 => 1616772102,
+      1 => 1616930312,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605dfc18ba96a1_61909074 (Smarty_Internal_Template $_smarty_tpl) {
-?><link rel="stylesheet" href="CSS\footer.css">
+function content_6061a471a38665_82944613 (Smarty_Internal_Template $_smarty_tpl) {
+?><link rel="stylesheet" href="CSS/footer.css">
 
-<footer id="footer" role="contentinfo">
+<footer style="width:100%;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">

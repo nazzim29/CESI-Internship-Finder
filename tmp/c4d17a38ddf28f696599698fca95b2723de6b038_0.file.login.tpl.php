@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-26 14:51:53
+/* Smarty version 3.1.39, created on 2021-03-29 11:56:48
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_605de6f9277b81_11284112',
+  'unifunc' => 'content_6061a460885dc8_83823725',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4d17a38ddf28f696599698fca95b2723de6b038' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\login.tpl',
-      1 => 1616763377,
+      1 => 1616938274,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6061a460885dc8_83823725 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <title>Se Connecter</title>
-    <link rel="icon" type="image/png" href="assets\Image\LOGOc.png" />
+    <link rel="icon" type="image/png" href="Image/LOGOc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS\login.css">
+    <link rel="stylesheet" type="text/css" href="CSS/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 
@@ -36,8 +36,8 @@ function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
     <div class="container">
-        <div class="left-container" include="logo_anim.html">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1574.000000 579.000000"
+        <div class="left-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1574.000000 579.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,579.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M14155 5779 c-312 -46 -631 -208 -837 -427 -125 -134 -250 -333 -308
@@ -140,7 +140,7 @@ function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="login-content">
             <div class="usr-icon">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600.000000 579.000000"
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600.000000 579.000000"
                     preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,579.000000) scale(0.100000,-0.100000)" fill="#000000"
                         stroke="none">
@@ -238,7 +238,7 @@ function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl)
                     </g>
                 </svg>
             </div>
-            <form action="\login" method="POST">
+            <form action="/login" method="POST">
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
@@ -250,7 +250,7 @@ function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl)
 "
                         <?php }?>
                         required>
-                        <label for="username">
+                        <label for="email">
                             <span class="content-name">
                                 Nom d'utilisateur
                             </span>
@@ -303,7 +303,7 @@ function content_605de6f9277b81_11284112 (Smarty_Internal_Template $_smarty_tpl)
  src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="JS\login.js"><?php echo '</script'; ?>
+ src="JS/login.js"><?php echo '</script'; ?>
 >
 </body>
 

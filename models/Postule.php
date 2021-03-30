@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Portule Extends Db
 {
     protected $_id_utilisateur;
@@ -57,5 +57,11 @@ class Portule Extends Db
     public function setconvention(string $chemin)
     {
         $this->$_convention_stage = $chemin;
+    }
+    public function deletebyoffre($postdata)
+    {
+        $req = $this->db->prepare('DELETE FROM postule where Id_offre = ?');
+        $req->bindvalue(1,$postdata);
+        $req->execute();
     }
 }

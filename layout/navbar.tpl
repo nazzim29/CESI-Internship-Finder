@@ -1,5 +1,5 @@
 <header>
-<link rel="stylesheet" href="CSS/navbar.css">
+<link rel="stylesheet" href="../../CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
@@ -68,74 +68,74 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link text-white" href="\home">ACCEUIL</a>
+                <a class="nav-link text-white" href="/home">ACCEUIL</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#entreprise" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#entreprise" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Entreprise
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx3',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item" href="\entreprise\new" id="item">Créer</a>
+                    <a class="dropdown-item item" href="/entreprise/new">Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx3',$_SESSION['current_user']['permission']) !== false) or $_SESSION['current_user']['type'] eq 'ETUDIANT'}
-                    <a class="dropdown-item" href="\entreprise" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="/entreprise">Afficher</a>
                     {/if}
                 </div>
             </li>
             {if $_SESSION['current_user']['type'] neq 'ETUDIANT'}
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#etudiant" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#etudiant"  role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx23',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx22',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                     {/if}
                 </div>
             </li>
             {/if}
             {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#pilote" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#pilote" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pilote
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             {/if}
             {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE'}
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#delegue" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#delegue" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Délégué
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             {/if}
             {if $_SESSION['current_user']['type'] eq 'ADMIN'}
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#offre" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Offre
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx9',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item" href="#" id="item">Créer</a>
+                    <a class="dropdown-item item" href="#" >Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item" href="#" id="item">Afficher</a>
+                    <a class="dropdown-item item" href="#" >Afficher</a>
                     {/if}
                 </div>
             </li>
@@ -145,18 +145,16 @@
                 <a class="nav-link text-white" href="#footer">Candidature</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'ETUDIANT' }
-                    <a class="dropdown-item" href="#" id="item">Mes Condidatures</a>
+                    <a class="dropdown-item item" href="#" >Mes Condidatures</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] neq 'ETUDIANT'}
-                    <a class="dropdown-item" href="#" id="item">Condidatures en cours</a>
+                    <a class="dropdown-item item" href="#" >Condidatures en cours</a>
                     {/if}
                 </div>
             </li>
             {/if}
         </ul>
-        <button id="dl" class="d-inline btn btn-outline-light btn-rounded" type="submit">
-            <a href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
-        </button>
+        <a id="dl" class="d-inline btn btn-outline-light btn-rounded" href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
     </div>
 </nav>
 </header>

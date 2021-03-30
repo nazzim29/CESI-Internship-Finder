@@ -29,5 +29,11 @@ class Requiert Extends Db
         $req->bindvalue(2,$postdata["id_offre"]);
         $req->execute();
     }
+    public function deletebyoffer($postdata)
+    {
+        $req = $this->db->prepare('DELETE FROM requiert where Id_offre = ?');
+        $req->bindvalue(1,$postdata);
+        $req->execute();
+    }
 }
 
