@@ -58,4 +58,10 @@ class Portule Extends Db
     {
         $this->$_convention_stage = $chemin;
     }
+    public function deletebyoffre($postdata)
+    {
+        $req = $this->db->prepare('DELETE FROM postule where Id_offre = ?');
+        $req->bindvalue(1,$postdata);
+        $req->execute();
+    }
 }

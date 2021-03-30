@@ -51,11 +51,12 @@ class Entreprise Extends Db
     {
         try{
 
-            $req = $this->db->prepare("insert into entreprise(Secteur_activite,Localite,Raison_social,Email) values (?,?,?,?)");
+            $req = $this->db->prepare("INSERT INTO `entreprise`(`Secteur_activite`, `Localite`, `Raison_social`, `Email`, `Date_creation`, `Nb_stage`)  values (?,?,?,?,now(),?)");
             $req->bindvalue(1,$postdata['secteur_dactivite']);
             $req->bindvalue(2,$postdata['localite']);
             $req->bindvalue(3,$postdata['raison_sociale']);
             $req->bindvalue(4,$postdata['email']);
+            $req->bindvalue(5,$postdata['nb_etu']);
             $req->execute();
             $req = $this->db->prepare("SELECT LAST_INSERT_ID() as 'id';");
             $req->execute();
@@ -63,7 +64,7 @@ class Entreprise Extends Db
             return $res->id;
         }catch(PDOException $e){
             if(strpos($e->getmessage(),'Integrity constraint violation') !== false){
-                return "l'email de cette entreprise existe deja dans la base de données";
+                return "Cette entreprise existe deja dans la base de données";
             }
         }
     }

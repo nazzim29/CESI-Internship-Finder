@@ -52,7 +52,7 @@
 
                 <div class="form-group">
                     <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
-                    <input type="number" id="nbr" name ="nbr" class="form-control" value="nb_stagiaires" {if isset($en->nb_stagiaires)} value = "{$en->nb_stagiaires}"{/if} required>
+                    <input type="number" id="nbr" name ="nbr" class="form-control" {if isset($en->Nb_stage)} value = "{$en->Nb_stage}"{/if} required>
                 </div>
                 <div class="form-group">
                     <label for="file">Uploader un logo</label><br>

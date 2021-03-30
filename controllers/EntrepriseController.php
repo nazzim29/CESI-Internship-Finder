@@ -1,8 +1,12 @@
 <?php
 require_once('models\competencesRecherchees.php');
+require_once('view\View.php');
 require_once('models\Entreprise.php');
 require_once('models\Note.php');
-require_once('view\View.php');
+require_once('models\Souhaite.php');
+require_once('models\Postule.php');
+require_once('models\Requiert.php');
+
 class EntrepriseController
 {
     public function index()
@@ -67,7 +71,14 @@ class EntrepriseController
                             'erreur' => $id_entr
                         ));
                     }else{
-                        header("Location: ".$id_entr."");
+                        if(substr($postdata['file']['name'],-4) == '.png'){
+                            move_uploaded_file($postdata['file']['tmp_name'],"image/entreprise/".$id_entr.".png");
+                            header("Location: ".$id_entr."");
+                        }else{
+                            View::display('formentr',array(
+                                'erreur' => "veuillez uploader une image au format png"
+                            ));
+                        }
                     }
                 break;
                 case 'DELEGUE':
@@ -79,8 +90,14 @@ class EntrepriseController
                                 'erreur' => $id_entr
                             ));
                         }else{
-                            echo $id_entr;
-                            header("Location: ".$id_entr."");
+                            if(substr($postdata['file']['name'],-4) == '.png'){
+                                move_uploaded_file($postdata['file']['tmp_name'],"image/entreprise/".$id_entr.".png");
+                                header("Location: ".$id_entr."");
+                            }else{
+                                View::display('formentr',array(
+                                    'erreur' => "veuillez uploader une image au format png"
+                                ));
+                            }
                         }
 
                     }else{
@@ -168,6 +185,15 @@ class EntrepriseController
                         View::display('formentr',array(
                             'erreur' => $ee
                         ));
+                    }else{
+                        if(substr($postdata['file']['name'],-4) == '.png'){
+                            move_uploaded_file($postdata['file']['tmp_name'],"image/entreprise/".$postdata['id_entreprise'].".png");
+                            header("Location: ".$postdata['id_entreprise']."");
+                        }else{
+                            View::display('formentr',array(
+                                'erreur' => "veuillez uploader une image au format png"
+                            ));
+                        }
                     }
                 break;
                 case 'DELEGUE':
@@ -178,6 +204,15 @@ class EntrepriseController
                             View::display('formentr',array(
                                 'erreur' => $ee
                             ));
+                        }else{
+                            if(substr($postdata['file']['name'],-4) == '.png'){
+                                move_uploaded_file($postdata['file']['tmp_name'],"image/entreprise/".$postdata['id_entreprise'].".png");
+                                header("Location: ".$postdata['id_entreprise']."");
+                            }else{
+                                View::display('formentr',array(
+                                    'erreur' => "veuillez uploader une image au format png"
+                                ));
+                            }
                         }
                     }else{
                         header('Location : accessinterdit');
@@ -198,12 +233,38 @@ class EntrepriseController
             switch ($_SESSION['current_user']['type']) {
                 case 'PILOTE':
                 case 'ADMIN':
+                    $n = new Note();
+                    $n->deletebyentr($postdata);
+                    $o = new Offre();
+                    $s = new Souhaite();
+                    $p = new Postule();
+                    $r = new Requiert();
                     $e = new Entreprise();
+                    $lsto = $o->selectbyentr($postdata);
+                    foreach ($lsto as $key => $value) {
+                        $s->deletebyoffre($value->Id_offre);
+                        $p->deletebyoffre($value->Id_offre);
+                        $r->deletebyoffre($value->Id_offre);
+                        $o->delete($value->Id_offre);
+                    }
                     $e->delete($postdata);
                 break;
                 case 'DELEGUE':
-                    if(array_search('sfx6',$_SESSION['current_user']['permission'])){
+                    if(array_search('sfx6',$_SESSION['current_user']['permission']) & array_search('sfx11',$_SESSION['current_user']['permission'])){
+                        $n = new Note();
+                        $n->deletebyentr($postdata);
+                        $o = new Offre();
+                        $s = new Souhaite();
+                        $p = new Postule();
+                        $r = new Requiert();
                         $e = new Entreprise();
+                        $lsto = $o->selectbyentr($postdata);
+                        foreach ($lsto as $key => $value) {
+                            $s->deletebyoffre($value->Id_offre);
+                            $p->deletebyoffre($value->Id_offre);
+                            $r->deletebyoffre($value->Id_offre);
+                            $o->delete($value->Id_offre);
+                        }
                         $e->delete($postdata);
                     }else{
                         header('Location : accessinterdit');

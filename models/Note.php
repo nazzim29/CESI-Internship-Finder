@@ -47,9 +47,11 @@ class Note Extends Db
     {
         # code...
     }
-    public function delete()
+    public function deletebyentr($postdata)
     {
-        # code...
+        $req = $this->db->prepare('DELETE FROM note where Id_entreprise = ?');
+        $req->bindvalue(1,$postdata);
+        $req->execute();
     }
 
 }
