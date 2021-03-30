@@ -1,5 +1,5 @@
 <header>
-<link rel="stylesheet" href="../CSS/navbar.css">
+<link rel="stylesheet" href="../../CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
@@ -87,7 +87,7 @@
             {if $_SESSION['current_user']['type'] neq 'ETUDIANT'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#etudiant"  role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

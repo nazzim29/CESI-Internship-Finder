@@ -20,7 +20,7 @@ body{
     padding: 0 10px;
 }
 .navbar-nav li a{
-    color: #ffffff  ;
+    color: white  ;
     font-weight: 600;
 }
 .navbar-toggler{
@@ -31,9 +31,6 @@ body{
     background-image:linear-gradient(to right, #64a587, #446b50) ;
     color: white;
     font-family: 'Nunito', sans-serif;
-}
-.navbarDropdown{
-    color: white;
 }
 .item{
     color: #446b50;
@@ -49,4 +46,8 @@ body{
 }
 .dl:hover{
     color: #446b50;
+}
+
+.nav-link{
+    color: white;
 }

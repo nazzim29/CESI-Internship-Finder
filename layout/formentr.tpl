@@ -16,57 +16,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../CSS/star_rating.css">
-    <link rel="stylesheet" href="../CSS/formstyle.css">
+    <link rel="stylesheet" href="../../CSS/star_rating.css">
+    <link rel="stylesheet" href="../../CSS/formstyle.css">
 </head>
 
 <body>
     {include 'navbar.tpl'}
     <div class="container">
-        <form id="create">
-            <h1 id="titre">Creation d'Entreprise</h1>
+        <form enctype="multipart/form-data" id="create" method="POST">
+            <h1 id="titre">{if !isset($en)}Creation{else}Modification{/if} d'Entreprise</h1>
+            {if isset($erreur)}
+            <label>{$erreur}</label>
+            {/if}
             <div class="row">
                 <div class="form-group">
-                    <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" class="form-control" required>
+                    <label for="nom">Raison Sociale</label><br>
+                    <input type="text" id="raison_sociale" name="raison_sociale" class="form-control" {if isset($en->Raison_social)} value = "{$en->Raison_social}"{/if} required>
                 </div>
 
                 <div class="form-group">
                     <label for="secteur">Secteur d'activité</label><br>
-                    <input type="text" id="secteur" class="form-control" required>
+                    <input type="text" id="secteur" name="secteur_dactivite" class="form-control" {if isset($en->Secteur_activite)} value = "{$en->Secteur_activite}"{/if} required>
                 </div>
 
 
                 <div class="form-group">
-                    <label for="adr">Adresse</label><br>
-                    <input type="text" id="adr" class="form-control" required>
+                    <label for="adr">Localité</label><br>
+                    <input type="text" id="adr" name="localite" class="form-control" {if isset($en->Localite)} value = "{$en->Localite}"{/if} required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adresse Email</label><br>
+                    <input type="email" id="email" name="email" class="form-control" {if isset($en->Email)} value = "{$en->Email}"{/if} required>
                 </div>
 
                 <div class="form-group">
                     <label for="nbr">Nombre de stagiaires CESI déjà acceptés</label><br>
-                    <input type="number" id="nbr" class="form-control" required>
-                </div>
-
-                <label for="nbr">Confiance du pilote</label><br>
-                <div class="rating-system">
-                    <div class="stars-widget">
-                        <input type="radio" name="rate" id="rate-5" value="5">
-                        <label for="rate-5" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-4" value="4">
-                        <label for="rate-4" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-3" value="3">
-                        <label for="rate-3" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-2" value="2">
-                        <label for="rate-2" class="fas fa-star"></label>
-                        <input type="radio" name="rate" id="rate-1" value="1">
-                        <label for="rate-1" class="fas fa-star"></label>
-                    </div>
-                    <div id="ressenti"></div>
-                    <textarea cols="45" placeholder="Laisser un commentaire..."></textarea>
+                    <input type="number" id="nbr" name ="nbr" class="form-control" value="nb_stagiaires" {if isset($en->nb_stagiaires)} value = "{$en->nb_stagiaires}"{/if} required>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer
-                        Entreprise
+                    <label for="file">Uploader un logo</label><br>
+                    <input type="file" id="file" name="logo" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sample btn-rounded">
+                        <i class="fas fa-plus"></i> 
+                        {if !isset($en)}Créer Entreprise{else}Enregistrer{/if}
                     </button>
                 </div>
             </div>

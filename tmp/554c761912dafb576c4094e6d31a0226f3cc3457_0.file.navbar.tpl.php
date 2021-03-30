@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-28 15:54:48
+/* Smarty version 3.1.39, created on 2021-03-29 11:56:36
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60608aa894a932_63888133',
+  'unifunc' => 'content_6061a454166088_39863156',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1616939576,
+      1 => 1616958356,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60608aa894a932_63888133 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6061a454166088_39863156 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
-<link rel="stylesheet" href="../CSS/navbar.css">
+<link rel="stylesheet" href="../../CSS/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
@@ -110,7 +110,7 @@ function content_60608aa894a932_63888133 (Smarty_Internal_Template $_smarty_tpl)
             <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#etudiant"  role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
