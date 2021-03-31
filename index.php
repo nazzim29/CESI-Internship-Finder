@@ -190,6 +190,9 @@ Route::add('/delegue/([0-9]*)',function($var1){
     //afficher un delegue
 });
 
+Route::add('/wishlist',function(){
+    View::display("wishlist");
+});
 Route::run();
 
 

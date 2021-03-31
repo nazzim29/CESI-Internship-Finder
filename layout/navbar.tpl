@@ -137,6 +137,8 @@
                     {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
                     <a class="dropdown-item item" href="#" >Afficher</a>
                     {/if}
+                    
+
                 </div>
             </li>
             {/if}
