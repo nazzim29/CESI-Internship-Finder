@@ -3,9 +3,6 @@ require_once('models\competencesRecherchees.php');
 require_once('view\View.php');
 require_once('models\Entreprise.php');
 require_once('models\Note.php');
-require_once('models\Shouaite.php');
-require_once('models\Postule.php');
-require_once('models\Requiert.php');
 
 class EntrepriseController
 {
@@ -66,7 +63,7 @@ class EntrepriseController
                 case 'ADMIN':
                     $entr = new Entreprise();
                     $id_entr = $entr->create($postdata);
-                    if($id_entr == "l'email de cette entreprise existe deja dans la base de données"){
+                    if($id_entr == "Cette entreprise existe deja dans la base de données"){
                         View::display('formentr',array(
                             'erreur' => $id_entr
                         ));
@@ -233,38 +230,12 @@ class EntrepriseController
             switch ($_SESSION['current_user']['type']) {
                 case 'PILOTE':
                 case 'ADMIN':
-                    $n = new Note();
-                    $n->deletebyentr($postdata);
-                    $o = new Offre();
-                    $s = new Souhaite();
-                    $p = new Postule();
-                    $r = new Requiert();
                     $e = new Entreprise();
-                    $lsto = $o->selectbyentr($postdata);
-                    foreach ($lsto as $key => $value) {
-                        $s->deletebyoffre($value->Id_offre);
-                        $p->deletebyoffre($value->Id_offre);
-                        $r->deletebyoffre($value->Id_offre);
-                        $o->delete($value->Id_offre);
-                    }
                     $e->delete($postdata);
                 break;
                 case 'DELEGUE':
                     if(array_search('sfx6',$_SESSION['current_user']['permission']) & array_search('sfx11',$_SESSION['current_user']['permission'])){
-                        $n = new Note();
-                        $n->deletebyentr($postdata);
-                        $o = new Offre();
-                        $s = new Souhaite();
-                        $p = new Postule();
-                        $r = new Requiert();
                         $e = new Entreprise();
-                        $lsto = $o->selectbyentr($postdata);
-                        foreach ($lsto as $key => $value) {
-                            $s->deletebyoffre($value->Id_offre);
-                            $p->deletebyoffre($value->Id_offre);
-                            $r->deletebyoffre($value->Id_offre);
-                            $o->delete($value->Id_offre);
-                        }
                         $e->delete($postdata);
                     }else{
                         header('Location : accessinterdit');

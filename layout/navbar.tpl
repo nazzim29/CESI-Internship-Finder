@@ -1,5 +1,5 @@
 <header>
-<link rel="stylesheet" href="../../CSS/navbar.css">
+
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
@@ -87,7 +87,7 @@
             {if $_SESSION['current_user']['type'] neq 'ETUDIANT'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#etudiant"  role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                     Etudiant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -153,8 +153,22 @@
                 </div>
             </li>
             {/if}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    {$_SESSION['current_user']['nom']|upper} {$_SESSION['current_user']['prenom']|capitalize}({($_SESSION['current_user']['type']|lower)|capitalize})
+                    <img width='40' height='40'  src="..\..\image\{$_SESSION['current_user']['type']|lower}\{$_SESSION['current_user']['id']}.png" class="img-thumbnail rounded-circle navbar-brand" >
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx9',$_SESSION['current_user']['permission']) !== false)}
+                    <a class="dropdown-item item" href="/logout" >Déconnexion</a>
+                    {/if}
+                    {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
+                    <a class="dropdown-item item" href="{$_SESSION['current_user']['type']|lower}/{$_SESSION['current_user']['id']}" >Mon Profile</a>
+                    {/if}
+                </div>
+            </li>
         </ul>
-        <a id="dl" class="d-inline btn btn-outline-light btn-rounded" href="/logout" style="text-decoration: none;color: inherit;">Déconnexion </a>
     </div>
 </nav>
+<link rel="stylesheet" href="../../CSS/navbar.css">
 </header>

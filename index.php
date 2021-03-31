@@ -7,6 +7,7 @@ include_once('controllers\LoginController.php');
 include_once('controllers\EntrepriseController.php');
 include_once('controllers\OffreController.php');
 
+
 Route::add('/home',function(){
     //affichage de la dashboard
     if(isset($_SESSION['current_user'])){
@@ -25,6 +26,7 @@ Route::add('/',function(){
         
     }
 });
+/*  --------------- login et logout  ---------------*/
 Route::add('/login',function(){
     //affichage de la page de connexion
     LoginController::get();
@@ -39,6 +41,7 @@ Route::add('/login',function(){
 Route::add('/logout',function(){
     LoginController::logout();
 });
+/*  --------------- gestion des offres  ---------------*/
 Route::add('/offre/New',function(){
     OffreController::indexnew();
 });
@@ -100,6 +103,20 @@ Route::add('/entreprise/update/([0-9]*)',function($var1){
 });
 Route::add('/entreprise',function(){
     EntrepriseController::index();
+});
+/*  --------------- gestion utilisateur  ---------------*/
+Route::add('/etusiant/new',function(){
+    UtilisateurController::post(array(
+        "type" => "ETUDIANT",
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+        "nom" => $_POST['nom'],
+    ));
 });
 Route::add('/etudiant/([0-9]*)',function($var1){
     //afficher un etudiant

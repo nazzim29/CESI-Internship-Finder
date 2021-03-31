@@ -86,7 +86,39 @@ class Utilisateur Extends Db
         return $req->fetch(PDO::FETCH_ASSOC);
 
     }
-    public function create(){
+    public function selectbyid($postdata){
+        $req = $this->db->prepare("select * from utilisateur where Id_utilisateur = ?");
+        $req->bindvalue(1,$postdata);
+        $req->execute();
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        $req = $this->db->prepare("UPDATE `utilisateur` SET `Nb_visite`=? WHERE Id_utilisateur = ?");
+        $req->bindvalue(1,$result->Nb_visite+1);
+        $req->bindvalue(2,$result->Id_utilisateur);
+        $req->execute();
+        return $result;
+    }
+    public function create($postdata){
+        try{
+
+            $req = $this->db->prepare("INSERT INTO `utilisateur`(`Password`, `Type`, `Promotion`, `Date_creation`, `Nom`, `Prenom`, `Email`, `Id_centre`, `Id_Createur`) VALUES (?,?,?,now(),?,?,?,?,?)");
+            $req->bindvalue(1,$postdata['password']);
+            $req->bindvalue(2,$postdata['type']);
+            $req->bindvalue(3,$postdata['promotion']);
+            $req->bindvalue(4,$postdata['nom']);
+            $req->bindvalue(5,$postdata['prenom']);
+            $req->bindvalue(6,$postdata['email']);
+            $req->bindvalue(7,$postdata['id_centre']);
+            $req->bindvalue(8,$postdata['id_createur']);
+            $req->execute();
+            $req = $this->db->prepare("SELECT LAST_INSERT_ID() as 'id';");
+            $req->execute();
+            $res = $req->fetch(PDO::FETCH_OBJ);
+            return $res->id;
+        }catch(PDOException $e){
+            if(strpos($e->getmessage(),'Integrity constraint violation') !== false){
+                return "Cette utilisateur existe deja dans la base de données";
+            }
+        }
 
     }
     public function read(){

@@ -83,19 +83,24 @@ class Offre Extends Db
         $req->bindvalue(1,$postdata);
         $req->execute();
         $s=$req->fetchAll(PDO::FETCH_OBJ);
+        
         return $s;
     }
-    public function select($postdata)
+    public function select($id)
     {
-        $req= $this->db->prepare("select * from offre where Titre = ?");
-        $req->bindvalue(1,$postdata["titre"]);
+        $req= $this->db->prepare("select * from offre where Id_offre = ?");
+        $req->bindvalue(1,$postdata["id"]);
         $req->execute();
         $s=$req->fetchAll(PDO::FETCH_OBJ);
+        $req= $this->db->prepare("UPDATE `offre` SET`Nb_vues`= ? WHERE Id_offre = ?");
+        $req->bindvalue(1,$s->Nb_vues +1);
+        $req->bindvalue(2,$s->Id_offre);
+        $req->execute();
         return $s;
     }
     public function create($postdata)
     {
-        $req=$this->db->prepare("insert into offre (Description,Duree_stage,Base_remuneration,Nb_places,Titre,Id_utilisateur,Id_entreprise) values(?,?,?,?,?,?,?)");
+        $req=$this->db->prepare("INSERT INTO `offre`(`Description`, `Date_publication`, `Duree_stage`, `Base_remuneration`, `Nb_places`, `Titre`, `Id_utilisateur`, `Id_entreprise`)(?,now(),?,?,?,?,?,?)");
         $req->biendvalue(1,$postdata["description"]);
         $req->biendvalue(2,$postdata["duree_stage"]);
         $req->biendvalue(3,$postdata["base_remuneration"]);
