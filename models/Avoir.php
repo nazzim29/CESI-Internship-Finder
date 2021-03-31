@@ -29,7 +29,11 @@ class Avoir Extends Db
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function create(){
+    public function create($postdata){
+        $req = $this->db->prepare("INSERT INTO `avoir`(`Id_permission`, `Id_utilisateur`) VALUES (?,?)");
+        $req->bindvalue(2,$postdata['id_utilisateur']);
+        $req->bindvalue(1,$postdata['id_permission']);
+        $req->execute();
 
     }
     public function read(){
@@ -38,7 +42,10 @@ class Avoir Extends Db
     public function update(){
 
     }
-    public function delete(){
+    public function deletebyusee($postdata){
+        $req = $this->db->prepare("delete from avoir where Id_utilisateur = ?");
+        $req->bindvalue(1,$postdata);
+        $req->execute();
         
     }
 }

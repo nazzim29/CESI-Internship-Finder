@@ -105,17 +105,79 @@ Route::add('/entreprise',function(){
     EntrepriseController::index();
 });
 /*  --------------- gestion utilisateur  ---------------*/
-Route::add('/etusiant/new',function(){
-    UtilisateurController::post(array(
+Route::add('/etudiant/new',function(){
+    UtilisateurController::create(array(
         "type" => "ETUDIANT",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+    ));
+});
+Route::add('/pilote/new',function(){
+    UtilisateurController::create(array(
+        "type" => "PILOTE",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+        "file" => $_POST['photo']
+    ));
+});
+Route::add('/delegue/new',function(){
+    UtilisateurController::create(array(
+        "type" => "DELEGUE",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+        "permission" => $_POST['permission'],
+        "file" => $_POST['photo']
+    ));
+});
+Route::add('/etudiant/update/([0-9]*)',function($var1){
+    UtilisateurController::update(array(
+        'id' => $var1,
+        "type" => "ETUDIANT",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+    ));
+});
+Route::add('/pilote/update/([0-9]*)',function($var1){
+    UtilisateurController::update(array(
+        "id" => $var1,
+        "type" => "PILOTE",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+        "file" => $_POST['photo']
+    ));
+});
+Route::add('/delegue/update/([0-9]*)',function($var1){
+    UtilisateurController::update(array(
+        "id" => $var1,
+        "type" => "DELEGUE",
+        "password" => $_POST['password'],
+        "promotion" => $_POST['promotion'],
         "nom" => $_POST['nom'],
-        "nom" => $_POST['nom'],
-        "nom" => $_POST['nom'],
+        "prenom" => $_POST['prenom'],
+        "email" => $_POST['email'],
+        "centre" => $_POST['centre'],
+        "permission" => $_POST['permission'],
+        "file" => $_POST['photo']
     ));
 });
 Route::add('/etudiant/([0-9]*)',function($var1){

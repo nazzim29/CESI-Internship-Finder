@@ -107,8 +107,8 @@ class Utilisateur Extends Db
             $req->bindvalue(4,$postdata['nom']);
             $req->bindvalue(5,$postdata['prenom']);
             $req->bindvalue(6,$postdata['email']);
-            $req->bindvalue(7,$postdata['id_centre']);
-            $req->bindvalue(8,$postdata['id_createur']);
+            $req->bindvalue(7,$postdata['centre']);
+            $req->bindvalue(8,$postdata['createur']);
             $req->execute();
             $req = $this->db->prepare("SELECT LAST_INSERT_ID() as 'id';");
             $req->execute();
@@ -116,7 +116,7 @@ class Utilisateur Extends Db
             return $res->id;
         }catch(PDOException $e){
             if(strpos($e->getmessage(),'Integrity constraint violation') !== false){
-                return "Cette utilisateur existe deja dans la base de données";
+                return "Cet utilisateur existe deja dans la base de données";
             }
         }
 
@@ -124,10 +124,26 @@ class Utilisateur Extends Db
     public function read(){
 
     }
-    public function update(){
-
+    public function update($postdata){
+        try{
+            $req = $this->db->prepare('UPDATE `utilisateur` SET `Promotion`=?,`Nom`=?,`Prenom`=?,`Email`=?,`Id_centre`=? WHERE `Id_utilisateur`=?');
+            $req->bindvalue(1,$postdata['promotion']);
+            $req->bindvalue(2,$postdata['nom']);
+            $req->bindvalue(3,$postdata['prenom']);
+            $req->bindvalue(4,$postdata['email']);
+            $req->bindvalue(5,$postdata['centre']);
+            $req->bindvalue(5,$postdata['id']);
+            $req->execute();
+        }catch(PDOException $e){
+            if(strpos($e->getmessage(),'Integrity constraint violation') !== false){
+                return "cet utilisateur existe deja dans la base de données";
+            }
+        }
     }
-    public function delete(){
+    public function delete($postdata){
+        $req = $this->db->prepare("DELETE FROM `utilisateur` WHERE Id_utilisateur = ? ");
+        $req->bindvalue(1,$postdata);
+        $req->execute();
         
     }
 }
