@@ -192,7 +192,7 @@ Route::add('/delegue/([0-9]*)',function($var1){
 
 Route::add('/wishlist',function(){
     OffreController::Wishlistindex(array(
-        "utilisateur" => 
+        "utilisateur" => null
     ));
 });
 Route::run();

@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-04-01 16:59:11
+  from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\acceuil.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_6065dfbfa682e0_94748143',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'be02fdcfc0515525147fc9a24dec3f1e86d0d466' => 
+    array (
+      0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\acceuil.tpl',
+      1 => 1617288929,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -269,17 +292,28 @@
     </footer>
 
     <!--Animation on scroll-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <?php echo '<script'; ?>
+ src="https://unpkg.com/aos@next/dist/aos.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
         AOS.init({
             offset: 120,
             duration: 900,
         });
-    </script>
+    <?php echo '</script'; ?>
+>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

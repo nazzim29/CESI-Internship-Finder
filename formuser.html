@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création user</title>
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/formstyle.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="create">
+            <h1 id="titre">Créer un utilisateur</h1>
+            <div class="row">
+                <div class="form-group">
+                    <label for="nom">Nom</label><br>
+                    <input type="text" id="nom" name="firstname" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom</label><br>
+                    <input type="text" id="prenom" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomuser">Email</label><br>
+                    <input type="text" id="nomuser" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pass">Mot de passe</label><br>
+                    <input type="password" id="pass" class="form-control" name="motdepasse" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adr">Centre</label><br>
+                    <input type="text" id="adr" class="form-control" required>
+                </div>
+
+                <!--seulement pour l'étudiant-->
+                <div class="form-group" id="promostudent">
+                    <label for="promo">Promotion</label><br>
+                    <SELECT id="promo" class="form-select form-control" name="nom" size="1">
+                        <OPTION class="op">Choisir une promotion...
+                        <OPTION class="op">A1
+                        <OPTION class="op">A2
+                        <OPTION class="op">A3
+                        <OPTION class="op">A4
+                        <OPTION class="op">A5
+                    </SELECT>
+                </div>
+                <!--pour le pilote et pour le délegué-->
+                <div class="form-group">
+                    <label>Promotions assignées</label>
+                    <ul class="checkbox">
+                        <li><label for="pone"><input type="checkbox" id="pone">A1<span class="default"></span></label>
+                        </li>
+                        <li><label for="ptwo"><input type="checkbox" id="ptwo">A2</label></li>
+
+                        <li><label for="pthree"><input type="checkbox" id="pthree">A3</label></li>
+
+                        <li><label for="pfour"><input type="checkbox" id="pfour">A4</label></li>
+
+                        <li><label for="pfive"><input type="checkbox" id="pfive">A5</label></li>
+                    </ul>
+                </div>
+                <label>Droits attribués</label>
+                <!--Permission délégués-->
+                <div id="permission" class="row">
+                    <div class="col">
+                        <label id="gentr">Gestion Entreprise</label>
+                        <div id="list1">
+                            <ul class="items">
+                                <li><input type="checkbox" />Rechercher </li>
+                                <li><input type="checkbox" />Créer</li>
+                                <li><input type="checkbox" />Modifier</li>
+                                <li><input type="checkbox" />Evaluer</li>
+                                <li><input type="checkbox" />Supprimer</li>
+                                <li><input type="checkbox" />Consulter les stats</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label id="goffr">Gestion Offres</label>
+                        <div id="list2">
+                            <ul class="items">
+                                <li><input type="checkbox" />Rechercher </li>
+                                <li><input type="checkbox" />Créer</li>
+                                <li><input type="checkbox" />Modifier</li>
+                                <li><input type="checkbox" />Supprimer</li>
+                                <li><input type="checkbox" />Consulter les stats</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label id="getu">Gestion Etudiants</label>
+                        <div id="list3">
+                            <ul class="items">
+                                <li><input type="checkbox" />Rechercher</li>
+                                <li><input type="checkbox" />Créer</li>
+                                <li><input type="checkbox" />Modifier</li>
+                                <li><input type="checkbox" />Supprimer</li>
+                                <li><input type="checkbox" />Consulter les stats</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label id="gdel">Gestion Délegués</label>
+                        <div id="list4">
+                            <ul class="items">
+                                <li><input type="checkbox" />Rechercher</li>
+                                <li><input type="checkbox" />Créer</li>
+                                <li><input type="checkbox" />Modifier</li>
+                                <li><input type="checkbox" />Supprimer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label id="gcand">Gestion Candidatures</label>
+                        <div id="list5">
+                            <ul class="items">
+                                <li><input type="checkbox" />Avancement step 3</li>
+                                <li><input type="checkbox" />Avancement step 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sample btn-rounded"><i class="fas fa-plus"></i> Créer un
+                        utilisateur
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+<!--footer-->
+
+</html>
