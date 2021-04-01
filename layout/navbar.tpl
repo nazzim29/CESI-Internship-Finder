@@ -79,7 +79,7 @@
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx3',$_SESSION['current_user']['permission']) !== false)}
                     <a class="dropdown-item item" href="/entreprise/new">Créer</a>
                     {/if}
-                    {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx3',$_SESSION['current_user']['permission']) !== false) or $_SESSION['current_user']['type'] eq 'ETUDIANT'}
+                    {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx2',$_SESSION['current_user']['permission']) !== false) or $_SESSION['current_user']['type'] eq 'ETUDIANT'}
                     <a class="dropdown-item item" href="/entreprise">Afficher</a>
                     {/if}
                 </div>
@@ -100,19 +100,21 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'DELEGUE'}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#pilote" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pilote
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {if  $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx14',$_SESSION['current_user']['permission']) !== false)}
                     <a class="dropdown-item item" href="#" >Créer</a>
+                    {/if}
                     <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE'}
+            {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx18',$_SESSION['current_user']['permission']) !== false)}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#delegue" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -124,7 +126,7 @@
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['type'] eq 'ADMIN'}
+            {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'ETUDIANT' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -137,24 +139,16 @@
                     {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
                     <a class="dropdown-item item" href="#" >Afficher</a>
                     {/if}
+                    {if $_SESSION['current_user']['type'] eq 'ETUDIANT'}
+                    <a class="dropdown-item item" href="#" >Mes condidatures</a>
+                    <a class="dropdown-item item" href="#" >Ma Wishlist</a>
+                    {/if}
                     
 
                 </div>
             </li>
             {/if}
-            {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#footer">Candidature</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {if $_SESSION['current_user']['type'] eq 'ETUDIANT' }
-                    <a class="dropdown-item item" href="#" >Mes Condidatures</a>
-                    {/if}
-                    {if $_SESSION['current_user']['type'] neq 'ETUDIANT'}
-                    <a class="dropdown-item item" href="#" >Condidatures en cours</a>
-                    {/if}
-                </div>
-            </li>
-            {/if}
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     {$_SESSION['current_user']['nom']|upper} {$_SESSION['current_user']['prenom']|capitalize}({($_SESSION['current_user']['type']|lower)|capitalize})

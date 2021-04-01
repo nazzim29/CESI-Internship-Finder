@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 00:55:35
+/* Smarty version 3.1.39, created on 2021-04-01 15:13:18
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064fde7c9a398_63381962',
+  'unifunc' => 'content_6065c6ee14d164_51524343',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1617230665,
+      1 => 1617282795,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6064fde7c9a398_63381962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6065c6ee14d164_51524343 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <header>
@@ -104,7 +104,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item item" href="/entreprise/new">Créer</a>
                     <?php }?>
-                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx3',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false) || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx2',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false) || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
                     <a class="dropdown-item item" href="/entreprise">Afficher</a>
                     <?php }?>
                 </div>
@@ -125,19 +125,21 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE') {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#pilote" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pilote
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx14',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item item" href="#" >Créer</a>
+                    <?php }?>
                     <a class="dropdown-item item" href="#" >Afficher</a>
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx18',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#delegue" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -149,7 +151,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN') {?>
+            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,24 +164,16 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item item" href="#" >Afficher</a>
                     <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
+                    <a class="dropdown-item item" href="#" >Mes condidatures</a>
+                    <a class="dropdown-item item" href="#" >Ma Wishlist</a>
+                    <?php }?>
                     
 
                 </div>
             </li>
             <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#footer">Candidature</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
-                    <a class="dropdown-item item" href="#" >Mes Condidatures</a>
-                    <?php }?>
-                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'ETUDIANT') {?>
-                    <a class="dropdown-item item" href="#" >Condidatures en cours</a>
-                    <?php }?>
-                </div>
-            </li>
-            <?php }?>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     <?php echo mb_strtoupper($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['nom'], 'UTF-8');?>

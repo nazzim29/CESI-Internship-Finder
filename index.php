@@ -191,7 +191,9 @@ Route::add('/delegue/([0-9]*)',function($var1){
 });
 
 Route::add('/wishlist',function(){
-    View::display("wishlist");
+    OffreController::Wishlistindex(array(
+        "utilisateur" => 
+    ));
 });
 Route::run();
 

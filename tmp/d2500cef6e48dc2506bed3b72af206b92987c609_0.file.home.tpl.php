@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-29 11:57:05
+/* Smarty version 3.1.39, created on 2021-04-01 14:05:09
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6061a471982ba0_09972720',
+  'unifunc' => 'content_6065b6f5272b63_54381355',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1616937855,
+      1 => 1617269593,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6061a471982ba0_09972720 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6065b6f5272b63_54381355 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>

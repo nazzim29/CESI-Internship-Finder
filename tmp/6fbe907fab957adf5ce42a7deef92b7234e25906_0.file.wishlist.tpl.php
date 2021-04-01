@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 00:37:23
+/* Smarty version 3.1.39, created on 2021-04-01 11:35:54
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6064f9a30c0720_92462826',
+  'unifunc' => 'content_606593faa66156_43999175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fbe907fab957adf5ce42a7deef92b7234e25906' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\wishlist.tpl',
-      1 => 1617229976,
+      1 => 1617269717,
       2 => 'file',
     ),
   ),
@@ -22,26 +22,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6064f9a30c0720_92462826 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<!DOCTYPE html>
-<html lang="en">
-
+function content_606593faa66156_43999175 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wish List</title>
     <link rel="stylesheet" href="CSS\wishlist.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
 </head>
-
 <body>
 <?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
     <div class="forme">
         <h2 id="cr"> My wishlist </h2>
         <div id="love">
