@@ -25,7 +25,7 @@ class Avoir Extends Db
     }
     public function selectbyuser($s){
         $req = $this->db->prepare("select Id_permission from avoir where Id_utilisateur = ?");
-        $req->bindvalue(1,$s['Id_utilisateur']);
+        $req->bindvalue(1,$s);
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }

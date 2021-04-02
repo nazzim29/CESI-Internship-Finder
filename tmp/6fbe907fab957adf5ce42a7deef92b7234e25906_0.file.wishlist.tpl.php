@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 11:35:54
+/* Smarty version 3.1.39, created on 2021-04-02 15:47:01
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606593faa66156_43999175',
+  'unifunc' => 'content_606720554fc805_45167747',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fbe907fab957adf5ce42a7deef92b7234e25906' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\wishlist.tpl',
-      1 => 1617269717,
+      1 => 1617371218,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_606593faa66156_43999175 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606720554fc805_45167747 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,6 +30,7 @@ function content_606593faa66156_43999175 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wish List</title>
     <link rel="stylesheet" href="CSS\wishlist.css">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
 </head>
@@ -55,13 +56,36 @@ function content_606593faa66156_43999175 (Smarty_Internal_Template $_smarty_tpl)
                 </tr>
             </thead>
             <tbody>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['souhait']->value, 'value');
+$_smarty_tpl->tpl_vars['value']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->do_else = false;
+?>
+                <tr>
+                    <td class="mot" data-label="Offre"><?php echo $_smarty_tpl->tpl_vars['value']->value->Titre;?>
+</td>
+                    <td class="mot" data-label="Nom entreprise"><?php echo $_smarty_tpl->tpl_vars['value']->value->Entreprise;?>
+</td>
+                    <td class="mot" data-label="Date de publication"><?php echo $_smarty_tpl->tpl_vars['value']->value->Date_publication;?>
+</td>
+                    <td class="del">
+                        <input type="submit" class="btn" value="Postuler">
+                        <a class="btn" >Afficher plus</a>
+                        <a href="/delete/<?php echo $_smarty_tpl->tpl_vars['value']->value->Id_offre;?>
+"><i class="far fa-trash-alt param"></i></a>
+                    </td>
+                </tr>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <tr>
                     <td class="mot" data-label="Offre">Offre</td>
                     <td class="mot" data-label="Nom entreprise">Entreprise</td>
                     <td class="mot" data-label="Date de publication">Date</td>
                     <td class="del">
                         <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
+                        <a class="btn" >Afficher plus</a>
                         <a href=""><i class="far fa-trash-alt param"></i></a>
                     </td>
                 </tr>
@@ -100,6 +124,15 @@ function content_606593faa66156_43999175 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 </body>
 
 </html><?php }
