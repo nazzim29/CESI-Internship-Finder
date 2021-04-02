@@ -191,13 +191,7 @@ Route::add('/delegue/([0-9]*)',function($var1){
 });
 
 Route::add('/wishlist',function(){
-<<<<<<< HEAD
     OffreController::wishlistindex($_SESSION['current_user']['id']);
-=======
-    OffreController::Wishlistindex(array(
-        "utilisateur" => null
-    ));
->>>>>>> 2c8497a1f702948c0cfc7c63f393918ae728d5f8
 });
 Route::run();
 
