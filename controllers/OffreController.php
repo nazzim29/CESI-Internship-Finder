@@ -1,20 +1,46 @@
 <?php
 require_once('view\View.php');
 require_once('models\Offre.php');
-require_once('models\Requiert.php');
+require_once('models\Shouaite.php');
+
 class OffreController  
 {
     public function index()
     {
-        View::diplay('formoffre');
+        View::display('formoffre');
     }
     public function indexnew()
     {
-        View::diplay('formoffre');
+        View::display('formoffre');
     }
-    public function profile($postdata)
+    public function wishlistindex($postdata)
     {
-        
+        if(isset($_SESSION['current_user'])){
+            //if($_SESSION['current_user']['type'] == "ETUDIANT"){
+                $s = new Souhaite();
+                $souhait = $s->selectbyuser($postdata);
+                View::display('wishlist',array(
+                    'souhait' => $souhait
+                ));
+            //}else{
+              //  header('Location : /accessinterdit');
+            //}
+        }else{
+            header('Location: login');
+        }
+    }
+    public function wishlistadd($postdata)
+    {
+        if(isset($_SESSION['current_user'])){
+            if($_SESSION['current_user']['type'] == "ETUDIANT"){
+                $s = new Souhaite();
+                $souhait = $s->post($postdata);
+            }else{
+                header('Location : accessinterdit');
+            }
+        }else{
+            header('Location: login');
+        }
     }
     public function post($postdata)
     {
@@ -29,6 +55,7 @@ class OffreController
             ));
         }
     }
+
 
 
 }

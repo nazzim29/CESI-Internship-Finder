@@ -1,7 +1,7 @@
 <header>
 
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+    <a class="navbar-brand" href="/"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
             enable-background="new 0 0 960 560" xml:space="preserve">
             <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
@@ -92,10 +92,10 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx23',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/etudiant/new" >Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] eq 'PILOTE' or $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx22',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/etudiant" >Afficher</a>
                     {/if}
                 </div>
             </li>
@@ -108,9 +108,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {if  $_SESSION['current_user']['type'] eq 'ADMIN' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx14',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/pilote/new" >Créer</a>
                     {/if}
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/pilote" >Afficher</a>
                 </div>
             </li>
             {/if}
@@ -121,8 +121,8 @@
                     Délégué
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item item" href="#" >Créer</a>
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/delegue/new" >Créer</a>
+                    <a class="dropdown-item item" href="/delegue" >Afficher</a>
                 </div>
             </li>
             {/if}
@@ -134,14 +134,14 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx9',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/offre/new" >Créer</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/offre" >Afficher</a>
                     {/if}
                     {if $_SESSION['current_user']['type'] eq 'ETUDIANT'}
-                    <a class="dropdown-item item" href="#" >Mes condidatures</a>
-                    <a class="dropdown-item item" href="#" >Ma Wishlist</a>
+                    <a class="dropdown-item item" href="/condidature" >Mes condidatures</a>
+                    <a class="dropdown-item item" href="/wishlist" >Ma Wishlist</a>
                     {/if}
                     
 

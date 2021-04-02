@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-29 11:56:46
+/* Smarty version 3.1.39, created on 2021-04-02 16:15:59
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6061a45e7fcd65_36848233',
+  'unifunc' => 'content_6067271f9001c5_72476446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d229a64e78856cc5cd65cd70f957054350b0a48' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1616927357,
+      1 => 1617372050,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -33,6 +33,7 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/acceuil.css">
     <title>Page d'acceuil</title>
 </head>
@@ -132,7 +133,8 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
                                 </div>
                             </li> -->
                 </ul>
-                <a id="sn" class="d-inline btn btn-outline-light btn-rounded" href="/login" style="text-decoration: none;">SE CONNECTER </a>
+                <a id="sn" class="d-inline btn btn-outline-light btn-rounded" href="/login"
+                    style="text-decoration: none;">SE CONNECTER </a>
             </div>
         </nav>
     </header>
@@ -141,13 +143,15 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
         <div class="container" style="padding-top: 8%; padding-bottom: 5%;">
             <div class="row text-center">
                 <div style="width:100%">
-                    <h1 class="title"><strong>LE lieu pour trouver votre stage</strong></h1>
-                    <p class="description">Vous êtes étudiant au CESI, et vous cherchez un stage en entreprise. Peu
+                    <h1 class="title" data-aos="fade-down"><strong>LE lieu pour trouver votre stage</strong></h1>
+                    <p class="description" data-aos="fade-up">Vous êtes étudiant au CESI, et vous cherchez un stage en
+                        entreprise. Peu
                         importe votre spécialité, votre promotion,
                         le centre auquel vous appartenez ou même votre pays, CESI Internship Finder est
                         LE bon endroit pour trouver le stage qui vous convient le mieux.
                     </p>
-                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded" onclick="installPWA(deferredPrompt)">Télécharger</button>
+                    <button id="dl" type="button" class="btn btn-outline-light btn-rounded"
+                        onclick="installPWA(deferredPrompt)">Télécharger</button>
                 </div>
             </div>
         </div>
@@ -160,10 +164,10 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
         <br><br>
         <div id="un" class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <img id="provisoire2" src="Image/provisoire2.png" class="w-100 hover-shadow" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Si vous êtes empathique,
                         curieux et créatif; désireux de faire de petits pas ainsi que de grands sauts; prêt à poser
                         beaucoup
@@ -175,12 +179,13 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
         <br><br>
         <div id="deux" class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <img id="provisoire3" src="Image/provisoire3.png" alt="">
                 </div>
                 <div class="col-md-6" style="display: table-cell;
                 vertical-align: middle; min-height: 10em;">
-                    <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Un espace uniquememt réservé
+                    <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;" data-aos="fade-left">Un espace
+                        uniquememt réservé
                         aux membres du CESI</h3>
                 </div>
             </div>
@@ -188,10 +193,10 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
         <br><br>
         <div id="trois" class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <img id="provisoire1" src="Image/provisoire1.png" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <h3 style="padding-left: 15%; padding-right: 15%; margin: 17% 0;">CESI Internship Finder offre
                         un
                         environnement hautement novateur et collaboratif engagé à transformer l’éducation pour
@@ -207,8 +212,8 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 310">
             <path fill="#fff" d="M0,128L480,64L960,0L1440,224L1440,0L960,0L480,0L0,0Z"></path>
         </svg>
-        <h1 id="titre">Nos entreprises partenaires</h1>
-        <div class="container">
+        <h1 id="titre" data-aos="fade-up">Nos entreprises partenaires</h1>
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
                     <img src="Image/logo1.png" alt="" class="logos">
@@ -240,10 +245,15 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
                         <div id="about">
                             <h3>A propos de nous</h3>
                         </div>
-                        <p class="text-left">CESI Internship Finder, est un site de stage dédié aux
-                            étudiants des campus CESI pour leur permettre, grace aux differentes offres mise à
-                            leurs disposition pour trouver le meilleur stage
+                        <p class="text-left" style="max-width: 300px;">CESI Internship Finder, est un site de stage
+                            dédié
+                            aux étudiants de
+                            campus CESI
+                            pour
+                            leur permettre grace aux differentes offres mise à leurs disposition pour trouver le
+                            meilleur stage
                         </p>
+
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -251,7 +261,6 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
                         <h3>Navigation</h3>
                         <ul class="navigation">
                             <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Contact</a></li>
                             <li><a href="#">Mention légales</a></li>
                             <li><a href="#">Telécharger</a></li>
                         </ul>
@@ -259,7 +268,14 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-3">
                     <div class="footer-pad">
-                        <h3 id="network">Suivez nous</h3>
+                        <h3 id="network">Contactez nous</h3>
+                        <div class="contact">
+                            <ul class="navigation">
+                                <li>Email :</li>
+                                <li>cesiif@groupeelwaer.com</li>
+                                <li>N°: 05658584958</li>
+                            </ul>
+                        </div>
                         <ul class="social-network social-circle">
                             <li><a href="#" class="iconfb" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="iconlink" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
@@ -272,19 +288,36 @@ function content_6061a45e7fcd65_36848233 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="footer-pad">
                         <h3>Signalez un problème</h3>
                         <form id="prblm">
-                            <input type="email" id="femail" placeholder="Email">
+                            <input type="email" id="femail" placeholder="Email" class="footerinput">
                             <textarea name="description" id="ds" cols="5" rows="5"
                                 placeholder="Decrivez-nous le problème"></textarea>
                             <button>Envoyer</button>
                         </form>
                     </div>
+
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12 copy">
                     <p class="text-center"> &copy; Copyright 2021 CESI Internship Finder. Tous droits reservés.</p>
                 </div>
             </div>
         </div>
+
     </footer>
+
+    <!--Animation on scroll-->
+    <?php echo '<script'; ?>
+ src="https://unpkg.com/aos@next/dist/aos.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+        AOS.init({
+            offset: 120,
+            duration: 900,
+        });
+    <?php echo '</script'; ?>
+>
 
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wish List</title>
     <link rel="stylesheet" href="CSS\wishlist.css">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
 </head>
@@ -19,60 +20,39 @@
                 </path>
             </svg>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nom de l'offre</th>
-                    <th>Entreprise</th>
-                    <th>Date de publication</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        {if $souhait != null}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom de l'offre</th>
+                        <th>Entreprise</th>
+                        <th>Date de publication</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {foreach $souhait as $value}
+                    <tr>
+                        <td class="mot" data-label="Offre">{$value->Titre}</td>
+                        <td class="mot" data-label="Nom entreprise">{$value->Entreprise}</td>
+                        <td class="mot" data-label="Date de publication">{$value->Date_publication}</td>
+                        <td class="del">
+                            <input type="submit" class="btn" value="Postuler" onclick="location.href = '/offre/valider/{$value->Id_offre}'">
+                            <input type="submit" class="btn" value="Afficher plus" onclick="location.href = '/offre/{$value->Id_offre}'">
+                            <a href="/delete/{$value->Id_offre}"><i class="far fa-trash-alt param"></i></a>
+                        </td>
+                    </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        {else}
+            <h2>aucune offre n'est dans votre wishlist</h2>
+        {/if}
     </div>
     {include "footer.tpl"}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>

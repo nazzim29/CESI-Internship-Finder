@@ -6,6 +6,7 @@ require_once('libs\smarty-3.1.39\libs\Smarty.class.php');
 include_once('controllers\LoginController.php');
 include_once('controllers\EntrepriseController.php');
 include_once('controllers\OffreController.php');
+include_once('controllers\UtilisateurController.php');
 
 
 Route::add('/home',function(){
@@ -106,6 +107,15 @@ Route::add('/entreprise',function(){
 });
 /*  --------------- gestion utilisateur  ---------------*/
 Route::add('/etudiant/new',function(){
+    UtilisateurController::indexnew("Etudiant");
+});
+Route::add('/pilote/new',function(){
+    UtilisateurController::indexnew("Pilote");
+});
+Route::add('/delegue/new',function(){
+    UtilisateurController::indexnew("Delegué");
+});
+Route::add('/etudiant/new',function(){
     UtilisateurController::create(array(
         "type" => "ETUDIANT",
         "password" => $_POST['password'],
@@ -115,7 +125,7 @@ Route::add('/etudiant/new',function(){
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
     ));
-});
+},"POST");
 Route::add('/pilote/new',function(){
     UtilisateurController::create(array(
         "type" => "PILOTE",
@@ -127,7 +137,7 @@ Route::add('/pilote/new',function(){
         "centre" => $_POST['centre'],
         "file" => $_POST['photo']
     ));
-});
+},"POST");
 Route::add('/delegue/new',function(){
     UtilisateurController::create(array(
         "type" => "DELEGUE",
@@ -140,7 +150,7 @@ Route::add('/delegue/new',function(){
         "permission" => $_POST['permission'],
         "file" => $_POST['photo']
     ));
-});
+},"POST");
 Route::add('/etudiant/update/([0-9]*)',function($var1){
     UtilisateurController::update(array(
         'id' => $var1,
@@ -152,7 +162,7 @@ Route::add('/etudiant/update/([0-9]*)',function($var1){
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
     ));
-});
+},"POST");
 Route::add('/pilote/update/([0-9]*)',function($var1){
     UtilisateurController::update(array(
         "id" => $var1,
@@ -165,7 +175,7 @@ Route::add('/pilote/update/([0-9]*)',function($var1){
         "centre" => $_POST['centre'],
         "file" => $_POST['photo']
     ));
-});
+},"POST");
 Route::add('/delegue/update/([0-9]*)',function($var1){
     UtilisateurController::update(array(
         "id" => $var1,
@@ -179,7 +189,7 @@ Route::add('/delegue/update/([0-9]*)',function($var1){
         "permission" => $_POST['permission'],
         "file" => $_POST['photo']
     ));
-});
+},"POST");
 Route::add('/etudiant/([0-9]*)',function($var1){
     //afficher un etudiant
 });
@@ -189,12 +199,17 @@ Route::add('/pilote/([0-9]*)',function($var1){
 Route::add('/delegue/([0-9]*)',function($var1){
     //afficher un delegue
 });
-
+/*  --------------- wishliste  ---------------*/
 Route::add('/wishlist',function(){
-    OffreController::Wishlistindex(array(
-        "utilisateur" => null
+    OffreController::wishlistindex($_SESSION['current_user']['id']);
+});
+Route::add('/wishlist/([0-9]*)',function($var1){
+    OffreController::wishlistadd(array(
+        "id_utilisateur" => $_SESSION['current_user']['id'],
+        "id_offre" => $var1
     ));
 });
+
 Route::run();
 
 

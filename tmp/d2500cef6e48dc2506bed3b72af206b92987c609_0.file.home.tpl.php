@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 14:05:09
+/* Smarty version 3.1.39, created on 2021-04-02 16:03:03
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6065b6f5272b63_54381355',
+  'unifunc' => 'content_60672417ef2aa2_88815659',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1617269593,
+      1 => 1617372050,
       2 => 'file',
     ),
   ),
@@ -22,24 +22,358 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6065b6f5272b63_54381355 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontawesomeCDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!--bootstrapCDN-->
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--CSS link-->
     <link href="CSS/home.css" rel="stylesheet">
     <title>Home</title>
 </head>
+
 <body>
     <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+    <!--Home admin-->
+    <div id="body">
+        <section class="container">
+            <h3>Les dernières Entreprises ajoutées </h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="Image/logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale: Oks web</li>
+                                <li>Secteur d'activité: Informatique</li>
+                                <li>Localité: Alger</li>
+                                <li>Email: contact@okswebcom</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn">Ajouter nouveau</button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="btn">Afficher tous</button>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h3>Les derniers Pilotes ajoutées </h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale: Oks web</li>
+                                <li>Secteur d'activité: Informatique</li>
+                                <li>Localité: Alger</li>
+                                <li>Email: contact@okswebcom</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn">Ajouter nouveau</button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="btn">Afficher tous</button>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h3>Les dernières Offres ajoutées </h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale: Oks web</li>
+                                <li>Secteur d'activité: Informatique</li>
+                                <li>Localité: Alger</li>
+                                <li>Email: contact@okswebcom</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn">Ajouter nouveau</button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="btn">Afficher tous</button>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h3>Les derniers Etudiants ajoutées </h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale: Oks web</li>
+                                <li>Secteur d'activité: Informatique</li>
+                                <li>Localité: Alger</li>
+                                <li>Email: contact@okswebcom</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 image">
+                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                            </div>
+                            <ul class="info">
+                                <li>Raison sociale:</li>
+                                <li>Secteur d'activité: </li>
+                                <li>Localité:</li>
+                                <li>Email:</li>
+                            </ul>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn">Ajouter nouveau</button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="btn">Afficher tous</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

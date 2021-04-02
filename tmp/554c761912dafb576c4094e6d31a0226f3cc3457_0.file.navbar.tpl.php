@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 15:13:18
+/* Smarty version 3.1.39, created on 2021-04-02 18:16:00
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6065c6ee14d164_51524343',
+  'unifunc' => 'content_606743409af555_40543407',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1617282795,
+      1 => 1617380157,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6065c6ee14d164_51524343 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606743409af555_40543407 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <header>
 
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+    <a class="navbar-brand" href="/"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
             enable-background="new 0 0 960 560" xml:space="preserve">
             <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
@@ -117,10 +117,10 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx23',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/etudiant/new" >Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx22',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/etudiant" >Afficher</a>
                     <?php }?>
                 </div>
             </li>
@@ -133,9 +133,9 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx14',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/pilote/new" >Créer</a>
                     <?php }?>
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/pilote" >Afficher</a>
                 </div>
             </li>
             <?php }?>
@@ -146,8 +146,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                     Délégué
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item item" href="#" >Créer</a>
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/delegue/new" >Créer</a>
+                    <a class="dropdown-item item" href="/delegue" >Afficher</a>
                 </div>
             </li>
             <?php }?>
@@ -159,14 +159,14 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx9',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="#" >Créer</a>
+                    <a class="dropdown-item item" href="/offre/new" >Créer</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="#" >Afficher</a>
+                    <a class="dropdown-item item" href="/offre" >Afficher</a>
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ETUDIANT') {?>
-                    <a class="dropdown-item item" href="#" >Mes condidatures</a>
-                    <a class="dropdown-item item" href="#" >Ma Wishlist</a>
+                    <a class="dropdown-item item" href="/condidature" >Mes condidatures</a>
+                    <a class="dropdown-item item" href="/wishlist" >Ma Wishlist</a>
                     <?php }?>
                     
 
