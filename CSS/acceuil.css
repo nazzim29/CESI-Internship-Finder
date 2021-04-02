@@ -108,6 +108,7 @@ footer{
     background: rgb(65, 64, 64);
     color: white;
     position:sticky;
+    width: 100%;
 }
 
 .footer-pad{
@@ -139,7 +140,7 @@ ul.navigation a:hover{
 }
 .copy{
   margin-top: 2em;
-  background-image:linear-gradient(to right, #64a587, #446b50)
+  background: #446B50;
 }
 .copy p{
   margin-top: 1em;
@@ -155,10 +156,10 @@ ul.navigation a:hover{
   flex-direction: column;
   padding:0;
 }
-#prblm input{
+#prblm .footerinput{
   height: 2em;
 }
-#prblm textarea,input{
+#prblm textarea, .footerinput{
   border: none;
   outline: none;
   resize: none;
@@ -185,9 +186,6 @@ ul.navigation a:hover{
   background: #F17877;
   color: white;
 }
-.footer-pad #network{
-  margin-bottom: 1.5em;
-}
 
 /*Social Icon*/
 ul.social-network i{
@@ -202,7 +200,7 @@ ul.social-network {
   
 ul.social-network li {
     display: inline;
-    margin: 0 0.2em;
+    margin: 0 0.5em;
 }
 ul.social-circle li{
       margin-top: 100px;
@@ -270,3 +268,4 @@ ul.social-circle li{
 .social-network a {
     background-color: #F17877;
 }
+

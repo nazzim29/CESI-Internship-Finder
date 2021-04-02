@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-01 16:59:11
+/* Smarty version 3.1.39, created on 2021-04-02 12:42:40
   from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6065dfbfa682e0_94748143',
+  'unifunc' => 'content_6066f5204c8de2_52459546',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be02fdcfc0515525147fc9a24dec3f1e86d0d466' => 
     array (
       0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1617288929,
+      1 => 1617360122,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6066f5204c8de2_52459546 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -245,10 +245,15 @@ function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl)
                         <div id="about">
                             <h3>A propos de nous</h3>
                         </div>
-                        <p class="text-left">CESI Internship Finder, est un site de stage dédié aux
-                            étudiants des campus CESI pour leur permettre, grace aux differentes offres mise à
-                            leurs disposition pour trouver le meilleur stage
+                        <p class="text-left" style="max-width: 300px;">CESI Internship Finder, est un site de stage
+                            dédié
+                            aux étudiants de
+                            campus CESI
+                            pour
+                            leur permettre grace aux differentes offres mise à leurs disposition pour trouver le
+                            meilleur stage
                         </p>
+
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -256,7 +261,6 @@ function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl)
                         <h3>Navigation</h3>
                         <ul class="navigation">
                             <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Contact</a></li>
                             <li><a href="#">Mention légales</a></li>
                             <li><a href="#">Telécharger</a></li>
                         </ul>
@@ -264,7 +268,14 @@ function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-3">
                     <div class="footer-pad">
-                        <h3 id="network">Suivez nous</h3>
+                        <h3 id="network">Contactez nous</h3>
+                        <div class="contact">
+                            <ul class="navigation">
+                                <li>Email :</li>
+                                <li>cesiif@groupeelwaer.com</li>
+                                <li>N°: 05658584958</li>
+                            </ul>
+                        </div>
                         <ul class="social-network social-circle">
                             <li><a href="#" class="iconfb" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="iconlink" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
@@ -277,18 +288,22 @@ function content_6065dfbfa682e0_94748143 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="footer-pad">
                         <h3>Signalez un problème</h3>
                         <form id="prblm">
-                            <input type="email" id="femail" placeholder="Email">
+                            <input type="email" id="femail" placeholder="Email" class="footerinput">
                             <textarea name="description" id="ds" cols="5" rows="5"
                                 placeholder="Decrivez-nous le problème"></textarea>
                             <button>Envoyer</button>
                         </form>
                     </div>
+
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12 copy">
                     <p class="text-center"> &copy; Copyright 2021 CESI Internship Finder. Tous droits reservés.</p>
                 </div>
             </div>
         </div>
+
     </footer>
 
     <!--Animation on scroll-->

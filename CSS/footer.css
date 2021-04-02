@@ -58,10 +58,10 @@ ul.navigation a:hover{
   flex-direction: column;
   padding:0;
 }
-#prblm input{
+#prblm .footerinput{
   height: 2em;
 }
-#prblm textarea,input{
+#prblm textarea, .footerinput{
   border: none;
   outline: none;
   resize: none;
@@ -87,9 +87,6 @@ ul.navigation a:hover{
 #prblm button:hover{
   background: #F17877;
   color: white;
-}
-.footer-pad #network{
-  margin-bottom: 1.5em;
 }
 
 /*Social Icon*/
