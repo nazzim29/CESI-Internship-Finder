@@ -16,15 +16,15 @@ class OffreController
     public function wishlistindex($postdata)
     {
         if(isset($_SESSION['current_user'])){
-            //if($_SESSION['current_user']['type'] == "ETUDIANT"){
+            if($_SESSION['current_user']['type'] == "ETUDIANT"){
                 $s = new Souhaite();
                 $souhait = $s->selectbyuser($postdata);
                 View::display('wishlist',array(
                     'souhait' => $souhait
                 ));
-            //}else{
-              //  header('Location : /accessinterdit');
-            //}
+            }else{
+                header('Location : /accessinterdit');
+            }
         }else{
             header('Location: login');
         }

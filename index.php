@@ -192,6 +192,7 @@ Route::add('/delegue/update/([0-9]*)',function($var1){
 },"POST");
 Route::add('/etudiant/([0-9]*)',function($var1){
     //afficher un etudiant
+    View::display('profile');
 });
 Route::add('/pilote/([0-9]*)',function($var1){
     //afficher un pilote
