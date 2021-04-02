@@ -93,9 +93,12 @@ ul.items{
 ul.items input[type="checkbox"]{
   margin-inline-end: 0.5em;
 }
-#gentr, #goffr, #getu, #gdel, #gcand{
+#gentr, #goffr, #getu, #gdel, #gcand, #gpil{
   border-bottom: 1px solid #F17877;
   padding-right: 5px;
+}
+#goffr, #gpil{
+  padding-bottom: 1.5em;
 }
 /*---titre du formulaire---*/
 #titre{
@@ -164,6 +167,12 @@ ul.items input[type="checkbox"]{
   ul.checkbox li{
     display: inline;
     margin-inline-end: 1em;
+  }
+  ul.items input[type="checkbox"]{
+    margin-inline-end: 0.1em;
+  }
+  #goffr, #gpil{
+    padding-bottom: 0;
   }
 }
 @media (max-width: 300px){
