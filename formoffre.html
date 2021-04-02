@@ -24,13 +24,13 @@
             <h1 id="titre">Creation d'une offre</h1>
             <div class="row">
                 <div class="form-group">
-                    <label for="nom">Compétences</label><br>
-                    <input type="text" id="nom" class="form-control" required>
+                    <label for="adr">Nom de l'entreprise</label><br>
+                    <input type="text" id="adr" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="adr">Nom de l'entreprise</label><br>
-                    <input type="text" id="adr" class="form-control" required>
+                    <label for="nom">Compétences</label><br>
+                    <input type="text" id="nom" class="form-control" required>
                 </div>
 
                 <div class="form-group">
@@ -38,9 +38,16 @@
                     <input type="text" id="secteur" class="form-control" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="pro">Promotion</label><br>
-                    <input type="text" id="pro" class="form-control" required>
+                <div class="form-group" id="promostudent">
+                    <label for="promo">Promotion</label><br>
+                    <SELECT id="promo" class="form-select form-control" name="nom" size="1">
+                        <OPTION class="op">Choisir une promotion...
+                        <OPTION class="op">A1
+                        <OPTION class="op">A2
+                        <OPTION class="op">A3
+                        <OPTION class="op">A4
+                        <OPTION class="op">A5
+                    </SELECT>
                 </div>
 
                 <div class="form-group">
