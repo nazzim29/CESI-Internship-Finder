@@ -46,6 +46,7 @@ body {
     letter-spacing: 0.35px;
     font-weight: normal;
     padding: 6px;
+    justify-content: flex-end;
 }
 td{
     border-top: 1px solid black;
