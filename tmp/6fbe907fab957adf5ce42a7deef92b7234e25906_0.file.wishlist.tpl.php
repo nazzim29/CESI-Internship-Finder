@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-02 15:47:01
+/* Smarty version 3.1.39, created on 2021-04-02 16:26:19
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606720554fc805_45167747',
+  'unifunc' => 'content_6067298bed6621_20279745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fbe907fab957adf5ce42a7deef92b7234e25906' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\wishlist.tpl',
-      1 => 1617371218,
+      1 => 1617373569,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_606720554fc805_45167747 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6067298bed6621_20279745 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -46,81 +46,47 @@ function content_606720554fc805_45167747 (Smarty_Internal_Template $_smarty_tpl)
                 </path>
             </svg>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nom de l'offre</th>
-                    <th>Entreprise</th>
-                    <th>Date de publication</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
+        <?php if ($_smarty_tpl->tpl_vars['souhait']->value != null) {?>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom de l'offre</th>
+                        <th>Entreprise</th>
+                        <th>Date de publication</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['souhait']->value, 'value');
 $_smarty_tpl->tpl_vars['value']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
 $_smarty_tpl->tpl_vars['value']->do_else = false;
 ?>
-                <tr>
-                    <td class="mot" data-label="Offre"><?php echo $_smarty_tpl->tpl_vars['value']->value->Titre;?>
+                    <tr>
+                        <td class="mot" data-label="Offre"><?php echo $_smarty_tpl->tpl_vars['value']->value->Titre;?>
 </td>
-                    <td class="mot" data-label="Nom entreprise"><?php echo $_smarty_tpl->tpl_vars['value']->value->Entreprise;?>
+                        <td class="mot" data-label="Nom entreprise"><?php echo $_smarty_tpl->tpl_vars['value']->value->Entreprise;?>
 </td>
-                    <td class="mot" data-label="Date de publication"><?php echo $_smarty_tpl->tpl_vars['value']->value->Date_publication;?>
+                        <td class="mot" data-label="Date de publication"><?php echo $_smarty_tpl->tpl_vars['value']->value->Date_publication;?>
 </td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <a class="btn" >Afficher plus</a>
-                        <a href="/delete/<?php echo $_smarty_tpl->tpl_vars['value']->value->Id_offre;?>
+                        <td class="del">
+                            <input type="submit" class="btn" value="Postuler" onclick="location.href = '/offre/valider/<?php echo $_smarty_tpl->tpl_vars['value']->value->Id_offre;?>
+'">
+                            <input type="submit" class="btn" value="Afficher plus" onclick="location.href = '/offre/<?php echo $_smarty_tpl->tpl_vars['value']->value->Id_offre;?>
+'">
+                            <a href="/delete/<?php echo $_smarty_tpl->tpl_vars['value']->value->Id_offre;?>
 "><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-            <?php
+                        </td>
+                    </tr>
+                <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <a class="btn" >Afficher plus</a>
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="mot" data-label="Offre">Offre</td>
-                    <td class="mot" data-label="Nom entreprise">Entreprise</td>
-                    <td class="mot" data-label="Date de publication">Date</td>
-                    <td class="del">
-                        <input type="submit" class="btn" value="Postuler">
-                        <input type="submit" class="btn" value="Afficher plus">
-                        <a href=""><i class="far fa-trash-alt param"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        <?php } else { ?>
+            <h2>aucune offre n'est dans votre wishlist</h2>
+        <?php }?>
     </div>
     <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

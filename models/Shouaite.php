@@ -33,5 +33,13 @@ class Souhaite Extends Db
         $req->execute();
         return $req->fetchAll(PDO::FETCH_OBJ);
     }
+    public function post($postdata)
+    {
+        $req = $this->db->prepare("INSERT INTO souhaite (Id_utilisateur,Id_offre) values(?,?)");
+        $req->bindvalue(1,$postdata['id_utilisateur']);
+        $req->bindvalue(2,$postdata['id_offre']);
+        $req->execute();
+
+    }
 }
 

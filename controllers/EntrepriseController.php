@@ -1,5 +1,4 @@
 <?php
-require_once('models\competencesRecherchees.php');
 require_once('view\View.php');
 require_once('models\Entreprise.php');
 require_once('models\Note.php');

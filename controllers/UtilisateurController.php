@@ -3,9 +3,11 @@ require_once('view\View.php');
 require_once('models\Utilisateur.php');
 class UtilisateurController
 {
-    public function index()
+    public function indexnew($type)
     {
-
+        View::display('formuser',array(
+            "type" => $type
+        ));
     }
     public function read($postdata)
     {
