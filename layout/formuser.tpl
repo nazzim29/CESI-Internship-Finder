@@ -19,36 +19,36 @@
 <body>
     {include 'navbar.tpl'}
     <div class="container">
-        <form id="create">
+        <form id="create" action="" method="GET">
             <h1 id="titre">Créer un {$type}</h1>
             <div class="row">
                 <div class="form-group">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" name="firstname" class="form-control" required>
+                    <input type="text" id="nom" name="nom" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="prenom">Prénom</label><br>
-                    <input type="text" id="prenom" class="form-control" required>
+                    <input type="text" id="prenom" name="prenom" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="nomuser">Email</label><br>
-                    <input type="text" id="nomuser" class="form-control" required>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="pass">Mot de passe</label><br>
-                    <input type="password" id="pass" class="form-control" name="motdepasse" required>
+                    <input type="password" id="pass" class="form-control" name="password" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="adr">Centre</label><br>
-                    <input type="text" id="adr" class="form-control" required>
+                    <label for="centre">Centre</label><br>
+                    <input type="text" id="centre" name="centre" class="form-control" required>
                 </div>
-                <div class="form-group" id="promostudent">
+                <div class="form-group">
                     <label for="promo">Promotion</label><br>
-                    <SELECT id="promo" class="form-select form-control" name="nom" size="1">
+                    <SELECT id="promo" class="form-select form-control" name="promo" size="1">
                         <OPTION class="op">Choisir une promotion...
                         <OPTION class="op">A1
                         <OPTION class="op">A2
@@ -56,6 +56,10 @@
                         <OPTION class="op">A4
                         <OPTION class="op">A5
                     </SELECT>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Photo de profile</label><br>
+                    <input type="file" name="photo" class="form-control" >
                 </div>
                 {if $type eq 'Delegué' and ($_SESSION['current_user']['type'] eq "PILOTE" or  $_SESSION['current_user']['type'] eq "ADMIN")}
                 <label>Droits attribués</label>
@@ -65,12 +69,12 @@
                         <label id="gentr">Gestion Entreprise</label>
                         <div id="list1">
                             <ul class="items">
-                                <li><input type="checkbox" id="rech" />Rechercher </li>
-                                <li><input type="checkbox" />Créer</li>
-                                <li><input type="checkbox" id="modif" disabled/>Modifier</li>
-                                <li><input type="checkbox" />Evaluer</li>
-                                <li><input type="checkbox" id="supr" disabled/>Supprimer</li>
-                                <li><input type="checkbox" />Consulter les stats</li>
+                                <li><input type="checkbox" class="rech" name="permission[]" value="2"/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]" value="3"/>Créer</li>
+                                <li><input type="checkbox" class="modif" name="permission[]" disabled value="4"/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" value="5"/>Evaluer</li>
+                                <li><input type="checkbox" class="supr" name="permission[]" disabled value="6"/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" value="7"/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -78,12 +82,11 @@
                         <label id="goffr">Gestion Offres</label>
                         <div id="list2">
                             <ul class="items">
-                                <li><input type="checkbox" id="rech" />Rechercher </li>
-                                <li><input type="checkbox" />Créer</li>
-                                <li><input type="checkbox" id="modif" disabled/>Modifier</li>
-                                <li><input type="checkbox" />Evaluer</li>
-                                <li><input type="checkbox" id="supr" disabled/>Supprimer</li>
-                                <li><input type="checkbox" />Consulter les stats</li>
+                                <li><input type="checkbox" class="rech" name="permission[]" value="8"/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]" value="9"/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="10"/>Modifier</li>
+                                <li><input type="checkbox"  name="permission[]" class="supr" disabled value="11"/>Supprimer</li>
+                                <li><input type="checkbox"  name="permission[]" value="12"/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -91,12 +94,11 @@
                         <label id="getu">Gestion Etudiants</label>
                         <div id="list3">
                             <ul class="items">
-                                <li><input type="checkbox" id="rech" />Rechercher </li>
-                                <li><input type="checkbox" />Créer</li>
-                                <li><input type="checkbox" id="modif" disabled/>Modifier</li>
-                                <li><input type="checkbox" />Evaluer</li>
-                                <li><input type="checkbox" id="supr" disabled/>Supprimer</li>
-                                <li><input type="checkbox" />Consulter les stats</li>
+                                <li><input type="checkbox"  name="permission[]" class="rech" value="22"/>Rechercher </li>
+                                <li><input type="checkbox"  name="permission[]" value="23"/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" value="24" disabled/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="25"/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" value="26"/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -104,21 +106,30 @@
                         <label id="gdel">Gestion Délegués</label>
                         <div id="list4">
                             <ul class="items">
-                                <li><input type="checkbox" id="rech" />Rechercher </li>
-                                <li><input type="checkbox" />Créer</li>
-                                <li><input type="checkbox" id="modif" disabled/>Modifier</li>
-                                <li><input type="checkbox" />Evaluer</li>
-                                <li><input type="checkbox" id="supr" disabled/>Supprimer</li>
-                                <li><input type="checkbox" />Consulter les stats</li>
+                                <li><input type="checkbox" name="permission[]" class="rech" value="17"/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]"  value="18"/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="19"/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="20"/>Supprimer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label id="gpil">Gestion Pilotes</label>
+                        <div id="list5">
+                            <ul class="items">
+                                <li><input type="checkbox" name="permission[]" class="rech" value="13"/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]"  value="14"/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="15"/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="16"/>Supprimer</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col">
                         <label id="gcand">Gestion Candidatures</label>
-                        <div id="list5">
+                        <div id="list6">
                             <ul class="items">
-                                <li><input type="checkbox" />Avancement step 3</li>
-                                <li><input type="checkbox" />Avancement step 4</li>
+                                <li><input type="checkbox" name="permission[]"/>Avancement step 3</li>
+                                <li><input type="checkbox" name="permission[]"/>Avancement step 4</li>
                             </ul>
                         </div>
                     </div>
@@ -142,67 +153,80 @@
     <script>
         $('#gentr').on('click',function(){
             $('#list1 input').prop('checked', false);
-            $('#list1 #modif,#list1 #supr').attr('disabled',true);
+            $('#list1 .modif,#list1 .supr').attr('disabled',true);
             $('#list1').toggle(200);
         });
+        $('#gpil').on('click',function(){
+            $('#list5 input').prop('checked', false);
+            $('#list5 .modif,#list5 .supr').attr('disabled',true);
+            $('#list5').toggle(200);
+        });
         $('#goffr').on('click',function(){
-            $('#list2 #modif,#list2 #supr').attr('disabled',true);
+            $('#list2 .modif,#list2 .supr').attr('disabled',true);
             $('#list2 input').prop('checked', false);
             $('#list2').toggle(200);
         });
         $('#getu').on('click',function(){
-            $('#list3 #modif,#list3 #supr').attr('disabled',true);
+            $('#list3 .modif,#list3 .supr').attr('disabled',true);
             $('#list3 input').prop('checked', false);
             $('#list3').toggle(200);
         });
         $('#gdel').on('click',function(){
-            $('#list4 #modif,#list4 #supr').attr('disabled',true);
+            $('#list4 .modif,#list4 .supr').attr('disabled',true);
             $('#list4 input').prop('checked', false);
             $('#list4').toggle(200);
         });
         $('#gcand').on('click',function(){
-            $('#list5 #modif,#list5 #supr').attr('disabled',true);
-            $('#list5 input').prop('checked', false);
-            $('#list5').toggle(200);
+            $('#list6 .modif,#list6 .supr').attr('disabled',true);
+            $('#list6 input').prop('checked', false);
+            $('#list6').toggle(200);
         });
-        $('#list1 #rech').on('change',function(){
-            if($('#list1 #rech').is(':checked')){
-                $('#list1 #modif,#list1 #supr').removeAttr('disabled');
+        $('#list1 .rech').on('change',function(){
+            if($('#list1 .rech').is(':checked')){
+                $('#list1 .modif,#list1 .supr').removeAttr('disabled');
             }else{
-                $('#list1 #modif,#list1 #supr').attr('disabled',true);
-                $('#list1 #modif,#list1 #supr').prop('checked', false)
+                $('#list1 .modif,#list1 .supr').attr('disabled',true);
+                $('#list1 .modif,#list1 .supr').prop('checked', false)
             }
         });
-        $('#list2 #rech').on('change',function(){
-            if($('#list2 #rech').is(':checked')){
-                $('#list2 #modif,#list2 #supr').removeAttr('disabled');
+        $('#list2 .rech').on('change',function(){
+            if($('#list2 .rech').is(':checked')){
+                $('#list2 .modif,#list2 .supr').removeAttr('disabled');
             }else{
-                $('#list2 #modif,#list2 #supr').attr('disabled',true);
-                $('#list2 #modif,#list2 #supr').prop('checked', false)
+                $('#list2 .modif,#list2 .supr').attr('disabled',true);
+                $('#list2 .modif,#list2 .supr').prop('checked', false)
             }
         });
-        $('#list3 #rech').on('change',function(){
-            if($('#list3 #rech').is(':checked')){
-                $('#list3 #modif,#list3 #supr').removeAttr('disabled');
+        $('#list3 .rech').on('change',function(){
+            if($('#list3 .rech').is(':checked')){
+                $('#list3 .modif,#list3 .supr').removeAttr('disabled');
             }else{
-                $('#list3 #modif,#list3 #supr').attr('disabled',true);
-                $('#list3 #modif,#list3 #supr').prop('checked', false)
+                $('#list3 .modif,#list3 .supr').attr('disabled',true);
+                $('#list3 .modif,#list3 .supr').prop('checked', false)
             }
         });
-        $('#list4 #rech').on('change',function(){
-            if($('#list4 #rech').is(':checked')){
-                $('#list4 #modif,#list4 #supr').removeAttr('disabled');
+        $('#list4 .rech').on('change',function(){
+            if($('#list4 .rech').is(':checked')){
+                $('#list4 .modif,#list4 .supr').removeAttr('disabled');
             }else{
-                $('#list4 #modif,#list4 #supr').attr('disabled',true);
-                $('#list4 #modif,#list4 #supr').prop('checked', false)
+                $('#list4 .modif,#list4 .supr').attr('disabled',true);
+                $('#list4 .modif,#list4 .supr').prop('checked', false)
             }
         });
-        $('#list5 #rech').on('change',function(){
-            if($('#list5 #rech').is(':checked')){
-                $('#list5 #modif,#list5 #supr').removeAttr('disabled');
+        $('#list5 .rech').on('change',function(){
+            if($('#list5 .rech').is(':checked')){
+                $('#list5 .modif,#list5 .supr').removeAttr('disabled');
             }else{
-                $('#list5 #modif,#list5 #supr').attr('disabled',true);
-                $('#list5 #modif,#list5 #supr').prop('checked', false)
+                $('#list5 .modif,#list5 .supr').attr('disabled',true);
+                $('#list5 .modif,#list5 .supr').prop('checked', false)
+            }
+        });
+        $('#list6 .rech').on('change',function(){
+            if($('#list6 .rech').is(':checked')){
+                $('#list6 .modif,#list6 .supr').removeAttr('disabled');
+            }else{
+                $('#list6 .modif,#list6 .supr').attr('disabled',true);
+                $('#list6 .modif,#list6 .supr').prop('checked', false)
             }
         });
     </script>

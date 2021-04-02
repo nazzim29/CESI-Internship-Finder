@@ -124,6 +124,7 @@ Route::add('/etudiant/new',function(){
         "prenom" => $_POST['prenom'],
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
+        "file" => $_post['photo']
     ));
 },"POST");
 Route::add('/pilote/new',function(){
@@ -161,6 +162,7 @@ Route::add('/etudiant/update/([0-9]*)',function($var1){
         "prenom" => $_POST['prenom'],
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
+        "file" => $_POST['photo']
     ));
 },"POST");
 Route::add('/pilote/update/([0-9]*)',function($var1){

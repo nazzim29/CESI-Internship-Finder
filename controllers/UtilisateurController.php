@@ -116,20 +116,12 @@ class UtilisateurController
     {
         if(isset($_SESSION['current_user'])){
             if($postdata['type'] == "DELEGUE"){
-                $sfx = 'sfx18';
-            }else if($postdata['type'] == "PILOTE"){
-                $sfx = 'sfx14';
-            }else if($postdata['type'] == "ETUDIANT"){
-                $sfx = 'sfx23';
-            }
-            switch($_SESSION['current_user']['type']){
-                case 'PILOTE':
-                case 'ADMIN':
+                if ($_SESSION['current_ucer']['type'] == "ADMIN" || $_SESSION['current_ucer']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx18',$_SESSION['current_user']['permission']))) {
                     $user = new Utilisateur();
                     $avoir = new Avoir();
                     $id_user = $user->create(array(
                         'password' => password_hash($postdata['password'],PASSWORD_BCRYPT,['cost'=> 12]),
-                        'type' => $postdata['type'],
+                        'type' => "DELEGUE",
                         'promotion' => $postdata['promotion'],
                         'nom' => $postdata['nom'],
                         'prenom' => $postdata['prenom'],
@@ -143,16 +135,14 @@ class UtilisateurController
                             'erreur' => $id_entr
                         ));
                     }else{
-                        if($postdata['type'] == "DELEGUE"){
-                            foreach ($postdata['permission'] as $key => $value) {
-                                $avoir->create(array(
-                                    "id_utilisateur" => $id_user,
-                                    "id_permission" => $value
-                                ));
-                            }
+                        foreach ($postdata['permission'] as $key => $value) {
+                            $avoir->create(array(
+                                "id_utilisateur" => $id_user,
+                                "id_permission" => $value
+                            ));
                         }
                         if(substr($postdata['file']['name'],-4) == '.png'){
-                            move_uploaded_file($postdata['file']['tmp_name'],"image/".strtolower($postdata['type'])."/".$id_user.".png");
+                            move_uploaded_file($postdata['file']['tmp_name'],"image/delegue/".$id_user.".png");
                             header("Location: ".$id_user."");
                         }else{
                             View::display('formentr',array(
@@ -160,46 +150,70 @@ class UtilisateurController
                             ));
                         }
                     }
-                break;
-                case 'DELEGUE':
-                    if(array_search($sfx,$_SESSION['current_user']['permission'])){
-                        $user = new Utilisateur();
-                        $avoir = new Avoir();
-                        $id_user = $user->create(array(
-                            'password' => password_hash($postdata['password'],PASSWORD_BCRYPT,['cost'=> 12]),
-                            'type' => $postdata['type'],
-                            'promotion' => $postdata['promotion'],
-                            'nom' => $postdata['nom'],
-                            'prenom' => $postdata['prenom'],
-                            'email' => $postdata['email'],
-                            'centre' => $postdata['centre'],
-                            'createur' => $_SESSION['current_user']['id']
+                }else{
+                    header('Location : accessinterdit');
+                }
+            }else if($postdata['type'] == "PILOTE"){
+                if($_SESSION['current_user']['type'] == 'ADMIN' || ($_SESSION['current_user']['type'] == 'DELEGUE' & array_search('sfx14',$_SESSION['current_user']['permission']))) {
+                    $user = new Utilisateur();
+                    $id_user = $user->create(array(
+                        'password' => password_hash($postdata['password'],PASSWORD_BCRYPT,['cost'=> 12]),
+                        'type' => "PILOTE",
+                        'promotion' => $postdata['promotion'],
+                        'nom' => $postdata['nom'],
+                        'prenom' => $postdata['prenom'],
+                        'email' => $postdata['email'],
+                        'centre' => $postdata['centre'],
+                        'createur' => $_SESSION['current_user']['id']
+                    ));
+                    if($id_user == "Cet utilisateur existe deja dans la base de données"){
+                        View::display('formuser',array(
+                            'erreur' => $id_entr
                         ));
-
-                        if($id_user == "Cet utilisateur existe deja dans la base de données"){
-                            View::display('formuser',array(
-                                'erreur' => $id_entr
-                            ));
+                    }else{
+                        if(substr($postdata['file']['name'],-4) == '.png'){
+                            move_uploaded_file($postdata['file']['tmp_name'],"image/pilote/".$id_user.".png");
+                            header("Location: ".$id_user."");
                         }else{
-                            if($postdata['type'] == "DELEGUE"){
-                                foreach ($postdata['permission'] as $key => $value) {
-                                    $avoir->create(array(
-                                        "id_utilisateur" => $id_user,
-                                        "id_permission" => $value
-                                    ));
-                                }
-                            }
-                            if(substr($postdata['file']['name'],-4) == '.png'){
-                                move_uploaded_file($postdata['file']['tmp_name'],"image/".strtolower($postdata['type'])."/".$id_user.".png");
-                                header("Location: ".$id_user."");
-                            }else{
-                                View::display('formentr',array(
-                                    'erreur' => "veuillez uploader une image au format png"
-                                ));
-                            }
+                            View::display('formentr',array(
+                                'erreur' => "veuillez uploader une image au format png"
+                            ));
                         }
-                    }
-                break;
+                    } 
+                }else{
+                    header('Location : accessinterdit');
+                }
+                
+            }else if($postdata['type'] == "ETUDIANT"){
+                if($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == 'DELEGUE' & array_search('sfx23',$_SESSION['current_user']['permission']))){
+                    $user = new Utilisateur();
+                    $id_user = $user->create(array(
+                        'password' => password_hash($postdata['password'],PASSWORD_BCRYPT,['cost'=> 12]),
+                        'type' => "ETUDIANT",
+                        'promotion' => $postdata['promotion'],
+                        'nom' => $postdata['nom'],
+                        'prenom' => $postdata['prenom'],
+                        'email' => $postdata['email'],
+                        'centre' => $postdata['centre'],
+                        'createur' => $_SESSION['current_user']['id']
+                    ));
+                    if($id_user == "Cet utilisateur existe deja dans la base de données"){
+                        View::display('formuser',array(
+                            'erreur' => $id_entr
+                        ));
+                    }else{
+                        if(substr($postdata['file']['name'],-4) == '.png'){
+                            move_uploaded_file($postdata['file']['tmp_name'],"image/etudiant/".$id_user.".png");
+                            header("Location: ".$id_user."");
+                        }else{
+                            View::display('formentr',array(
+                                'erreur' => "veuillez uploader une image au format png"
+                            ));
+                        }
+                    } 
+                }else{
+                    header('Location : accessinterdit');
+                }
             }
         }else {
             header('Location : login');
