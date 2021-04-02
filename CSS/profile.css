@@ -1,0 +1,158 @@
+body {
+	background: url(fond.png) no-repeat center center fixed;
+	background-size: cover;
+	cursor: default;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+/*
+*{
+	border: solid;
+}
+*/
+#card{
+    background-color: white;
+    width: 80%;
+    height: fit-content;
+    padding-bottom: 5em;
+    margin: 10% auto;
+    left: 50%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+#profile {
+    margin: 0;
+	display: flex;
+	justify-content: center;
+}
+.role{
+	background-color: gray;
+	font-weight: 600;
+	padding:.15em .5em .2em .5em;
+	border-radius: 25px;
+	text-align: center;
+	font-size: small;
+	color: lavender;
+}
+#plus {
+    padding: 50px 50px;
+    margin: 0;
+	height: fit-content;
+}
+
+#thelogo {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	position: relative;
+	display: block;
+	margin: 30px;
+	-webkit-filter: sepia(.25);
+	-moz-filter: sepia(.25);
+	filter: sepia(.25);
+}
+
+h1 {
+	color: rgba(38, 50, 56, 1);
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+}
+
+ul {
+	color: rgba(38, 50, 56, .87);
+	font-family: 'Roboto Condensed', sans-serif;
+    list-style: none;
+	font-size: 20px;
+	font-weight: 400;
+    padding: 0;
+}
+
+#user {
+	height: 80px;
+    width: 80px;
+	border-radius: 100px;
+	display: block;
+	margin: 2em;
+	-webkit-filter: sepia(.25);
+	-moz-filter: sepia(.25);
+	filter: sepia(.25);
+}
+
+#users {
+	height: 80px;
+	border-radius: 100px;
+	display: block;
+    margin-left: 2em;
+	padding: 0.8em;
+	-webkit-filter: sepia(.25);
+	-moz-filter: sepia(.25);
+	filter: sepia(.25);
+}
+
+p{
+    margin: 1em 0 1em 0;
+    display: block;
+}
+.com{
+	display: flex;
+	flex-direction: row;
+
+}
+.com img{
+	flex: auto;
+	width: 80px;
+	height: 80px;
+}
+
+.comment {
+	padding: 10px 30px 10px 20px;
+}
+
+.comment h6{
+    display: inline;
+	vertical-align: text-bottom;
+}
+
+.comment span {
+	display: inline;
+	vertical-align: baseline;
+}
+
+h1,
+h6 {
+    font-weight: bold
+}
+h5{
+	margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+
+  /*  
+#profile {
+	width: 100%;
+	height: 300px;
+    margin: 0;
+}
+*/
+#plus {
+	height: fit-content;
+    padding: 0 50px 2em 50px;
+}
+h1 {
+	color: rgba(38, 50, 56, 1);
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	top: 48px;
+	text-align: center;
+}
+.com{
+	width: 100%;
+	margin-left: 20px;
+}
+#user {
+	margin: 0 2em; 
+}
+  }
