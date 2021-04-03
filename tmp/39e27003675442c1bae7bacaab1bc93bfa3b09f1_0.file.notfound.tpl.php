@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-04-03 12:13:00
+  from 'C:\Users\pc\Desktop\projet web\CESI-Internship-Finder\layout\notfound.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60683fac917810_70350622',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '39e27003675442c1bae7bacaab1bc93bfa3b09f1' => 
+    array (
+      0 => 'C:\\Users\\pc\\Desktop\\projet web\\CESI-Internship-Finder\\layout\\notfound.tpl',
+      1 => 1617444740,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_60683fac917810_70350622 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,7 +58,8 @@
 			<a href="/">Go To Homepage</a>
 		</div>
 	</div>
-<script>
+<?php echo '<script'; ?>
+>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
@@ -48,7 +72,9 @@
             });
         });
       }
-    </script>
+    <?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-04-03 13:08:14
+  from 'C:\Users\pc\Desktop\projet web\CESI-Internship-Finder\layout\acceuil.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60684c9e929115_97422322',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '353177c4df81b7bea27fc0c53bc3747ca1f2106b' => 
+    array (
+      0 => 'C:\\Users\\pc\\Desktop\\projet web\\CESI-Internship-Finder\\layout\\acceuil.tpl',
+      1 => 1617447996,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_60684c9e929115_97422322 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -291,18 +314,29 @@
     </footer>
 
     <!--Animation on scroll-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <?php echo '<script'; ?>
+ src="https://unpkg.com/aos@next/dist/aos.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
         AOS.init({
             offset: 120,
             duration: 900,
         });
-    </script>
+    <?php echo '</script'; ?>
+>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
@@ -315,7 +349,9 @@
             });
         });
       }
-    </script>
+    <?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}

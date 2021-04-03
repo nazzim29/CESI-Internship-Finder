@@ -13,6 +13,12 @@
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="\css/error.css" />
+    <link rel="manifest" href="\manifest.json">
+    <link rel="apple-touch-icon" href="GHIS2-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -28,7 +34,20 @@
             <a href="#">Go To Homepage</a>
         </div>
     </div>
-
+<script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then(registration => {
+              console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+              })
+            .catch(err => {
+              console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+            });
+        });
+      }
+    </script>
 </body>
 
 </html>
