@@ -13,7 +13,10 @@ class UtilisateurController
             "centres" => $centres
         ));
     }
-    public function rechercheindex(){
+    public function rechercheindex($s){
+        View::display('indexentreprise',array(
+            "type" => $s
+        ));
     }
     public function recherche($postdata){
 
@@ -24,11 +27,9 @@ class UtilisateurController
             $utilisateur=new Utilisateur();
             $u=$utilisateur->select($postdata["id_utilisateur"]);
             if($u['Type']==$postdata["type"]){
-                // $n=new Note();
-                // $notes=$n->select($u['Id_utilisateur']);
+                $utilisateur->visitincr($u['Id_utilisateur']);
                 View::display('profile',array(
                     "user"=>$u,
-                    //"coms"=>$notes
                 )); 
             }else{
                 View::display('notfound');

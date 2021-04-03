@@ -93,6 +93,10 @@ body {
     justify-content: center;
     margin-top: 1em;
 }
+image{
+    max-width: 100%;
+    height: auto;
+}
 #truc li  {
     display: inline;
     margin-right: 20px;
@@ -106,7 +110,6 @@ h1 {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
-    margin: 40px 0;
 }
 #profile {
 	color: rgba(38, 50, 56, .87);
@@ -147,6 +150,7 @@ h1 {
 .comment {
 	padding: 10px 50px 10px 50px;
 }
+
 
 @media (max-width: 990px) {
     .date{

@@ -152,7 +152,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     {$_SESSION['current_user']['nom']|upper} {$_SESSION['current_user']['prenom']|capitalize}({($_SESSION['current_user']['type']|lower)|capitalize})
-                    <img width='40' height='40'  src="..\..\image\{$_SESSION['current_user']['type']|lower}\{$_SESSION['current_user']['id']}.png" class="img-thumbnail rounded-circle navbar-brand" >
+                    <img width='40px' height='40px'  src="..\..\image\{$_SESSION['current_user']['type']|lower}\{$_SESSION['current_user']['id']}.png" class="img-thumbnail rounded-circle navbar-brand" >
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx9',$_SESSION['current_user']['permission']) !== false)}

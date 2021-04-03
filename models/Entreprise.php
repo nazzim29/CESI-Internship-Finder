@@ -70,7 +70,7 @@ class Entreprise Extends Db
     }
     public function read($id = null)
     {
-        $r = "select * from entreprise ";
+        $r = "SELECT * FROM `entreprise` ";
         if (isset($id)) {
             $r .= "where Id_entreprise = ?";
         }
