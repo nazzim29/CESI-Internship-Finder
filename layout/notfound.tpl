@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:700,900" rel="stylesheet">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/error.css" />
+	<link type="text/css" rel="stylesheet" href="\css/error.css" />
 
 </head>
 

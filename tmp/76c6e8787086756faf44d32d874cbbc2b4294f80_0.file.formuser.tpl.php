@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-02 22:48:43
+/* Smarty version 3.1.39, created on 2021-04-03 02:44:45
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\formuser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6067832b5af414_84787717',
+  'unifunc' => 'content_6067ba7d629573_69497962',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76c6e8787086756faf44d32d874cbbc2b4294f80' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\formuser.tpl',
-      1 => 1617396521,
+      1 => 1617410681,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+function content_6067ba7d629573_69497962 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+?>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -38,30 +40,34 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/formstyle.css">
+    <link rel="stylesheet" href="\CSS/formstyle.css">
 </head>
 
 <body>
     <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <form id="create" action="" method="GET">
-            <h1 id="titre">Créer un <?php echo $_smarty_tpl->tpl_vars['type']->value;?>
+        <form id="create" action="" enctype="multipart/form-data" method="POST">
+            <h1 id="titre">Créer un <?php echo smarty_modifier_capitalize((mb_strtolower($_smarty_tpl->tpl_vars['type']->value, 'UTF-8')));?>
 </h1>
             <div class="row">
                 <div class="form-group">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" name="nom" class="form-control" required>
+                    <input type="text" id="nom" name="nom" class="form-control" required <?php if ((isset($_smarty_tpl->tpl_vars['user']->value))) {?>value="<?php echo $_smarty_tpl->tpl_vars['user']->value['Nom'];?>
+"<?php }?>>
                 </div>
 
                 <div class="form-group">
                     <label for="prenom">Prénom</label><br>
-                    <input type="text" id="prenom" name="prenom" class="form-control" required>
+                    <input type="text" id="prenom" name="prenom" class="form-control" required <?php if ((isset($_smarty_tpl->tpl_vars['user']->value))) {?>value="<?php echo $_smarty_tpl->tpl_vars['user']->value['Prenom'];?>
+"<?php }?>>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <label for="email">Email </label><br>
+                    
+                    <input type="email" id="email" name="email" class="form-control" required <?php if ((isset($_smarty_tpl->tpl_vars['user']->value))) {?>value="<?php echo $_smarty_tpl->tpl_vars['user']->value['Email'];?>
+"<?php }?>>
                 </div>
 
                 <div class="form-group">
@@ -71,24 +77,36 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="form-group">
                     <label for="centre">Centre</label><br>
-                    <input type="text" id="centre" name="centre" class="form-control" required>
+                    <select id="centre" name="centre" class="form-select form-control" required>
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['centres']->value, 'c');
+$_smarty_tpl->tpl_vars['c']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['c']->value) {
+$_smarty_tpl->tpl_vars['c']->do_else = false;
+?>
+                            <OPTION class="op" value="<?php echo $_smarty_tpl->tpl_vars['c']->value["Id_centre"];?>
+" <?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['c']->value['Id_centre'] == $_smarty_tpl->tpl_vars['user']->value['Id_centre']) {?> selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['c']->value["Nom"];?>
+
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="promo">Promotion</label><br>
-                    <SELECT id="promo" class="form-select form-control" name="promo" size="1">
-                        <OPTION class="op">Choisir une promotion...
-                        <OPTION class="op">A1
-                        <OPTION class="op">A2
-                        <OPTION class="op">A3
-                        <OPTION class="op">A4
-                        <OPTION class="op">A5
+                    <SELECT id="promo" class="form-select form-control" name="promo" size="1" >
+                        <OPTION class="op" <?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['user']->value["Promotion"] == "A1") {?>selected<?php }?>>A1
+                        <OPTION class="op"<?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['user']->value["Promotion"] == "A2") {?>selected<?php }?>>A2
+                        <OPTION class="op"<?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['user']->value["Promotion"] == "A3") {?>selected<?php }?>>A3
+                        <OPTION class="op"<?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['user']->value["Promotion"] == "A4") {?>selected<?php }?>>A4
+                        <OPTION class="op"<?php if ((isset($_smarty_tpl->tpl_vars['user']->value)) && $_smarty_tpl->tpl_vars['user']->value["Promotion"] == "A5") {?>selected<?php }?>>A5
                     </SELECT>
                 </div>
                 <div class="form-group">
                     <label for="photo">Photo de profile</label><br>
                     <input type="file" name="photo" class="form-control" >
                 </div>
-                <?php if ($_smarty_tpl->tpl_vars['type']->value == 'Delegué' && ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN")) {?>
+                <?php if ($_smarty_tpl->tpl_vars['type']->value == 'DELEGUE' && ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN")) {?>
                 <label>Droits attribués</label>
                 <!--Permission délégués-->
                 <div id="permission" class="row">
@@ -96,12 +114,15 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="gentr">Gestion Entreprise</label>
                         <div id="list1">
                             <ul class="items">
-                                <li><input type="checkbox" class="rech" name="permission[]" value="2"/>Rechercher </li>
-                                <li><input type="checkbox" name="permission[]" value="3"/>Créer</li>
-                                <li><input type="checkbox" class="modif" name="permission[]" disabled value="4"/>Modifier</li>
-                                <li><input type="checkbox" name="permission[]" value="5"/>Evaluer</li>
-                                <li><input type="checkbox" class="supr" name="permission[]" disabled value="6"/>Supprimer</li>
-                                <li><input type="checkbox" name="permission[]" value="7"/>Consulter les stats</li>
+                                <li><input type="checkbox" class="rech" name="permission[]" value="2" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('2',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]" value="3" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('3',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Créer</li>
+                                <li><input type="checkbox" class="modif" name="permission[]"  value="4" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('2',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }
+if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('4',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?> checked<?php }?>/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" value="5" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('5',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Evaluer</li>
+                                <li><input type="checkbox" class="supr" name="permission[]" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('2',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="6"<?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('6',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" value="7"<?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('7',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -109,11 +130,13 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="goffr">Gestion Offres</label>
                         <div id="list2">
                             <ul class="items">
-                                <li><input type="checkbox" class="rech" name="permission[]" value="8"/>Rechercher </li>
-                                <li><input type="checkbox" name="permission[]" value="9"/>Créer</li>
-                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="10"/>Modifier</li>
-                                <li><input type="checkbox"  name="permission[]" class="supr" disabled value="11"/>Supprimer</li>
-                                <li><input type="checkbox"  name="permission[]" value="12"/>Consulter les stats</li>
+                                <li><input type="checkbox" class="rech" name="permission[]" value="8"<?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('8',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]" value="9"<?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('9',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('8',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="10" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('10',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Modifier</li>
+                                <li><input type="checkbox"  name="permission[]" class="supr" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('8',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="11" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('11',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Supprimer</li>
+                                <li><input type="checkbox"  name="permission[]" value="12" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('12',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -121,11 +144,13 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="getu">Gestion Etudiants</label>
                         <div id="list3">
                             <ul class="items">
-                                <li><input type="checkbox"  name="permission[]" class="rech" value="22"/>Rechercher </li>
-                                <li><input type="checkbox"  name="permission[]" value="23"/>Créer</li>
-                                <li><input type="checkbox"  name="permission[]" class="modif" value="24" disabled/>Modifier</li>
-                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="25"/>Supprimer</li>
-                                <li><input type="checkbox" name="permission[]" value="26"/>Consulter les stats</li>
+                                <li><input type="checkbox"  name="permission[]" class="rech" value="22" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('22',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Rechercher </li>
+                                <li><input type="checkbox"  name="permission[]" value="23" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('23',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" value="24" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('22',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('24',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('22',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="25" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('25',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" value="26" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('26',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Consulter les stats</li>
                             </ul>
                         </div>
                     </div>
@@ -133,10 +158,12 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="gdel">Gestion Délegués</label>
                         <div id="list4">
                             <ul class="items">
-                                <li><input type="checkbox" name="permission[]" class="rech" value="17"/>Rechercher </li>
-                                <li><input type="checkbox" name="permission[]"  value="18"/>Créer</li>
-                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="19"/>Modifier</li>
-                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="20"/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" class="rech" value="17" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('17',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]"  value="18" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('18',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('17',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="19" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('19',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('17',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="20" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('20',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Supprimer</li>
                             </ul>
                         </div>
                     </div>
@@ -144,10 +171,12 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="gpil">Gestion Pilotes</label>
                         <div id="list5">
                             <ul class="items">
-                                <li><input type="checkbox" name="permission[]" class="rech" value="13"/>Rechercher </li>
-                                <li><input type="checkbox" name="permission[]"  value="14"/>Créer</li>
-                                <li><input type="checkbox"  name="permission[]" class="modif" disabled value="15"/>Modifier</li>
-                                <li><input type="checkbox" name="permission[]" class="supr" disabled value="16"/>Supprimer</li>
+                                <li><input type="checkbox" name="permission[]" class="rech" value="13" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('13',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Rechercher </li>
+                                <li><input type="checkbox" name="permission[]"  value="14" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('14',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Créer</li>
+                                <li><input type="checkbox"  name="permission[]" class="modif" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('13',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="15" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('15',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Modifier</li>
+                                <li><input type="checkbox" name="permission[]" class="supr" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('13',$_smarty_tpl->tpl_vars['permission']->value) !== false) {
+} else { ?>disabled<?php }?> value="16" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('16',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Supprimer</li>
                             </ul>
                         </div>
                     </div>
@@ -155,8 +184,8 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
                         <label id="gcand">Gestion Candidatures</label>
                         <div id="list6">
                             <ul class="items">
-                                <li><input type="checkbox" name="permission[]"/>Avancement step 3</li>
-                                <li><input type="checkbox" name="permission[]"/>Avancement step 4</li>
+                                <li><input type="checkbox" name="permission[]" value="32" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('32',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Avancement step 3</li>
+                                <li><input type="checkbox" name="permission[]"value="33" <?php if ((isset($_smarty_tpl->tpl_vars['permission']->value)) && array_search('33',$_smarty_tpl->tpl_vars['permission']->value) !== false) {?>checked<?php }?>/>Avancement step 4</li>
                             </ul>
                         </div>
                     </div>
@@ -185,7 +214,7 @@ function content_6067832b5af414_84787717 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
-    <?php if ($_smarty_tpl->tpl_vars['type']->value == "Delegué" && ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN")) {?>
+    <?php if ($_smarty_tpl->tpl_vars['type']->value == "DELEGUE" && ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN")) {?>
     <?php echo '<script'; ?>
 >
         $('#gentr').on('click',function(){
