@@ -13,10 +13,10 @@
     <link href="\CSS/home.css" rel="stylesheet">
     <link rel="manifest" href="\manifest.json">
     <link rel="apple-touch-icon" href="GHIS2-96x96.png">
-  <meta name="apple-mobile-web-app-status-bar" content="white">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="white">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
 </head>
 
@@ -117,10 +117,10 @@
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -140,9 +140,9 @@
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -163,9 +163,9 @@
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -199,10 +199,9 @@
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Titre:</li>
+                                <li>Entreprise:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -228,9 +227,8 @@
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Titre:</li>
+                                <li>Entreprise: </li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -257,9 +255,8 @@
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Titre:</li>
+                                <li>Entreprise: </li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -304,10 +301,10 @@
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -327,9 +324,9 @@
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom: </li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -350,9 +347,9 @@
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom: </li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -383,18 +380,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/sw.js')
-            .then(registration => {
-              console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
-              })
-            .catch(err => {
-              console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(registration => {
+                        console.log(`Service Worker enregistré!Ressource:${registration.scope}`);
+                    })
+                    .catch(err => {
+                        console.log(`Echec de l'enregistrement du Service Worker: ${err}`);
+                    });
             });
-        });
-      }
+        }
     </script>
 </body>
 
