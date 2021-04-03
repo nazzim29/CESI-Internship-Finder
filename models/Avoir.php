@@ -42,7 +42,7 @@ class Avoir Extends Db
     public function update(){
 
     }
-    public function deletebyusee($postdata){
+    public function deletebyuser($postdata){
         $req = $this->db->prepare("delete from avoir where Id_utilisateur = ?");
         $req->bindvalue(1,$postdata);
         $req->execute();

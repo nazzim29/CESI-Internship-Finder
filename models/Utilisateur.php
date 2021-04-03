@@ -86,16 +86,22 @@ class Utilisateur Extends Db
         return $req->fetch(PDO::FETCH_ASSOC);
 
     }
-    public function selectbyid($postdata){
+    public function select($postdata){
+        $req = $this->db->prepare("select * from utilisateur where Id_utilisateur = ?");
+        $req->bindvalue(1,$postdata);
+        $req->execute();
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function visitincr($postdata)
+    {
         $req = $this->db->prepare("select * from utilisateur where Id_utilisateur = ?");
         $req->bindvalue(1,$postdata);
         $req->execute();
         $result = $req->fetch(PDO::FETCH_ASSOC);
         $req = $this->db->prepare("UPDATE `utilisateur` SET `Nb_visite`=? WHERE Id_utilisateur = ?");
-        $req->bindvalue(1,$result->Nb_visite+1);
-        $req->bindvalue(2,$result->Id_utilisateur);
-        $req->execute();
-        return $result;
+        $req->bindvalue(1,$result['Nb_visite']+1);
+        $req->bindvalue(2,$result['Id_utilisateur']);
     }
     public function create($postdata){
         try{

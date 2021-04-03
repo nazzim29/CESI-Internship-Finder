@@ -1,12 +1,16 @@
 <?php
 require_once('view\View.php');
 require_once('models\Utilisateur.php');
+require_once('models\Centre.php');
 class UtilisateurController
 {
     public function indexnew($type)
     {
+        $centre = new Centre();
+        $centres = $centre->select();
         View::display('formuser',array(
-            "type" => $type
+            "type" => $type,
+            "centres" => $centres
         ));
     }
     public function read($postdata)
@@ -16,19 +20,88 @@ class UtilisateurController
             $u=$utilisateur->select($postdata["id"]);
             if($u->Type==$postdata["type"]){
                 $n=new Note();
-                $notes=$n->select($u->Id_utilisateur);
+                $notes=$n->select($u['Id_utilisateur']);
                 View::display(array(
                     "user"=>$u,
                     "coms"=>$notes
-
                 )); 
             }
             else{
-                header("Location: ".$u->type."/".$u->Id_utilisateur);
+                header("Location: /".$u["Type"]."/".$u["Id_utilisateur"]);
             }
         }
         else{
-            header("Location: login");
+            header("Location: /login");
+        }
+    }
+    public function updateindex($postdata)
+    {
+        if(isset($_SESSION['current_user'])){
+            if($postdata['type'] == "PILOTE"){
+                if($_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx15',$_SESSION['current_user']['permission']))){
+                    $user = new Utilisateur();
+                    $u = $user->select($postdata['id_utilisateur']);
+                    if($u['Type'] == $postdata['type']){
+                        $centre = new Centre();
+                        $centres = $centre->select();
+                        View::display('formuser',array(
+                            "user" =>$u,
+                            "type" => $postdata['type'],
+                            "centres" => $centres
+                        ));
+                    }else{
+                        header('Location : /'.$u["Type"]."/".$postdata['id_utilisateur']);
+                    }
+                }else{
+                    header('Location: /accessinterdit');
+                }
+            }else if($postdata['type'] == "DELEGUE"){
+                if($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx19',$_SESSION['current_user']['permission']))){
+                    $user = new Utilisateur();
+                    $u = $user->select($postdata['id_utilisateur']);
+                    if($u['Type'] == $postdata['type']){
+                        $centre = new Centre();
+                        $centres = $centre->select();
+                        $permission = new Avoir();
+                        $p = $permission->selectbyuser($u['Id_utilisateur']);
+                        foreach ($p as $key => $value) {
+                            $p[$key] = $value['Id_permission'];
+                        }
+                        View::display('formuser',array(
+                            "permission" =>$p,
+                            "user" =>$u,
+                            "type" => $postdata['type'],
+                            "centres" => $centres
+                        ));
+                    }else{
+                        header('Location : /'.$u["Type"]."/".$postdata['id_utilisateur']);
+                    }
+                }else{
+                    header('Location: /accessinterdit');
+                }
+
+            }else{
+                if($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx23',$_SESSION['current_user']['permission']))){
+                    $user = new Utilisateur();
+                    $u = $user->select($postdata['id_utilisateur']);
+                    if($u['Type'] == $postdata['type']){
+                        $centre = new Centre();
+                        $centres = $centre->select();
+                        View::display('formuser',array(
+                            "user" =>$u,
+                            "type" => $postdata['type'],
+                            "centres" => $centres
+                        ));
+                    }else{
+                        header('Location : /'.$u["Type"]."/".$postdata['id_utilisateur']);
+                    }
+                }else{
+                    header('Location: /accessinterdit');
+                }
+            }
+        }else{
+            
+            header('Location: /login');   
         }
     }
     public function update($postdata)
@@ -112,11 +185,10 @@ class UtilisateurController
             header('Location : login');
         }
     }
-    public function create($postdata)
-    {
+    public function create($postdata){
         if(isset($_SESSION['current_user'])){
             if($postdata['type'] == "DELEGUE"){
-                if ($_SESSION['current_ucer']['type'] == "ADMIN" || $_SESSION['current_ucer']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx18',$_SESSION['current_user']['permission']))) {
+                if ($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_ucer']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx18',$_SESSION['current_user']['permission']))) {
                     $user = new Utilisateur();
                     $avoir = new Avoir();
                     $id_user = $user->create(array(
@@ -131,24 +203,27 @@ class UtilisateurController
                     ));
 
                     if($id_user == "Cet utilisateur existe deja dans la base de données"){
+                        $centre = new Centre();
+                        $centres = $centre->select();
                         View::display('formuser',array(
-                            'erreur' => $id_entr
+                            "erreur" => $id_user,
+                            "type" => $type,
+                            "centres" => $centres
                         ));
+
                     }else{
-                        foreach ($postdata['permission'] as $key => $value) {
-                            $avoir->create(array(
-                                "id_utilisateur" => $id_user,
-                                "id_permission" => $value
-                            ));
+                        if(isset($postdata['permission'])){ 
+                            foreach ($postdata['permission'] as $key => $value) {
+                                $avoir->create(array(
+                                    "id_utilisateur" => $id_user,
+                                    "id_permission" => $value
+                                ));
+                            }
                         }
                         if(substr($postdata['file']['name'],-4) == '.png'){
-                            move_uploaded_file($postdata['file']['tmp_name'],"image/delegue/".$id_user.".png");
-                            header("Location: ".$id_user."");
-                        }else{
-                            View::display('formentr',array(
-                                'erreur' => "veuillez uploader une image au format png"
-                            ));
-                        }
+                            move_uploaded_file($postdata['file']['tmp_name'],"\image/delegue/".$id_user.".png");
+                        }   
+                        header("Location: ".$id_user."");
                     }
                 }else{
                     header('Location : accessinterdit');
@@ -167,18 +242,18 @@ class UtilisateurController
                         'createur' => $_SESSION['current_user']['id']
                     ));
                     if($id_user == "Cet utilisateur existe deja dans la base de données"){
+                        $centre = new Centre();
+                        $centres = $centre->select();
                         View::display('formuser',array(
-                            'erreur' => $id_entr
+                            "erreur" =>$id_user,
+                            "type" => $type,
+                            "centres" => $centres
                         ));
                     }else{
-                        if(substr($postdata['file']['name'],-4) == '.png'){
+                        if(isset($postdata['file']) & substr($postdata['file']['name'],-4) == '.png'){
                             move_uploaded_file($postdata['file']['tmp_name'],"image/pilote/".$id_user.".png");
-                            header("Location: ".$id_user."");
-                        }else{
-                            View::display('formentr',array(
-                                'erreur' => "veuillez uploader une image au format png"
-                            ));
                         }
+                        header("Location: ".$id_user."");
                     } 
                 }else{
                     header('Location : accessinterdit');
@@ -198,18 +273,18 @@ class UtilisateurController
                         'createur' => $_SESSION['current_user']['id']
                     ));
                     if($id_user == "Cet utilisateur existe deja dans la base de données"){
+                        $centre = new Centre();
+                        $centres = $centre->select();
                         View::display('formuser',array(
-                            'erreur' => $id_entr
+                            "type" => $type,
+                            "centres" => $centres,
+                            "erreur" => $id_user
                         ));
                     }else{
                         if(substr($postdata['file']['name'],-4) == '.png'){
                             move_uploaded_file($postdata['file']['tmp_name'],"image/etudiant/".$id_user.".png");
-                            header("Location: ".$id_user."");
-                        }else{
-                            View::display('formentr',array(
-                                'erreur' => "veuillez uploader une image au format png"
-                            ));
                         }
+                        header("Location: ".$id_user."");
                     } 
                 }else{
                     header('Location : accessinterdit');

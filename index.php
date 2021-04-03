@@ -107,49 +107,49 @@ Route::add('/entreprise',function(){
 });
 /*  --------------- gestion utilisateur  ---------------*/
 Route::add('/etudiant/new',function(){
-    UtilisateurController::indexnew("Etudiant");
+    UtilisateurController::indexnew("ETUDIANT");
 });
 Route::add('/pilote/new',function(){
-    UtilisateurController::indexnew("Pilote");
+    UtilisateurController::indexnew("PILOTE");
 });
 Route::add('/delegue/new',function(){
-    UtilisateurController::indexnew("Delegué");
+    UtilisateurController::indexnew("DELEGUE");
 });
 Route::add('/etudiant/new',function(){
     UtilisateurController::create(array(
         "type" => "ETUDIANT",
         "password" => $_POST['password'],
-        "promotion" => $_POST['promotion'],
+        "promotion" => $_POST['promo'],
         "nom" => $_POST['nom'],
         "prenom" => $_POST['prenom'],
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
-        "file" => $_post['photo']
+        "file" => $_FILES['photo']
     ));
 },"POST");
 Route::add('/pilote/new',function(){
     UtilisateurController::create(array(
         "type" => "PILOTE",
         "password" => $_POST['password'],
-        "promotion" => $_POST['promotion'],
+        "promotion" => $_POST['promo'],
         "nom" => $_POST['nom'],
         "prenom" => $_POST['prenom'],
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
-        "file" => $_POST['photo']
+        "file" => $_FILES['photo']
     ));
 },"POST");
 Route::add('/delegue/new',function(){
     UtilisateurController::create(array(
         "type" => "DELEGUE",
         "password" => $_POST['password'],
-        "promotion" => $_POST['promotion'],
+        "promotion" => $_POST['promo'],
         "nom" => $_POST['nom'],
         "prenom" => $_POST['prenom'],
         "email" => $_POST['email'],
         "centre" => $_POST['centre'],
         "permission" => $_POST['permission'],
-        "file" => $_POST['photo']
+        "file" => $_FILES['photo']
     ));
 },"POST");
 Route::add('/etudiant/update/([0-9]*)',function($var1){
@@ -192,6 +192,18 @@ Route::add('/delegue/update/([0-9]*)',function($var1){
         "file" => $_POST['photo']
     ));
 },"POST");
+Route::add('/pilote/update/([0-9]*)',function($var1){
+    UtilisateurController::updateindex(array(
+        "id_utilisateur" => $var1,
+        "type" => "PILOTE"
+    ));
+});
+Route::add('/delegue/update/([0-9]*)',function($var1){
+    UtilisateurController::updateindex(array(
+        "id_utilisateur" => $var1,
+        "type" => "DELEGUE"
+    ));
+});
 Route::add('/etudiant/([0-9]*)',function($var1){
     //afficher un etudiant
     View::display('profile');
@@ -211,6 +223,12 @@ Route::add('/wishlist/([0-9]*)',function($var1){
         "id_utilisateur" => $_SESSION['current_user']['id'],
         "id_offre" => $var1
     ));
+});
+Route::pathNotFound(function(){
+    View::display('notfound');
+});
+Route::methodNotAllowed(function(){
+    View::display('notallowed');
 });
 
 Route::run();

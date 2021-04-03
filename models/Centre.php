@@ -1,24 +1,11 @@
 <?php
-require_once('db.php');
+require_once('libs\db.php');
 class Centre Extends Db
 {
-    protected $_id;
-    protected $_ville;
-
-    public function getid()
+    public function select()
     {
-        return $this->$_id;
-    }
-    public function getville()
-    {
-        return $this->$_ville;
-    }
-    public function setid(int $id)
-    {
-        $this->$_id = $id;
-    }
-    public function setville(string $ville)
-    {
-        $this->$_ville = $ville;
+        $req = $this->db->prepare("select * from centre");
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 }
