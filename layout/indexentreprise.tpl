@@ -25,53 +25,71 @@
     <link rel="stylesheet" href="../CSS/rechercheentr.css">
 </head>
 
-<body onload ="getall()" style ="overflow-x: hidden;">
+<body onload="getall()" style="overflow-x: hidden;">
     {include 'navbar.tpl'}
     <div class="container">
-        <h1 class="text-center">Affichage Entreprise</h1>
+        <h1 class="text-center">Recherche Entreprise</h1>
         <div class="input-group">
-            <input type="search" id="sr" class="form-control rounded" placeholder="Rechercher une entreprise" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" id="sr" class="form-control rounded" placeholder="Rechercher une entreprise"
+                aria-label="Search" aria-describedby="search-addon" />
             <button type="button" class="input-group-text border-0" id="search-addon">
                 <i class="fa fa-search" id="search" onclick="chercher()"></i>
             </button>
+            <!--bouton refresh-->
+            <button type="button" class="input-group-text border-0" id="refresh" value="Actualiser">
+                <i class="fas fa-sync rotating"></i>
+            </button>
         </div>
-        <div class="filterby">
-            <ul class="filter">
-                <li>
-                    <input type="checkbox" id="checkboxOne" value="Afficher tous">
-                    <label for="checkboxOne">Afficher tous</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="checkboxTwo" value="Raison sociale" checked>
-                    <label for="checkboxTwo">Raison sociale</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="checkboxThree" value="Secteur d'activité" checked>
-                    <label for="checkboxThree">Secteur d'activité</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="checkboxFour" value="Localité">
-                    <label for="checkboxFour">Localité</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <section id="entrecard">
-        <div class="row" id="jsresult">
-            
-            
-        </div>
-        <!--Pagination-->
-        <div id="page" class="col-lg-12 p-4">
-            <ul class="pagination justify-content-center">
-                <li class="prev" onclick="previouspage()" id="prvbtn"><a href="#"><i class="fas fa-chevron-left"></i> Précedent</a></li>
-                <div style="display: flex;flex-direction: row;" id="pg">
-                </div>
-                <li class="next" onclick="nextpage()" id='nxtbtn'><a href="#">Suivant <i class="fas fa-chevron-right"></i></a></li>
+        <div class="row filter">
+            <div class="col localite">
+                <label>Localité</label>
+                <ul class="loca">
+                    <li><input type="checkbox"> Alger</li>
+                    <li><input type="checkbox"> Oran</li>
+                    <li><input type="checkbox"> Rouen</li>
+                    <li><input type="checkbox"> Paris</li>
+                </ul>
+            </div>
 
-            </ul>
+            <div class="col competences">
+                <label>Compétences</label>
+                <ul class="comp">
+                    <li><input type="checkbox"> HTML</li>
+                    <li><input type="checkbox"> CSS</li>
+                    <li><input type="checkbox"> JAVA</li>
+                    <li><input type="checkbox"> mobile</li>
+                </ul>
+            </div>
+            <div class="col competences">
+                <label>Secteur d'activité</label>
+                <ul class="comp">
+                    <li><input type="checkbox"> Informatique</li>
+                    <li><input type="checkbox"> Réseau</li>
+                    <li><input type="checkbox"> Communication</li>
+                    <li><input type="checkbox"> Industrie</li>
+                </ul>
+            </div>
         </div>
-    </section>
+        <section id="entrecard">
+            <div class="row" id="jsresult">
+
+            </div>
+        </section>
+
+    </div>
+    <!--Pagination-->
+    <div id="page" class="col-lg-12 p-4">
+        <ul class="pagination justify-content-center">
+            <li class="prev" onclick="previouspage()" id="prvbtn"><a href="#"><i class="fas fa-chevron-left"></i>
+                    Précedent</a></li>
+            <div style="display: flex;flex-direction: row;" id="pg">
+            </div>
+            <li class="next" onclick="nextpage()" id='nxtbtn'><a href="#">Suivant <i
+                        class="fas fa-chevron-right"></i></a></li>
+
+        </ul>
+    </div>
+
     {include 'footer.tpl'}
     <!--SCRIPT-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
