@@ -17,17 +17,16 @@ class UtilisateurController
     {
         if(isset($_SESSION['current_user'])){
             $utilisateur=new Utilisateur();
-            $u=$utilisateur->select($postdata["id"]);
-            if($u->Type==$postdata["type"]){
-                $n=new Note();
-                $notes=$n->select($u['Id_utilisateur']);
-                View::display(array(
+            $u=$utilisateur->select($postdata["id_utilisateur"]);
+            if($u['Type']==$postdata["type"]){
+                // $n=new Note();
+                // $notes=$n->select($u['Id_utilisateur']);
+                View::display('profile',array(
                     "user"=>$u,
-                    "coms"=>$notes
+                    //"coms"=>$notes
                 )); 
-            }
-            else{
-                header("Location: /".$u["Type"]."/".$u["Id_utilisateur"]);
+            }else{
+                View::display('notfound');
             }
         }
         else{

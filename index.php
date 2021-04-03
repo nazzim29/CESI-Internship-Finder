@@ -206,13 +206,24 @@ Route::add('/delegue/update/([0-9]*)',function($var1){
 });
 Route::add('/etudiant/([0-9]*)',function($var1){
     //afficher un etudiant
-    View::display('profile');
+    UtilisateurController::read(Array(
+        'type' => 'ETUDIANT',
+        'id_utilisateur' => $var1
+    ));
 });
 Route::add('/pilote/([0-9]*)',function($var1){
     //afficher un pilote
+    UtilisateurController::read(Array(
+        'type' => 'PILOTE',
+        'id_utilisateur' => $var1
+    ));
 });
 Route::add('/delegue/([0-9]*)',function($var1){
     //afficher un delegue
+    UtilisateurController::read(Array(
+        'type' => 'DELEGUE',
+        'id_utilisateur' => $var1
+    ));
 });
 /*  --------------- wishliste  ---------------*/
 Route::add('/wishlist',function(){
