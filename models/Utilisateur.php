@@ -87,7 +87,7 @@ class Utilisateur Extends Db
 
     }
     public function select($postdata){
-        $req = $this->db->prepare("select Password,Type,Promotion,Date_creation,Nb_visite,Nom,Prenom,Email,Id_centre,Id_creature,Id_utilisateur,(select centre.Nom from centre where centre.Id_centre = utilisateur.Id_centre) as Centre from utilisateur where Id_utilisateur = ?");
+        $req = $this->db->prepare("select Password,Type,Promotion,Date_creation,Nb_visite,Nom,Prenom,Email,Id_centre,Id_createur,Id_utilisateur,(select centre.Nom from centre where centre.Id_centre = utilisateur.Id_centre) as Centre from utilisateur where Id_utilisateur = ?");
         $req->bindvalue(1,$postdata);
         $req->execute();
         $result = $req->fetch(PDO::FETCH_ASSOC);
@@ -99,9 +99,9 @@ class Utilisateur Extends Db
         $req->bindvalue(1,$postdata);
         $req->execute();
         $result = $req->fetch(PDO::FETCH_ASSOC);
-        $req = $this->db->prepare("UPDATE `utilisateur` SET `Nb_visite`=? WHERE Id_utilisateur = ?");
-        $req->bindvalue(1,$result['Nb_visite']+1);
-        $req->bindvalue(2,$result['Id_utilisateur']);
+        $req = $this->db->prepare("UPDATE `utilisateur` SET `Nb_visite`=".($result['Nb_visite']+1)." WHERE Id_utilisateur = ?");
+        $req->bindvalue(1,$result['Id_utilisateur']);
+        $req->execute();
     }
     public function create($postdata){
         try{

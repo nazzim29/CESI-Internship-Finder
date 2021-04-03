@@ -109,6 +109,9 @@ Route::add('/entreprise',function(){
 Route::add('/etudiant/new',function(){
     UtilisateurController::indexnew("ETUDIANT");
 });
+Route::add('/etudiant',function(){
+    UtilisateurController::rechercheindex("ETUDIANT");
+});
 Route::add('/pilote/new',function(){
     UtilisateurController::indexnew("PILOTE");
 });
@@ -215,6 +218,13 @@ Route::add('/pilote/([0-9]*)',function($var1){
     //afficher un pilote
     UtilisateurController::read(Array(
         'type' => 'PILOTE',
+        'id_utilisateur' => $var1
+    ));
+});
+Route::add('/admin/([0-9]*)',function($var1){
+    //afficher un pilote
+    UtilisateurController::read(Array(
+        'type' => 'ADMIN',
         'id_utilisateur' => $var1
     ));
 });

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-02 17:28:16
+/* Smarty version 3.1.39, created on 2021-04-03 21:52:08
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6067381030c784_41201227',
+  'unifunc' => 'content_6068c768dfa056_99372367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bcbbe5cd040e1f628b31f2c1da8e657e5ab350fc' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\footer.tpl',
-      1 => 1617377258,
+      1 => 1617479524,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6067381030c784_41201227 (Smarty_Internal_Template $_smarty_tpl) {
-?><link rel="stylesheet" href="../CSS/footer.css">
+function content_6068c768dfa056_99372367 (Smarty_Internal_Template $_smarty_tpl) {
+?><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../CSS/footer.css">
+
 
 <footer style="width=100%;">
     <div class="container-fluid">
