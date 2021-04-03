@@ -87,7 +87,7 @@ class Utilisateur Extends Db
 
     }
     public function select($postdata){
-        $req = $this->db->prepare("select * from utilisateur where Id_utilisateur = ?");
+        $req = $this->db->prepare("select Password,Type,Promotion,Date_creation,Nb_visite,Nom,Prenom,Email,Id_centre,Id_creature,Id_utilisateur,(select centre.Nom from centre where centre.Id_centre = utilisateur.Id_centre) as Centre from utilisateur where Id_utilisateur = ?");
         $req->bindvalue(1,$postdata);
         $req->execute();
         $result = $req->fetch(PDO::FETCH_ASSOC);

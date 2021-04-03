@@ -19,9 +19,9 @@
                 <img id="thelogo" src="../image/{$type}/{$info['id']}" alt="{($info['raison_sociale']|lower)|capitalize}" />
             </div>
             <div class="col-md-8 col-sm-12 plus" id="plus">
-                <h1>{($info['prenom']|lower)|capitalize} {($info['nom']|upper)}</h1>
+                <h1>{($info['raison_sociale']|lower)|capitalize}</h1>
                 <ul>
-                    <li>Centre : {($info['Centre']|lower)|capitalize}</li>
+                    <li>Secteur d'activité : {($info['Secteur_activite']|lower)|capitalize}</li>
                     <li>Localité : {($info['localite']|lower)|capitalize}</li>
                     <li>Email : <a href="mailto:{$info['email']}">{$info['email']}</li>
                 </ul>

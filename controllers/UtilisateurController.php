@@ -13,6 +13,11 @@ class UtilisateurController
             "centres" => $centres
         ));
     }
+    public function rechercheindex(){
+    }
+    public function recherche($postdata){
+
+    }
     public function read($postdata)
     {
         if(isset($_SESSION['current_user'])){
@@ -297,29 +302,26 @@ class UtilisateurController
     {
         if(isset($_SESSION['current_user'])){
             if($postdata['type'] == "DELEGUE"){
-                $sfx = 'sfx20';
-            }else if($postdata['type'] == "PILOTE"){
-                $sfx = 'sfx16';
-            }else if($postdata['type'] == "ETUDIANT"){
-                $sfx = 'sfx25';
-            }
-            switch ($_SESSION['current_user']['type']) {
-                case 'PILOTE':
-                case 'ADMIN':
+                if($_SESSION['current_user']['type'] == 'ADMIN' || $_SESSION['current_user']['type'] == 'PILOTE' ||($_SESSION['current_user']['type']== 'DELGUE' & array_search('sfx20',$_SESSION['current_user']['permission']))){
                     $e = new Utilisateur();
                     $e->delete($postdata);
-                break;
-                case 'DELEGUE':
-                    if(array_search($sfx,$_SESSION['current_user']['permission'])){
-                        $e = new Utilisateur();
-                        $e->delete($postdata);
-                    }else{
-                        header('Location : accessinterdit');
-                    }
-                break;
-                default:
-                    header('Location : accessinterdit');
-                break;
+                }else{
+                    header("Location: /accessinterdit");
+                }
+            }else if($postdata['type'] == "PILOTE"){
+                if($_SESSION['current_user']['type'] == 'ADMIN' ||($_SESSION['current_user']['type']== 'DELGUE' & array_search('sfx16',$_SESSION['current_user']['permission']))){
+                    $e = new Utilisateur();
+                    $e->delete($postdata);
+                }else{
+                    header("Location: /accessinterdit");
+                }
+            }else if($postdata['type'] == "ETUDIANT"){
+                if($_SESSION['current_user']['type'] == 'ADMIN' || $_SESSION['current_user']['type'] == 'PILOTE' ||($_SESSION['current_user']['type']== 'DELGUE' & array_search('sfx26',$_SESSION['current_user']['permission']))){
+                    $e = new Utilisateur();
+                    $e->delete($postdata);
+                }else{
+                    header("Location: /accessinterdit");
+                }
             }
         }else{
             header('Location : login');
