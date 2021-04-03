@@ -17,7 +17,7 @@
   <meta name="theme-color" content="white">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="CSS/acceuil.css">
+    <link rel="stylesheet" href="\CSS/acceuil.css">
 
     <title>Page d'acceuil</title>
 </head>

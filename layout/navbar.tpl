@@ -166,5 +166,5 @@
         </ul>
     </div>
 </nav>
-<link rel="stylesheet" href="../../CSS/navbar.css">
+<link rel="stylesheet" href="\CSS/navbar.css">
 </header>

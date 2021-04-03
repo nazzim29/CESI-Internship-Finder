@@ -5,7 +5,7 @@
     <title>Se Connecter</title>
     <link rel="icon" type="image/png" href="Image/LOGOc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="\CSS/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="manifest" href="\manifest.json">
 <link rel="apple-touch-icon" href="GHIS2-96x96.png">

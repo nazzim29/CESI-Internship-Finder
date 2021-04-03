@@ -10,7 +10,7 @@
     <!--bootstrapCDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!--CSS link-->
-    <link href="CSS/home.css" rel="stylesheet">
+    <link href="\CSS/home.css" rel="stylesheet">
     <link rel="manifest" href="\manifest.json">
     <link rel="apple-touch-icon" href="GHIS2-96x96.png">
   <meta name="apple-mobile-web-app-status-bar" content="white">
