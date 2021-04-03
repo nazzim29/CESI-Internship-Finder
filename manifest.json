@@ -1,16 +1,16 @@
 {
-    "short_name": "CESIIF",
-    "name": "CESI Internship Finder",
-    "icons": [
+  "short_name": "CESIIF",
+  "name": "CESI Internship Finder",
+  "icons": [
     {
-    "src":"Image/LOGOc.png",
-    "sizes": "444x444",
-    "type": "image/png"
+      "src": "Image/LOGOc.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-    ],
-    "prefer_related_applications": false,
-    "start_url": "/home",
-    "background_color": "#e05a47",
-    "theme_color": "#e05a47",
-    "display": "standalone"
-  }
+  ],
+  "prefer_related_applications": false,
+  "start_url": "/",
+  "background_color": "#e05a47",
+  "theme_color": "#e05a47",
+  "display": "standalone"
+}

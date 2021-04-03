@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-04-03 13:08:33
+  from 'C:\Users\pc\Desktop\projet web\CESI-Internship-Finder\layout\login.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_60684cb1d31f38_38560780',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0591fde6a0a05294d85ec8cbddb7193163e0dd9f' => 
+    array (
+      0 => 'C:\\Users\\pc\\Desktop\\projet web\\CESI-Internship-Finder\\layout\\login.tpl',
+      1 => 1617448067,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_60684cb1d31f38_38560780 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -227,9 +250,10 @@
                     </div>
                     <div class="div">
                         <input type="text" class="input" id="email" name="email"
-                        {if isset($emailvalue)}
-                            value = "{$emailvalue}"
-                        {/if}
+                        <?php if ((isset($_smarty_tpl->tpl_vars['emailvalue']->value))) {?>
+                            value = "<?php echo $_smarty_tpl->tpl_vars['emailvalue']->value;?>
+"
+                        <?php }?>
                         required>
                         <label for="email">
                             <span class="content-name">
@@ -244,9 +268,10 @@
                     </div>
                     <div class="div">
                         <input type="password" class="input" id="password" name = "password"
-                        {if isset($passwordvalue)}
-                            value = "{$passwordvalue}"
-                        {/if}
+                        <?php if ((isset($_smarty_tpl->tpl_vars['passwordvalue']->value))) {?>
+                            value = "<?php echo $_smarty_tpl->tpl_vars['passwordvalue']->value;?>
+"
+                        <?php }?>
                         required>
                         <label for="password">
                             <span class="content-name">
@@ -255,14 +280,15 @@
                         </label>
                     </div>
                 </div>
-                {if isset($error)}
-                <div class="alert alert-danger" role="alert"> {$error} </div>
-                {/if}
+                <?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
+                <div class="alert alert-danger" role="alert"> <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+ </div>
+                <?php }?>
                 <div class="check-div">
                     <input type="checkbox" id="remember" name="remember"
-                    {if isset($emailvalue) && isset($passwordvalue)} 
+                    <?php if ((isset($_smarty_tpl->tpl_vars['emailvalue']->value)) && (isset($_smarty_tpl->tpl_vars['passwordvalue']->value))) {?> 
                     checked 
-                    {/if}>
+                    <?php }?>>
                     <i></i>
                     <label for="remember">Se souvenir de moi</label>
                 </div>
@@ -270,13 +296,22 @@
             </form>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script
-        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-    <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
-    <script src="JS/login.js"></script>
-    <script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="JS/login.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
@@ -289,7 +324,9 @@
             });
         });
       }
-    </script>
+    <?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}
