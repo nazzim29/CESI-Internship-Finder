@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-02 16:03:03
+/* Smarty version 3.1.39, created on 2021-04-03 13:11:23
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60672417ef2aa2_88815659',
+  'unifunc' => 'content_60684d5b5ce9b8_35372421',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1617372050,
+      1 => 1617444815,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60684d5b5ce9b8_35372421 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -52,7 +52,7 @@ function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="Image/logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale: Oks web</li>
@@ -231,6 +231,12 @@ function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl)
                                 <div class="p-1">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
                                 </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,6 +260,12 @@ function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl)
                                 <div class="p-1">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
                                 </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,11 +283,22 @@ function content_60672417ef2aa2_88815659 (Smarty_Internal_Template $_smarty_tpl)
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
-                                <div class="p-1">
+                                <div class="p-1 tool">
                                     <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                    <span class="tooltiptext">Modifier</span>
                                 </div>
-                                <div class="p-1">
+                                <div class="p-1 tool">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                    <span class="tooltiptext">Supprimer</span>
+                                </div>
+                                <div class="p-1 tool">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                    <span class="tooltiptext">wishList</span>
+
+                                </div>
+                                <div class="p-1 tool">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                    <span class="tooltiptext">Postuler</span>
                                 </div>
                             </div>
                         </div>

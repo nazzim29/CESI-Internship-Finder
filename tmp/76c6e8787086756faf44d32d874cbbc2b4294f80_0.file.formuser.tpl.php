@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-03 02:44:45
+/* Smarty version 3.1.39, created on 2021-04-03 13:26:50
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\formuser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6067ba7d629573_69497962',
+  'unifunc' => 'content_606850fa8790f7_33469340',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76c6e8787086756faf44d32d874cbbc2b4294f80' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\formuser.tpl',
-      1 => 1617410681,
+      1 => 1617445046,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6067ba7d629573_69497962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606850fa8790f7_33469340 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
