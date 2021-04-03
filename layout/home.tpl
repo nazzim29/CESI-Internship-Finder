@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="Image/logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale: Oks web</li>
@@ -205,6 +205,12 @@
                                 <div class="p-1">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
                                 </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -228,6 +234,12 @@
                                 <div class="p-1">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
                                 </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                </div>
+                                <div class="p-1">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -245,11 +257,22 @@
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
-                                <div class="p-1">
+                                <div class="p-1 tool">
                                     <a href="#" class="btnms"><i class="far fa-edit"></i></a>
+                                    <span class="tooltiptext">Modifier</span>
                                 </div>
-                                <div class="p-1">
+                                <div class="p-1 tool">
                                     <a href="#" class="btnms"><i class="far fa-trash-alt"></i></a>
+                                    <span class="tooltiptext">Supprimer</span>
+                                </div>
+                                <div class="p-1 tool">
+                                    <a href="#" class="btnms"><i class="far fa-heart"></i></a>
+                                    <span class="tooltiptext">wishList</span>
+
+                                </div>
+                                <div class="p-1 tool">
+                                    <a href="#" class="btnms"><i class="fas fa-align-left"></i></a>
+                                    <span class="tooltiptext">Postuler</span>
                                 </div>
                             </div>
                         </div>
