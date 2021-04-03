@@ -3,7 +3,7 @@ const assets = [
     '/',
     '/index.php',
     '/manifest.json',
-    '/home.tpl',
+    '/home',
     'sw.js'
 
 ];

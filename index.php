@@ -14,13 +14,13 @@ Route::add('/home',function(){
     if(isset($_SESSION['current_user'])){
        View::display('home');
     }else{
-        header('Location : login');
+        header("Location: /login");
     }  
 });
 Route::add('/',function(){
     if(isset($_SESSION['current_user'])){
         //redirection vers la dashboard si connéctée
-        header('Location: home');
+        header('Location: /home');
     }else{
         //affichage de l'acceuil si toujours pas connectée
         View::display('acceuil');

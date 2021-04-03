@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-03 13:11:23
+/* Smarty version 3.1.39, created on 2021-04-03 15:58:15
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60684d5b5ce9b8_35372421',
+  'unifunc' => 'content_606874773facb8_90790078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1617444815,
+      1 => 1617458261,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60684d5b5ce9b8_35372421 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -33,9 +33,15 @@ function content_60684d5b5ce9b8_35372421 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!--bootstrapCDN-->
-    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!--CSS link-->
     <link href="CSS/home.css" rel="stylesheet">
+    <link rel="manifest" href="\manifest.json">
+    <link rel="apple-touch-icon" href="GHIS2-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
 </head>
 
@@ -408,6 +414,22 @@ function content_60684d5b5ce9b8_35372421 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then(registration => {
+              console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+              })
+            .catch(err => {
+              console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+            });
+        });
+      }
+    <?php echo '</script'; ?>
 >
 </body>
 

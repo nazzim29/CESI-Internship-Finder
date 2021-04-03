@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-02 16:15:59
+/* Smarty version 3.1.39, created on 2021-04-03 16:00:45
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6067271f9001c5_72476446',
+  'unifunc' => 'content_6068750da44786_67464618',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d229a64e78856cc5cd65cd70f957054350b0a48' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1617372050,
+      1 => 1617458261,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6068750da44786_67464618 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -28,21 +28,28 @@ function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="manifest" href="\manifest.json">
+ <link rel="apple-touch-icon" href="GHIS2-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/acceuil.css">
+
     <title>Page d'acceuil</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
+            <a class="navbar-brand" href="#"><svg version="1.1" id="Calque_1" xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="250 220 460 170"
                     enable-background="new 0 0 960 560" xml:space="preserve">
                     <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
                         <path d="M6389.5,3662.9c-68.1-25.2-124.1-67.2-161.5-122.3c-47.6-70-60.7-112.9-59.7-205.3c0-72.8,3.7-91.5,26.1-135.3
@@ -155,7 +162,7 @@ function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 310">
+        <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 310">
             <path fill="#fff" d="M0,64L480,288L960,192L1440,128L1440,320L960,320L480,320L0,320Z"></path>
         </svg>
     </section>
@@ -209,7 +216,7 @@ function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl)
     </section>
 
     <section id="partenaires">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 310">
+        <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 310">
             <path fill="#fff" d="M0,128L480,64L960,0L1440,224L1440,0L960,0L480,0L0,0Z"></path>
         </svg>
         <h1 id="titre" data-aos="fade-up">Nos entreprises partenaires</h1>
@@ -327,6 +334,22 @@ function content_6067271f9001c5_72476446 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then(registration => {
+              console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+              })
+            .catch(err => {
+              console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+            });
+        });
+      }
+    <?php echo '</script'; ?>
 >
 </body>
 
