@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 02:40:42
+/* Smarty version 3.1.39, created on 2021-04-04 04:43:15
   from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60690b0abe09c2_27232845',
+  'unifunc' => 'content_606927c3333d22_39810650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be02fdcfc0515525147fc9a24dec3f1e86d0d466' => 
     array (
       0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1617489361,
+      1 => 1617497732,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60690b0abe09c2_27232845 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606927c3333d22_39810650 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -172,7 +172,7 @@ function content_60690b0abe09c2_27232845 (Smarty_Internal_Template $_smarty_tpl)
         <div id="un" class="container">
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <img id="provisoire2" src="Image/provisoire2.png" class="w-100 hover-shadow" alt="">
+                    <img id="provisoire2" src="\provisoire2.png" class="w-100 hover-shadow" alt="">
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Si vous êtes empathique,
@@ -187,7 +187,7 @@ function content_60690b0abe09c2_27232845 (Smarty_Internal_Template $_smarty_tpl)
         <div id="deux" class="container">
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <img id="provisoire3" src="Image/provisoire3.png" alt="">
+                    <img id="provisoire3" src="\provisoire3.png" alt="">
                 </div>
                 <div class="col-md-6" style="display: table-cell;
                 vertical-align: middle; min-height: 10em;">
@@ -223,22 +223,22 @@ function content_60690b0abe09c2_27232845 (Smarty_Internal_Template $_smarty_tpl)
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo1.png" alt="" class="logos">
+                    <img src="\logo1.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo2.png" alt="" class="logos">
+                    <img src="\logo2.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo3.png" alt="" class="logos">
+                    <img src="\logo3.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo4.png" alt="" class="logos">
+                    <img src="\logo4.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo5.png" alt="" class="logos">
+                    <img src="\logo5.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo6.png" alt="" class="logos">
+                    <img src="\logo6.png" alt="" class="logos">
                 </div>
             </div>
         </div>
