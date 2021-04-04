@@ -41,11 +41,11 @@
                     <tr>
                         <td class="mot" data-label="Offre">{$value->Titre}</td>
                         <td class="mot" data-label="Nom entreprise">{$value->Entreprise}</td>
-                        <td class="mot" data-label="Date de publication">{$value->Date_publication}</td>
+                        <td class="mot" data-label="Date de publication">{$value->Date_publication|date_format:"%d %b %Y"}</td>
                         <td class="del">
-                            <input type="submit" class="btn" value="Postuler" onclick="location.href = '/offre/valider/{$value->Id_offre}'">
+                            <input type="submit" class="btn" value="Postuler" onclick="location.href = '/offre/postuler/{$value->Id_offre}'">
                             <input type="submit" class="btn" value="Afficher plus" onclick="location.href = '/offre/{$value->Id_offre}'">
-                            <a href="/delete/{$value->Id_offre}"><i class="far fa-trash-alt param"></i></a>
+                            <a href="\wishlist/delete/{$value->Id_offre}"><i class="far fa-trash-alt param"></i></a>
                         </td>
                     </tr>
                 {/foreach}

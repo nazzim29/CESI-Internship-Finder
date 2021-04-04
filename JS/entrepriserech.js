@@ -47,20 +47,7 @@ function makefilter() {
         document.getElementById('sec').innerHTML += "<li><input type=\"checkbox\" name=\"secteur\" onclick=\"filter()\" value=\""+ element +"\">"+ element +"</li>";
     });
 }
-function show() {
-    html = ""
-    for(var i = (current_page-1)*8;i<current_page*8;i++){
-        var element = filtred_rows[i];
-        var card = "<div class=\"col-lg-3 col-md-6\"> <div class=\"card\"><div class=\"card-body\"><div class=\"col-lg-12 image\"><img src=\"../../Image/entreprise/";
-        card+= element.Id_entreprise +".png\" alt=\"logo\" class=\"img-fluid rounded-circle w-50\"></div><ul class=\"info\"><li><a href=\"entreprise/"+element.Id_entreprise+"\"> ";
-        card+= element.Raison_social +"</a></li><li>Secteur d'activité: ";
-        card+= element.Secteur_activite +"</li><li>Localité: ";
-        card+= element.Localite +"</li><li><a href=\"mailto:";
-        card+= element.Email +"\">Email</a></li></ul><div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\"><a href=\"entreprise/update/"+ element.Id_entreprise +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a></div><div class=\"p-1\"><a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_entreprise+")\"><i class=\"far fa-trash-alt\"></i></a></div></div></div></div></div>";
-        html+=card;
-        document.getElementById('jsresult').innerHTML = html;
-    }
-}
+
 function makepagination() {
     var nbpage = Math.ceil(filtred_rows.length / 8);
     var html = "";

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-03 15:58:15
+/* Smarty version 3.1.39, created on 2021-04-04 03:19:38
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606874773facb8_90790078',
+  'unifunc' => 'content_6069142a527409_19178230',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2500cef6e48dc2506bed3b72af206b92987c609' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1617458261,
+      1 => 1617499176,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6069142a527409_19178230 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -35,13 +35,13 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
     <!--bootstrapCDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <!--CSS link-->
-    <link href="CSS/home.css" rel="stylesheet">
+    <link href="\CSS/home.css" rel="stylesheet">
     <link rel="manifest" href="\manifest.json">
     <link rel="apple-touch-icon" href="GHIS2-96x96.png">
-  <meta name="apple-mobile-web-app-status-bar" content="white">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="white">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar" content="white">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
 </head>
 
@@ -143,10 +143,10 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -166,9 +166,9 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -189,9 +189,9 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -225,10 +225,9 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Titre:</li>
+                                <li>Entreprise:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -254,9 +253,8 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Titre:</li>
+                                <li>Entreprise: </li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -283,9 +281,8 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Titre:</li>
+                                <li>Entreprise: </li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -330,10 +327,10 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale: Oks web</li>
-                                <li>Secteur d'activité: Informatique</li>
-                                <li>Localité: Alger</li>
-                                <li>Email: contact@okswebcom</li>
+                                <li>Nom:</li>
+                                <li>Prenom:</li>
+                                <li>Promotion:</li>
+                                <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="p-1">
@@ -353,9 +350,9 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom: </li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -376,9 +373,9 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
                                 <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
-                                <li>Raison sociale:</li>
-                                <li>Secteur d'activité: </li>
-                                <li>Localité:</li>
+                                <li>Nom:</li>
+                                <li>Prenom: </li>
+                                <li>Promotion:</li>
                                 <li>Email:</li>
                             </ul>
                             <div class="d-flex flex-row justify-content-center">
@@ -417,18 +414,18 @@ function content_606874773facb8_90790078 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
 >
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/sw.js')
-            .then(registration => {
-              console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
-              })
-            .catch(err => {
-              console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+        if ('serviceWorker' in navigator){
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(registration => {
+                        console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+                    })
+                    .catch(err => {
+                        console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+                    });
             });
-        });
-      }
+        }
     <?php echo '</script'; ?>
 >
 </body>

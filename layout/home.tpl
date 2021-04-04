@@ -380,15 +380,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script>
-        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator){
             window.addEventListener('load', () => {
                 navigator.serviceWorker
                     .register('/sw.js')
                     .then(registration => {
-                        console.log(`Service Worker enregistré!Ressource:${registration.scope}`);
+                        console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
                     })
                     .catch(err => {
-                        console.log(`Echec de l'enregistrement du Service Worker: ${err}`);
+                        console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
                     });
             });
         }

@@ -157,7 +157,7 @@ class Utilisateur Extends Db
         $req = $this->db->prepare("SELECT Promotion,Nom,Prenom,Email,Id_createur,Id_utilisateur,(SELECT centre.Nom FROM centre WHERE centre.Id_centre = utilisateur.Id_centre) AS Centre,(SELECT concat(ucase(tbl.nom),\" \",CONCAT(UCASE(LEFT(lower(tbl.prenom), 1)),SUBSTRING(lower(tbl.prenom), 2))) from utilisateur as tbl where tbl.Id_utilisateur = utilisateur.Id_Createur) as Createur FROM utilisateur where Type = ?");
         $req->bindvalue(1,$postdata);
         $req->execute();
-        $result = $req->fetch(PDO::FETCH_OBJ);
+        $result = $req->fetchAll(PDO::FETCH_OBJ);
         return $result;
     }
 }

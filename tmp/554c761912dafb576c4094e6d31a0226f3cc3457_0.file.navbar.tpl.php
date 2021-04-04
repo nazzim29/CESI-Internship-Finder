@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 02:08:36
+/* Smarty version 3.1.39, created on 2021-04-04 03:30:11
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60690384f27f94_74996774',
+  'unifunc' => 'content_606916a37630a3_13398066',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '554c761912dafb576c4094e6d31a0226f3cc3457' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\navbar.tpl',
-      1 => 1617494188,
+      1 => 1617499792,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60690384f27f94_74996774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606916a37630a3_13398066 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <header>
@@ -180,19 +180,15 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
  <?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['prenom']);?>
 (<?php echo smarty_modifier_capitalize((mb_strtolower($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'], 'UTF-8')));?>
 )
-                    <img width='40px' height='40px'  src="..\..\image\<?php echo mb_strtolower($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'], 'UTF-8');?>
-\<?php echo $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['id'];?>
+                    <img width='40px' height='40px'  src="\image/<?php echo mb_strtolower($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'], 'UTF-8');?>
+/<?php echo $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['id'];?>
 .png" class="img-thumbnail rounded-circle navbar-brand" >
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'ADMIN' || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'PILOTE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx9',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
                     <a class="dropdown-item item" href="/logout" >Déconnexion</a>
-                    <?php }?>
-                    <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] != 'DELEGUE' || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == 'DELEGUE' && array_search('sfx8',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']) !== false)) {?>
-                    <a class="dropdown-item item" href="<?php echo mb_strtolower($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'], 'UTF-8');?>
+                    <a class="dropdown-item item" href="\<?php echo mb_strtolower($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'], 'UTF-8');?>
 /<?php echo $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['id'];?>
 " >Mon Profile</a>
-                    <?php }?>
                 </div>
             </li>
         </ul>

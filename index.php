@@ -216,6 +216,12 @@ Route::add('/pilote/update/([0-9]*)',function($var1){
         "type" => "PILOTE"
     ));
 });
+Route::add('/etudiant/update/([0-9]*)',function($var1){
+    UtilisateurController::updateindex(array(
+        "id_utilisateur" => $var1,
+        "type" => "ETUDIANT"
+    ));
+});
 Route::add('/delegue/update/([0-9]*)',function($var1){
     UtilisateurController::updateindex(array(
         "id_utilisateur" => $var1,
@@ -259,6 +265,9 @@ Route::add('/wishlist/([0-9]*)',function($var1){
         "id_utilisateur" => $_SESSION['current_user']['id'],
         "id_offre" => $var1
     ));
+});
+Route::add('/wishlist/delete/([0-9]*)',function($var1){
+    OffreController::wishlistremove($var1);
 });
 Route::pathNotFound(function(){
     View::display('notfound');

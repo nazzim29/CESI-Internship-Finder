@@ -152,15 +152,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navbarDropdown" href="#offre" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     {$_SESSION['current_user']['nom']|upper} {$_SESSION['current_user']['prenom']|capitalize}({($_SESSION['current_user']['type']|lower)|capitalize})
-                    <img width='40px' height='40px'  src="..\..\image\{$_SESSION['current_user']['type']|lower}\{$_SESSION['current_user']['id']}.png" class="img-thumbnail rounded-circle navbar-brand" >
+                    <img width='40px' height='40px'  src="\image/{$_SESSION['current_user']['type']|lower}/{$_SESSION['current_user']['id']}.png" class="img-thumbnail rounded-circle navbar-brand" >
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {if $_SESSION['current_user']['type'] eq 'ADMIN' or $_SESSION['current_user']['type'] eq 'PILOTE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx9',$_SESSION['current_user']['permission']) !== false)}
                     <a class="dropdown-item item" href="/logout" >Déconnexion</a>
-                    {/if}
-                    {if $_SESSION['current_user']['type'] neq 'DELEGUE' or ($_SESSION['current_user']['type'] eq 'DELEGUE' and array_search('sfx8',$_SESSION['current_user']['permission']) !== false)}
-                    <a class="dropdown-item item" href="{$_SESSION['current_user']['type']|lower}/{$_SESSION['current_user']['id']}" >Mon Profile</a>
-                    {/if}
+                    <a class="dropdown-item item" href="\{$_SESSION['current_user']['type']|lower}/{$_SESSION['current_user']['id']}" >Mon Profile</a>
                 </div>
             </li>
         </ul>

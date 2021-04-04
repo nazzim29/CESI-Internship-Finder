@@ -99,6 +99,55 @@
         });
       }
     </script>
+    <script>
+        function show() {
+            html = ""
+            for(var i = (current_page-1)*8;i<current_page*8;i++){
+                var element = filtred_rows[i];
+                var card = "<div class=\"col-lg-3 col-md-6\"> <div class=\"card\"><div class=\"card-body\"><div class=\"col-lg-12 image\"><img src=\"\Image/"+type+"/";
+                card+= element.Id_utilisateur +".png\" alt=\"logo\" class=\"img-fluid rounded-circle w-50\"></div><ul class=\"info\"><li><a href=\""+type+"/"+element.Id_utilisateur+"\"> ";
+                card+= element.Nom.toUpperCase() + " " + capitalize(element.Prenom)+"</a></li><li>Promotion: ";
+                card+= element.Promotion +"</li><li>Centre: ";
+                card+= element.Centre +"</li><li>Crée par : "+ element.Createur +"</li><li><a href=\"mailto:";
+                card+= element.Email +"\">Email</a></li></ul><div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\">";
+
+
+                {if ($type == "ETUDIANT" & ($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx24',$_SESSION['current_user']['permission']))))}
+                    
+                    card+="<a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a>";
+
+                {elseif $type == "PILOTE" & ($_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx19',$_SESSION['current_user']['permission'])))}
+                    
+                    card+="<a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a>";
+
+                {elseif $type == 'DELEGUE' & ($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx24',$_SESSION['current_user']['permission'])))}
+                    
+                    card+="<a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a>";
+                {/if}
+
+                card +="</div><div class=\"p-1\">"
+
+                {if ($type == "ETUDIANT" & ($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx25',$_SESSION['current_user']['permission']))))}
+                    
+                    card+="<a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a>";
+
+                {elseif $type == "PILOTE" & ($_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx16',$_SESSION['current_user']['permission'])))}
+                    
+                    card+="<a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a>";
+
+                {elseif $type == 'DELEGUE' & ($_SESSION['current_user']['type'] == "ADMIN" || $_SESSION['current_user']['type'] == "PILOTE" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx20',$_SESSION['current_user']['permission'])))}
+                    
+                    card+="<a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a>";
+                    
+
+                {/if}
+                card+="</div></div></div></div></div>";
+
+                html+=card;
+                document.getElementById('jsresult').innerHTML = html;
+            }
+        }
+    </script>
     
 </body>
 

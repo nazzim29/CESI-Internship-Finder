@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 02:19:19
+/* Smarty version 3.1.39, created on 2021-04-04 02:56:11
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\indexuser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606906071af004_79733098',
+  'unifunc' => 'content_60690eabe26087_40249418',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a85fbffc1754c8094d560eb6442e4f9c5c2fab16' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\indexuser.tpl',
-      1 => 1617495554,
+      1 => 1617497769,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_606906071af004_79733098 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60690eabe26087_40249418 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
@@ -74,13 +74,13 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
         <div class="row filter">
             <div class="col localite">
                 <label>Promotion</label>
-                <ul id="loca">
+                <ul id="promo">
 
                 </ul>
             </div>
             <div class="col competences">
                 <label>centre</label>
-                <ul id="sec">
+                <ul id="centre">
                 
                 </ul>
             </div>
@@ -141,6 +141,55 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
             });
         });
       }
+    <?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+        function show() {
+            html = ""
+            for(var i = (current_page-1)*8;i<current_page*8;i++){
+                var element = filtred_rows[i];
+                var card = "<div class=\"col-lg-3 col-md-6\"> <div class=\"card\"><div class=\"card-body\"><div class=\"col-lg-12 image\"><img src=\"\Image/"+type+"/";
+                card+= element.Id_utilisateur +".png\" alt=\"logo\" class=\"img-fluid rounded-circle w-50\"></div><ul class=\"info\"><li><a href=\""+type+"/"+element.Id_utilisateur+"\"> ";
+                card+= element.Nom.toUpperCase() + " " + capitalize(element.Prenom)+"</a></li><li>Promotion: ";
+                card+= element.Promotion +"</li><li>Centre: ";
+                card+= element.Centre +"</li><li>Crée par : "+ element.Createur +"</li><li><a href=\"mailto:";
+                card+= element.Email +"\">Email</a></li></ul>";
+
+
+                <?php if (($_smarty_tpl->tpl_vars['type']->value == "ETUDIANT"&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx24',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']))))) {?>
+                    
+                    card+="<div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\"><a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a></div>";
+
+                <?php } elseif ($_smarty_tpl->tpl_vars['type']->value == "PILOTE"&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx19',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission'])))) {?>
+                    
+                    card+="<div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\"><a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a></div>";
+
+                <?php } elseif ($_smarty_tpl->tpl_vars['type']->value == 'DELEGUE'&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx24',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission'])))) {?>
+                    
+                    card+="<div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\"><a href=\""+type+"/update/"+ element.Id_utilisateur +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a></div>";
+                <?php }?>
+
+
+                <?php if (($_smarty_tpl->tpl_vars['type']->value == "ETUDIANT"&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx25',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']))))) {?>
+                    
+                    card+="<div class=\"p-1\"><a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a></div></div></div></div></div>";
+
+                <?php } elseif ($_smarty_tpl->tpl_vars['type']->value == "PILOTE"&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx16',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission'])))) {?>
+                    
+                    card+="<div class=\"p-1\"><a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a></div></div></div></div></div>";
+
+                <?php } elseif ($_smarty_tpl->tpl_vars['type']->value == 'DELEGUE'&($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx20',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission'])))) {?>
+                    
+                    card+="<div class=\"p-1\"><a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_utilisateur+")\"><i class=\"far fa-trash-alt\"></i></a></div></div></div></div></div>";
+                    
+
+                <?php }?>
+
+                html+=card;
+                document.getElementById('jsresult').innerHTML = html;
+            }
+        }
     <?php echo '</script'; ?>
 >
     

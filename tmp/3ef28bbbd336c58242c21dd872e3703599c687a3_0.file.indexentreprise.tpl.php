@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 01:20:30
+/* Smarty version 3.1.39, created on 2021-04-04 03:04:25
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\indexentreprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6068f83e6c73f3_88596003',
+  'unifunc' => 'content_606910990ec379_70215429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ef28bbbd336c58242c21dd872e3703599c687a3' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\indexentreprise.tpl',
-      1 => 1617491814,
+      1 => 1617498249,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6068f83e6c73f3_88596003 (Smarty_Internal_Template $_smarty_tpl) {
+function content_606910990ec379_70215429 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -129,6 +129,32 @@ function content_6068f83e6c73f3_88596003 (Smarty_Internal_Template $_smarty_tpl)
             });
         });
       }
+    <?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+        function show() {
+            html = ""
+            for(var i = (current_page-1)*8;i<current_page*8;i++){
+                var element = filtred_rows[i];
+                var card = "<div class=\"col-lg-3 col-md-6\"> <div class=\"card\"><div class=\"card-body\"><div class=\"col-lg-12 image\"><img src=\"../../Image/entreprise/";
+                card+= element.Id_entreprise +".png\" alt=\"logo\" class=\"img-fluid rounded-circle w-50\"></div><ul class=\"info\"><li><a href=\"entreprise/"+element.Id_entreprise+"\"> ";
+                card+= element.Raison_social +"</a></li><li>Secteur d'activité: ";
+                card+= element.Secteur_activite +"</li><li>Localité: ";
+                card+= element.Localite +"</li><li><a href=\"mailto:";
+                card+= element.Email +"\">Email</a></li></ul><div class=\"d-flex flex-row justify-content-center\"><div class=\"p-1\">";
+                
+                <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx4',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']))) {?>        
+                    card+="<a href=\"entreprise/update/"+ element.Id_entreprise +"\" class=\"btnms\"><i class=\"far fa-edit\"></i></a>";
+                <?php }?>
+                card+="</div>"
+                <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "ADMIN" || $_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "PILOTE" || ($_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['type'] == "DELEGUE"&array_search('sfx6',$_smarty_tpl->tpl_vars['_SESSION']->value['current_user']['permission']))) {?>        
+                    card+="<div class=\"p-1\"><a href=\"\" class=\"btnms\" onclick=\"supr("+element.Id_entreprise+")\"><i class=\"far fa-trash-alt\"></i></a></div></div></div></div></div>";
+                <?php }?>
+                html+=card;
+                document.getElementById('jsresult').innerHTML = html;
+            }
+        }
     <?php echo '</script'; ?>
 >
     

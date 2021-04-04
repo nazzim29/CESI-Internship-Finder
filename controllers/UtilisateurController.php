@@ -58,7 +58,9 @@ class UtilisateurController
             $utilisateur=new Utilisateur();
             $u=$utilisateur->select($postdata["id_utilisateur"]);
             if($u['Type']==$postdata["type"]){
-                $utilisateur->visitincr($u['Id_utilisateur']);
+                if($_SESSION['current_user']['id'] != $u['Id_utilisateur']){
+                    $utilisateur->visitincr($u['Id_utilisateur']);
+                }
                 View::display('profile',array(
                     "user"=>$u,
                 )); 

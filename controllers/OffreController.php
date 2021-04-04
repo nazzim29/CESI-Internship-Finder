@@ -2,6 +2,7 @@
 require_once('view\View.php');
 require_once('models\Offre.php');
 require_once('models\Shouaite.php');
+require_once('models\Entreprise.php');
 
 class OffreController  
 {
@@ -11,7 +12,11 @@ class OffreController
     }
     public function indexnew()
     {
-        View::display('formoffre');
+        $en = new Entreprise();
+        $r = $en ->select();
+        View::display('formoffre',array(
+            "entr" => $r
+        ));
     }
     public function wishlistindex($postdata)
     {
@@ -40,6 +45,19 @@ class OffreController
             }
         }else{
             header('Location: login');
+        }
+    }
+    public function wishlistremove($postdata)
+    {
+        if(isset($_SESSION['current_user'])){
+            if($_SESSION['current_user']['type'] == "ETUDIANT"){
+                $s = new Souhaite();
+                $s->delete(array(
+                    "id_utilisateur" => $_SESSION['current_user']['id'],
+                    "id_offre" => $postdata
+                ));
+                header("Location: /wishlist");
+            }
         }
     }
     public function post($postdata)
