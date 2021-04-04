@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-03 21:56:29
+/* Smarty version 3.1.39, created on 2021-04-04 02:40:42
   from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\acceuil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6068c86dbe0883_51257849',
+  'unifunc' => 'content_60690b0abe09c2_27232845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be02fdcfc0515525147fc9a24dec3f1e86d0d466' => 
     array (
       0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\acceuil.tpl',
-      1 => 1617479679,
+      1 => 1617489361,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6068c86dbe0883_51257849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60690b0abe09c2_27232845 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -40,7 +40,7 @@ function content_6068c86dbe0883_51257849 (Smarty_Internal_Template $_smarty_tpl)
   <meta name="theme-color" content="white">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="CSS/acceuil.css">
+    <link rel="stylesheet" href="\CSS/acceuil.css">
 
     <title>Page d'acceuil</title>
 </head>

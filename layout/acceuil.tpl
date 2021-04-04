@@ -149,7 +149,7 @@
         <div id="un" class="container">
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <img id="provisoire2" src="Image/provisoire2.png" class="w-100 hover-shadow" alt="">
+                    <img id="provisoire2" src="\provisoire2.png" class="w-100 hover-shadow" alt="">
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <h3 style=" padding-left: 15%; padding-right: 15%; margin: 20% 0;">Si vous êtes empathique,
@@ -164,7 +164,7 @@
         <div id="deux" class="container">
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <img id="provisoire3" src="Image/provisoire3.png" alt="">
+                    <img id="provisoire3" src="\provisoire3.png" alt="">
                 </div>
                 <div class="col-md-6" style="display: table-cell;
                 vertical-align: middle; min-height: 10em;">
@@ -200,22 +200,22 @@
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo1.png" alt="" class="logos">
+                    <img src="\logo1.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo2.png" alt="" class="logos">
+                    <img src="\logo2.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo3.png" alt="" class="logos">
+                    <img src="\logo3.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo4.png" alt="" class="logos">
+                    <img src="\logo4.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo5.png" alt="" class="logos">
+                    <img src="\logo5.png" alt="" class="logos">
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-6 partenaire">
-                    <img src="Image/logo6.png" alt="" class="logos">
+                    <img src="\logo6.png" alt="" class="logos">
                 </div>
             </div>
         </div>
