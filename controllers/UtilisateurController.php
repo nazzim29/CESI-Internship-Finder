@@ -14,12 +14,43 @@ class UtilisateurController
         ));
     }
     public function rechercheindex($s){
-        View::display('indexentreprise',array(
+        View::display('indexuser',array(
             "type" => $s
         ));
     }
     public function recherche($postdata){
-
+        header("Content-Type: application/json");
+        if(isset($_SESSION['current_user'])){
+            $u = new Utilisateur();
+            if($postdata == "ETUDIANT"){
+                if($_SESSION['current_user']['type'] == "PILOTE" || $_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx22',$_SESSION['current_user']['permission']))){
+                    $r = $u->recherche($postdata);
+                }else{
+                    http_response_code(401);
+                }
+            }else if($postdata == "PILOTE"){
+                if($_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx13',$_SESSION['current_user']['permission']))){
+                    $r = $u->recherche($postdata);
+                }else{
+                    http_response_code(401);
+                }
+            }else if($postdata == "DELEGUE"){
+                if($_SESSION['current_user']['type'] == "PILOTE" || $_SESSION['current_user']['type'] == "ADMIN" || ($_SESSION['current_user']['type'] == "DELEGUE" & array_search('sfx17',$_SESSION['current_user']['permission']))){
+                    $r = $u->recherche($postdata);
+                }else{
+                    http_response_code(401);
+                }
+            }
+            if($r === false){
+                http_response_code(220);
+                return "aucun resultat";
+            }else{
+                echo json_encode($r);
+                http_response_code(200);
+            }
+        }else{
+            http_response_code(401);
+        }
     }
     public function read($postdata)
     {

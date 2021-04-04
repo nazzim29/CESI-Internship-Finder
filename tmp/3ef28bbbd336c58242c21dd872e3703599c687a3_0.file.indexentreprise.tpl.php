@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-03 22:59:05
+/* Smarty version 3.1.39, created on 2021-04-04 01:20:30
   from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\indexentreprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6068d7194a8114_83605899',
+  'unifunc' => 'content_6068f83e6c73f3_88596003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ef28bbbd336c58242c21dd872e3703599c687a3' => 
     array (
       0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\indexentreprise.tpl',
-      1 => 1617483538,
+      1 => 1617491814,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6068d7194a8114_83605899 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
-?>
-<!DOCTYPE html>
+function content_6068f83e6c73f3_88596003 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -57,8 +55,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
     <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="container">
-        <h1 class="text-center">Recherche <?php echo smarty_modifier_capitalize((mb_strtolower($_smarty_tpl->tpl_vars['type']->value, 'UTF-8')));?>
-</h1>
+        <h1 class="text-center">Recherche Entreprise</h1>
         <div class="input-group">
             <input type="search" id="sr" class="form-control rounded" placeholder="Rechercher une entreprise"
                 aria-label="Search" aria-describedby="search-addon" />
@@ -66,37 +63,21 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
                 <i class="fa fa-search" id="search" onclick="chercher()"></i>
             </button>
             <!--bouton refresh-->
-            <button type="button" class="input-group-text border-0" id="refresh" value="Actualiser">
+            <button type="button" class="input-group-text border-0" id="refresh" onclick="getrows()">
                 <i class="fas fa-sync rotating"></i>
             </button>
         </div>
         <div class="row filter">
             <div class="col localite">
                 <label>Localité</label>
-                <ul class="loca">
-                    <li><input type="checkbox"> Alger</li>
-                    <li><input type="checkbox"> Oran</li>
-                    <li><input type="checkbox"> Rouen</li>
-                    <li><input type="checkbox"> Paris</li>
-                </ul>
-            </div>
+                <ul id="loca">
 
-            <div class="col competences">
-                <label>Compétences</label>
-                <ul class="comp">
-                    <li><input type="checkbox"> HTML</li>
-                    <li><input type="checkbox"> CSS</li>
-                    <li><input type="checkbox"> JAVA</li>
-                    <li><input type="checkbox"> mobile</li>
                 </ul>
             </div>
             <div class="col competences">
                 <label>Secteur d'activité</label>
-                <ul class="comp">
-                    <li><input type="checkbox"> Informatique</li>
-                    <li><input type="checkbox"> Réseau</li>
-                    <li><input type="checkbox"> Communication</li>
-                    <li><input type="checkbox"> Industrie</li>
+                <ul id="sec">
+                
                 </ul>
             </div>
         </div>
@@ -132,15 +113,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Deskto
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="\js/userrech.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
->
-        $(document).ready(function() {
-            getrows("<?php echo $_smarty_tpl->tpl_vars['type']->value;?>
-");
-        } );
-    <?php echo '</script'; ?>
+ src="\js/entrepriserech.js"><?php echo '</script'; ?>
 >
    <?php echo '<script'; ?>
 >
