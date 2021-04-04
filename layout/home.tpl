@@ -32,7 +32,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale: Oks web</li>
@@ -55,7 +55,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -78,7 +78,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -114,7 +114,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -137,7 +137,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -160,7 +160,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -196,7 +196,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -224,7 +224,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -252,7 +252,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -298,7 +298,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -321,7 +321,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -344,7 +344,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
