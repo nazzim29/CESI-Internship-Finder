@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 04:43:42
+/* Smarty version 3.1.39, created on 2021-04-04 11:30:41
   from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606927de34a647_87453419',
+  'unifunc' => 'content_60698741a827e8_30164272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47c34e6cd420a4613d6956d7c6fb75db8ab930a7' => 
     array (
       0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\footer.tpl',
-      1 => 1617489349,
+      1 => 1617528572,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_606927de34a647_87453419 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60698741a827e8_30164272 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="\CSS/footer.css">
 
 
-<footer style="width=100%;">
+<footer id="footer" style="width=100%;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-pad">
                     <div id="about">
-                        <h3>A propos de nous</h3>
+                        <h3 class="h3foo">A propos de nous</h3>
                     </div>
                     <p class="text-left" style="max-width: 300px;">CESI Internship Finder, est un site de stage dédié
                         aux étudiants de
@@ -45,7 +45,7 @@ function content_606927de34a647_87453419 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3>Navigation</h3>
+                    <h3 class="h3foo">Navigation</h3>
                     <ul class="navigation">
                         <li><a href="#">Accueil</a></li>
                         <li><a href="#">Mention légales</a></li>
@@ -55,7 +55,7 @@ function content_606927de34a647_87453419 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3 id="network">Contactez nous</h3>
+                    <h3 id="network" class="h3foo">Contactez nous</h3>
                     <div class="contact">
                         <ul class="navigation">
                             <li>Email :</li>
@@ -73,7 +73,7 @@ function content_606927de34a647_87453419 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3>Signalez un problème</h3>
+                    <h3 class="h3foo">Signalez un problème</h3>
                     <form id="prblm">
                         <input type="email" id="femail" placeholder="Email" class="footerinput">
                         <textarea name="description" id="ds" cols="5" rows="5"

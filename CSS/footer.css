@@ -18,11 +18,12 @@ footer{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   letter-spacing: 2px;
 }
-.footer-pad h3{
+.footer-pad .h3foo{
+  color: white;
   margin-top: 1em;
   margin-bottom: 0.8em;
 }
-.footer-pad h3::before{
+.footer-pad .h3foo::before{
   content: '|';
   color: #F17877;
   padding-right: 0.25em;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-04 04:43:42
+/* Smarty version 3.1.39, created on 2021-04-04 11:38:53
   from 'C:\Users\Dell\Documents\CESI-Internship-Finder\layout\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_606927de23ff13_64560945',
+  'unifunc' => 'content_6069892df17944_43219419',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6acbc8cdf968e42c14d22a6c9611813903b6f883' => 
     array (
       0 => 'C:\\Users\\Dell\\Documents\\CESI-Internship-Finder\\layout\\home.tpl',
-      1 => 1617504088,
+      1 => 1617529055,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6069892df17944_43219419 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -52,13 +52,13 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
     <!--Home admin-->
     <div id="body">
         <section class="container">
-            <h3>Les dernières Entreprises ajoutées </h3>
+            <h3 class="titrecard">Les dernières Entreprises ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale: Oks web</li>
@@ -81,7 +81,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -104,7 +104,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -134,13 +134,13 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </section>
         <section class="container">
-            <h3>Les derniers Pilotes ajoutées </h3>
+            <h3 class="titrecard">Les derniers Pilotes ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -163,7 +163,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -186,7 +186,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -216,13 +216,13 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </section>
         <section class="container">
-            <h3>Les dernières Offres ajoutées </h3>
+            <h3 class="titrecard">Les dernières Offres ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -250,7 +250,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -278,7 +278,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -318,13 +318,13 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </section>
         <section class="container">
-            <h3>Les derniers Etudiants ajoutées </h3>
+            <h3 class="titrecard">Les derniers Etudiants ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/10.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -347,7 +347,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/10.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -370,7 +370,7 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/11.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -414,15 +414,15 @@ function content_606927de23ff13_64560945 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
 >
-        if ('serviceWorker' in navigator){
+        if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker
                     .register('/sw.js')
                     .then(registration => {
-                        console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+                        console.log(`Service Worker enregistré!Ressource:` + registration.scope);
                     })
                     .catch(err => {
-                        console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+                        console.log(`Echec de l'enregistrement du Service Worker: ` + err);
                     });
             });
         }

@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="\CSS/footer.css">
 
 
-<footer style="width=100%;">
+<footer id="footer" style="width=100%;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-pad">
                     <div id="about">
-                        <h3>A propos de nous</h3>
+                        <h3 class="h3foo">A propos de nous</h3>
                     </div>
                     <p class="text-left" style="max-width: 300px;">CESI Internship Finder, est un site de stage dédié
                         aux étudiants de
@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3>Navigation</h3>
+                    <h3 class="h3foo">Navigation</h3>
                     <ul class="navigation">
                         <li><a href="#">Accueil</a></li>
                         <li><a href="#">Mention légales</a></li>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3 id="network">Contactez nous</h3>
+                    <h3 id="network" class="h3foo">Contactez nous</h3>
                     <div class="contact">
                         <ul class="navigation">
                             <li>Email :</li>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-pad">
-                    <h3>Signalez un problème</h3>
+                    <h3 class="h3foo">Signalez un problème</h3>
                     <form id="prblm">
                         <input type="email" id="femail" placeholder="Email" class="footerinput">
                         <textarea name="description" id="ds" cols="5" rows="5"

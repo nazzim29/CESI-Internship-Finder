@@ -26,13 +26,13 @@
     <!--Home admin-->
     <div id="body">
         <section class="container">
-            <h3>Les dernières Entreprises ajoutées </h3>
+            <h3 class="titrecard">Les dernières Entreprises ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale: Oks web</li>
@@ -55,7 +55,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -78,7 +78,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Entreprise/logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Raison sociale:</li>
@@ -108,13 +108,13 @@
             </div>
         </section>
         <section class="container">
-            <h3>Les derniers Pilotes ajoutées </h3>
+            <h3 class="titrecard">Les derniers Pilotes ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -137,7 +137,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -160,7 +160,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Pilote/8.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -190,13 +190,13 @@
             </div>
         </section>
         <section class="container">
-            <h3>Les dernières Offres ajoutées </h3>
+            <h3 class="titrecard">Les dernières Offres ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -224,7 +224,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -252,7 +252,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/offre/offre.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Titre:</li>
@@ -292,13 +292,13 @@
             </div>
         </section>
         <section class="container">
-            <h3>Les derniers Etudiants ajoutées </h3>
+            <h3 class="titrecard">Les derniers Etudiants ajoutées </h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo1.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/10.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -321,7 +321,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo2.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/10.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -344,7 +344,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-lg-12 image">
-                                <img src="\logo3.png" alt="logo" class="img-fluid rounded-circle w-50">
+                                <img src="\Image/Etudiant/11.png" alt="logo" class="img-fluid rounded-circle w-50">
                             </div>
                             <ul class="info">
                                 <li>Nom:</li>
@@ -380,15 +380,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script>
-        if ('serviceWorker' in navigator){
+        if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker
                     .register('/sw.js')
                     .then(registration => {
-                        console.log(`Service Worker enregistré!Ressource:${ registration.scope }`);
+                        console.log(`Service Worker enregistré!Ressource:` + registration.scope);
                     })
                     .catch(err => {
-                        console.log(`Echec de l'enregistrement du Service Worker: ${ err }`);
+                        console.log(`Echec de l'enregistrement du Service Worker: ` + err);
                     });
             });
         }
