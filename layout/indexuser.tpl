@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="\CSS/rechercheentr.css">
 </head>
 
-<body onload="getall()" style="overflow-x: hidden;">
+<body style="overflow-x: hidden;">
     {include 'navbar.tpl'}
     <div class="container">
-        <h1 class="text-center">Recherche Entreprise</h1>
+        <h1 class="text-center">Recherche {($type|lower)|capitalize}</h1>
         <div class="input-group">
             <input type="search" id="sr" class="form-control rounded" placeholder="Rechercher une entreprise"
                 aria-label="Search" aria-describedby="search-addon" />
@@ -37,20 +37,20 @@
                 <i class="fa fa-search" id="search" onclick="chercher()"></i>
             </button>
             <!--bouton refresh-->
-            <button type="button" class="input-group-text border-0" id="refresh" onclick="getrows()">
+            <button type="button" class="input-group-text border-0" id="refresh" onclick="getrows('{$type|lower}')">
                 <i class="fas fa-sync rotating"></i>
             </button>
         </div>
         <div class="row filter">
             <div class="col localite">
-                <label>Localité</label>
-                <ul id="loca">
+                <label>Promotion</label>
+                <ul id="promo">
 
                 </ul>
             </div>
             <div class="col competences">
-                <label>Secteur d'activité</label>
-                <ul id="sec">
+                <label>centre</label>
+                <ul id="centre">
                 
                 </ul>
             </div>
@@ -79,7 +79,12 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="\js/entrepriserech.js"></script>
+    <script src="\js/userrech.js"></script>
+    <script>
+        $(document).ready(function() {
+            getrows('{$type|lower}');
+        });
+    </script>
    <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

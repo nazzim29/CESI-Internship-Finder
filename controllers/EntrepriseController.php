@@ -12,9 +12,7 @@ class EntrepriseController
                 case 'ADMIN':
                 case 'PILOTE':
                 case 'ETUDIANT':
-                    View::display('indexentreprise',array(
-                        "type" => "Entreprise"
-                    ));
+                    View::display('indexentreprise');
                 break;
                 case 'DELEGUE':
                     if(array_search('sfx2',$_SESSION['current_user']['permision']) !== false){
@@ -110,16 +108,35 @@ class EntrepriseController
     public function recherche()
     {
         header("Content-Type: application/json");
-        $entr = new Entreprise();
-        $s = $entr->read(); 
-        if($s === false){
-            http_response_code(220);
-            echo "aucun resultat";
+        if(isset($_SESSION['current_user'])){
+            switch ($_SESSION['current_user']['type']) {
+                case 'PILOTE':
+                case 'ADMIN':
+                case 'ETUDIANT':
+                    $entr = new Entreprise();
+                    $s = $entr->read(); 
+                break;
+                case 'DELEGUE':
+                    if (array_search('sfx2',$_SESSION['current_user']['permission'])) {
+                        $entr = new Entreprise();
+                        $s = $entr->read(); 
+                    }else{
+                        http_response_code(401);
+                    }
+                default:
+                    http_response_code(401);
+                break;
+            }
+            if($s === false){
+                http_response_code(220);
+                return "aucun resultat";
+            }else{
+                echo json_encode($s);
+                http_response_code(200);
+            }
         }else{
-            echo json_encode($s);
-            http_response_code(200);
+            http_response_code(401);
         }
-
     }
     public function updateindex($postdata)
     {

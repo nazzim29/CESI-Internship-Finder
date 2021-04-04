@@ -1,3 +1,30 @@
+<?php
+/* Smarty version 3.1.39, created on 2021-04-04 02:19:19
+  from 'C:\Users\Pedagogie\Desktop\gg\CESI-Internship-Finder\layout\indexuser.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_606906071af004_79733098',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a85fbffc1754c8094d560eb6442e4f9c5c2fab16' => 
+    array (
+      0 => 'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\layout\\indexuser.tpl',
+      1 => 1617495554,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:navbar.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_606906071af004_79733098 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Pedagogie\\Desktop\\gg\\CESI-Internship-Finder\\libs\\smarty-3.1.39\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,10 +53,12 @@
     <link rel="stylesheet" href="\CSS/rechercheentr.css">
 </head>
 
-<body onload="getall()" style="overflow-x: hidden;">
-    {include 'navbar.tpl'}
+<body style="overflow-x: hidden;">
+    <?php $_smarty_tpl->_subTemplateRender('file:navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     <div class="container">
-        <h1 class="text-center">Recherche Entreprise</h1>
+        <h1 class="text-center">Recherche <?php echo smarty_modifier_capitalize((mb_strtolower($_smarty_tpl->tpl_vars['type']->value, 'UTF-8')));?>
+</h1>
         <div class="input-group">
             <input type="search" id="sr" class="form-control rounded" placeholder="Rechercher une entreprise"
                 aria-label="Search" aria-describedby="search-addon" />
@@ -37,19 +66,20 @@
                 <i class="fa fa-search" id="search" onclick="chercher()"></i>
             </button>
             <!--bouton refresh-->
-            <button type="button" class="input-group-text border-0" id="refresh" onclick="getrows()">
+            <button type="button" class="input-group-text border-0" id="refresh" onclick="getrows('<?php echo mb_strtolower($_smarty_tpl->tpl_vars['type']->value, 'UTF-8');?>
+')">
                 <i class="fas fa-sync rotating"></i>
             </button>
         </div>
         <div class="row filter">
             <div class="col localite">
-                <label>Localité</label>
+                <label>Promotion</label>
                 <ul id="loca">
 
                 </ul>
             </div>
             <div class="col competences">
-                <label>Secteur d'activité</label>
+                <label>centre</label>
                 <ul id="sec">
                 
                 </ul>
@@ -74,13 +104,31 @@
         </ul>
     </div>
 
-    {include 'footer.tpl'}
+    <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     <!--SCRIPT-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="\js/entrepriserech.js"></script>
-   <script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.1.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="\js/userrech.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
+        $(document).ready(function() {
+            getrows('<?php echo mb_strtolower($_smarty_tpl->tpl_vars['type']->value, 'UTF-8');?>
+');
+        });
+    <?php echo '</script'; ?>
+>
+   <?php echo '<script'; ?>
+>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
@@ -93,8 +141,10 @@
             });
         });
       }
-    </script>
+    <?php echo '</script'; ?>
+>
     
 </body>
 
-</html>
+</html><?php }
+}

@@ -109,14 +109,29 @@ Route::add('/entreprise',function(){
 Route::add('/etudiant/new',function(){
     UtilisateurController::indexnew("ETUDIANT");
 });
-Route::add('/etudiant',function(){
-    UtilisateurController::rechercheindex("ETUDIANT");
-});
 Route::add('/pilote/new',function(){
     UtilisateurController::indexnew("PILOTE");
 });
 Route::add('/delegue/new',function(){
     UtilisateurController::indexnew("DELEGUE");
+});
+Route::add('/etudiant',function(){
+    UtilisateurController::rechercheindex("ETUDIANT");
+});
+Route::add('/pilote',function(){
+    UtilisateurController::rechercheindex("PILOTE");
+});
+Route::add('/delegue',function(){
+    UtilisateurController::rechercheindex("DELEGUE");
+});
+Route::add('/etudiant/recherche',function(){
+    UtilisateurController::recherche("ETUDIANT");
+});
+Route::add('/pilote/recherche',function(){
+    UtilisateurController::recherche("PILOTE");
+});
+Route::add('/delegue/recherche',function(){
+    UtilisateurController::recherche("DELEGUE");
 });
 Route::add('/etudiant/new',function(){
     UtilisateurController::create(array(
